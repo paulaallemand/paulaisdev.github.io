@@ -111,6 +111,8 @@ const TRANSLATIONS = {
     "footer.cta": "Bora construir algo incrível?",
     "footer.contact": "Fale comigo",
     "footer.rights": "Feito com café e código por Paula Allemand.",
+
+    "a11y.skip": "Pular para o conteúdo",
   },
 
   en: {
@@ -220,6 +222,8 @@ const TRANSLATIONS = {
     "footer.cta": "Shall we build something together?",
     "footer.contact": "Get in touch",
     "footer.rights": "Made with coffee and code by Paula Allemand.",
+
+    "a11y.skip": "Skip to main content",
   },
 };
 
