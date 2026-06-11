@@ -49,35 +49,31 @@ window.addEventListener("scroll", function () {
 AOS.init({ once: true });
 
 /* ============================================================
-   Experiência — accordion "Antes disso"
+   Experiência — abas de ano "Antes disso"
    ============================================================ */
-(function initExperienceAccordion() {
-  const triggers = document.querySelectorAll(".exp-acc-trigger");
-  if (!triggers.length) return;
+(function initExperienceTabs() {
+  const tabs = Array.from(document.querySelectorAll(".exp-tab"));
+  if (!tabs.length) return;
 
-  triggers.forEach((trigger) => {
-    const panel = document.getElementById(
-      trigger.getAttribute("aria-controls")
-    );
-    if (!panel) return;
-
-    trigger.addEventListener("click", () => {
-      const isOpen = trigger.getAttribute("aria-expanded") === "true";
-      trigger.setAttribute("aria-expanded", String(!isOpen));
-      panel.style.maxHeight = isOpen ? null : panel.scrollHeight + "px";
+  function activate(tab) {
+    tabs.forEach((t) => {
+      const isActive = t === tab;
+      t.setAttribute("aria-selected", String(isActive));
+      t.setAttribute("tabindex", isActive ? "0" : "-1");
+      const panel = document.getElementById(t.getAttribute("aria-controls"));
+      if (panel) panel.hidden = !isActive;
     });
-  });
+  }
 
-  // Reajusta a altura do painel aberto ao trocar de idioma/redimensionar
-  window.addEventListener("resize", () => {
-    document
-      .querySelectorAll('.exp-acc-trigger[aria-expanded="true"]')
-      .forEach((trigger) => {
-        const panel = document.getElementById(
-          trigger.getAttribute("aria-controls")
-        );
-        if (panel) panel.style.maxHeight = panel.scrollHeight + "px";
-      });
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => activate(tab));
+    tab.addEventListener("keydown", (e) => {
+      const idx = tabs.indexOf(e.currentTarget);
+      if (e.key === "ArrowRight") { e.preventDefault(); activate(tabs[(idx + 1) % tabs.length]); tabs[(idx + 1) % tabs.length].focus(); }
+      if (e.key === "ArrowLeft")  { e.preventDefault(); activate(tabs[(idx - 1 + tabs.length) % tabs.length]); tabs[(idx - 1 + tabs.length) % tabs.length].focus(); }
+      if (e.key === "Home")       { e.preventDefault(); activate(tabs[0]); tabs[0].focus(); }
+      if (e.key === "End")        { e.preventDefault(); activate(tabs[tabs.length - 1]); tabs[tabs.length - 1].focus(); }
+    });
   });
 })();
 

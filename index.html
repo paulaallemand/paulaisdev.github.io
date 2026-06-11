@@ -229,15 +229,15 @@
           </div>
         </div>
 
-        <div class="chips-row" data-aos="fade-up">
-          <span class="chips-label" data-i18n="chips.label">Comunidades &amp; programas:</span>
-          <ul class="chips">
-            <li class="chip">{reprograma}</li>
-            <li class="chip">Minas Programam</li>
-            <li class="chip">Tera</li>
-            <li class="chip">Estação Hack · Facebook</li>
-            <li class="chip">PrograMaria</li>
-            <li class="chip">UNESCO</li>
+        <div class="logos-strip" data-aos="fade-up">
+          <span class="logos-strip-label" data-i18n="chips.label">Comunidades &amp; programas:</span>
+          <ul class="logos-strip-list">
+            <li><img src="img/logos/reprograma.webp" alt="{reprograma}" class="strip-logo" loading="lazy" /></li>
+            <li><img src="img/logos/minas-programam.png" alt="Minas Programam" class="strip-logo" loading="lazy" /></li>
+            <li><img src="img/logos/tera.png" alt="Tera" class="strip-logo" loading="lazy" /></li>
+            <li><img src="img/logos/estacao-hack.png" alt="Estação Hack · Facebook" class="strip-logo" loading="lazy" /></li>
+            <li><img src="img/logos/programaria.svg" alt="PrograMaria" class="strip-logo" loading="lazy" /></li>
+            <li><img src="img/logos/unesco.png" alt="UNESCO" class="strip-logo" loading="lazy" /></li>
           </ul>
         </div>
       </div>
@@ -280,86 +280,44 @@
           </div>
         </article>
 
-        <!-- PASSADO: trajetória anterior em accordion -->
+        <!-- PASSADO: trajetória anterior em abas de ano -->
         <div class="exp-past">
           <h3 class="exp-past-label" data-i18n="experience.past">Antes disso</h3>
-          <ul class="exp-acc">
-            <li class="exp-acc-item">
-              <button type="button" class="exp-acc-trigger" aria-expanded="false" aria-controls="exp-bv-panel">
-                <span class="exp-acc-year">2024</span>
-                <span class="exp-acc-head">
-                  <span class="exp-acc-company">Banco BV</span>
-                  <span class="exp-acc-role" data-i18n="exp.bv.role">Engenheira de Software</span>
-                </span>
-                <span class="exp-acc-icon" aria-hidden="true"></span>
-              </button>
-              <div class="exp-acc-panel" id="exp-bv-panel" role="region">
-                <p class="exp-acc-desc" data-i18n="exp.bv.desc">
-                  Prevenção a Fraudes (via Act Digital): segurança dos fluxos e dados de todas as áreas do banco, com Java, Spring Boot, GCP e AWS.
-                </p>
+          <div class="exp-tabs" role="tablist" aria-label="Linha do tempo">
+            <button role="tab" class="exp-tab" aria-selected="true"  aria-controls="exp-tab-2024" id="tab-2024" tabindex="0">2024</button>
+            <button role="tab" class="exp-tab" aria-selected="false" aria-controls="exp-tab-2021" id="tab-2021" tabindex="-1">2021</button>
+            <button role="tab" class="exp-tab" aria-selected="false" aria-controls="exp-tab-2019" id="tab-2019" tabindex="-1">2019</button>
+            <button role="tab" class="exp-tab" aria-selected="false" aria-controls="exp-tab-2017" id="tab-2017" tabindex="-1">2017</button>
+          </div>
+          <div class="exp-tab-panels">
+            <div role="tabpanel" id="exp-tab-2024" aria-labelledby="tab-2024" class="exp-tab-panel">
+              <p class="exp-tp-company">Banco BV</p>
+              <p class="exp-tp-role" data-i18n="exp.bv.role">Engenheira de Software</p>
+              <p class="exp-tp-desc" data-i18n="exp.bv.desc">Prevenção a Fraudes (via Act Digital): segurança dos fluxos e dados de todas as áreas do banco, com Java, Spring Boot, GCP e AWS.</p>
+            </div>
+            <div role="tabpanel" id="exp-tab-2021" aria-labelledby="tab-2021" class="exp-tab-panel" hidden>
+              <p class="exp-tp-company">Itaú Unibanco</p>
+              <p class="exp-tp-role" data-i18n="exp.itau.role">Engenheira de Software Pleno</p>
+              <p class="exp-tp-desc" data-i18n="exp.itau.desc">Back-end: construção de APIs do zero (Java, Spring Boot, Maven, SQL) e arquitetura BFF conectando múltiplas APIs e serviços de segurança. Manutenção de serviços em Python, Kotlin e iOS.</p>
+            </div>
+            <div role="tabpanel" id="exp-tab-2019" aria-labelledby="tab-2019" class="exp-tab-panel" hidden>
+              <div class="exp-tp-entry">
+                <p class="exp-tp-company">Tera</p>
+                <p class="exp-tp-role" data-i18n="exp.tera.role">Expert &amp; Fullstack Developer</p>
+                <p class="exp-tp-desc" data-i18n="exp.tera.desc">Ensino de fullstack e back-end (lógica, algoritmos, arquitetura web, SQL/NoSQL, Node.js, web APIs e segurança) e desenvolvimento de plataformas em Vue, React, Node e Firebase — sempre com foco em acessibilidade.</p>
               </div>
-            </li>
-            <li class="exp-acc-item">
-              <button type="button" class="exp-acc-trigger" aria-expanded="false" aria-controls="exp-itau-panel">
-                <span class="exp-acc-year">2021</span>
-                <span class="exp-acc-head">
-                  <span class="exp-acc-company">Itaú Unibanco</span>
-                  <span class="exp-acc-role" data-i18n="exp.itau.role">Engenheira de Software Pleno</span>
-                </span>
-                <span class="exp-acc-icon" aria-hidden="true"></span>
-              </button>
-              <div class="exp-acc-panel" id="exp-itau-panel" role="region">
-                <p class="exp-acc-desc" data-i18n="exp.itau.desc">
-                  Back-end: construção de APIs do zero (Java, Spring Boot, Maven, SQL) e arquitetura BFF conectando múltiplas APIs e serviços de segurança. Manutenção de serviços em Python, Kotlin e iOS.
-                </p>
+              <div class="exp-tp-entry exp-tp-entry--sep">
+                <p class="exp-tp-company">{reprograma} · Minas Programam · Estação Hack</p>
+                <p class="exp-tp-role" data-i18n="exp.edu.role">Professora</p>
+                <p class="exp-tp-desc" data-i18n="exp.edu.desc">Formação de novas pessoas em programação — Git/GitHub, HTML/CSS, JavaScript, React, Node.js e APIs/CRUD — em programas que ampliam o acesso à tecnologia.</p>
               </div>
-            </li>
-            <li class="exp-acc-item">
-              <button type="button" class="exp-acc-trigger" aria-expanded="false" aria-controls="exp-tera-panel">
-                <span class="exp-acc-year">2019</span>
-                <span class="exp-acc-head">
-                  <span class="exp-acc-company">Tera</span>
-                  <span class="exp-acc-role" data-i18n="exp.tera.role">Expert &amp; Fullstack Developer</span>
-                </span>
-                <span class="exp-acc-icon" aria-hidden="true"></span>
-              </button>
-              <div class="exp-acc-panel" id="exp-tera-panel" role="region">
-                <p class="exp-acc-desc" data-i18n="exp.tera.desc">
-                  Ensino de fullstack e back-end (lógica, algoritmos, arquitetura web, SQL/NoSQL, Node.js, web APIs e segurança) e desenvolvimento de plataformas em Vue, React, Node e Firebase — sempre com foco em acessibilidade.
-                </p>
-              </div>
-            </li>
-            <li class="exp-acc-item">
-              <button type="button" class="exp-acc-trigger" aria-expanded="false" aria-controls="exp-edu-panel">
-                <span class="exp-acc-year">2019</span>
-                <span class="exp-acc-head">
-                  <span class="exp-acc-company">{reprograma} · Minas Programam · Estação Hack</span>
-                  <span class="exp-acc-role" data-i18n="exp.edu.role">Professora</span>
-                </span>
-                <span class="exp-acc-icon" aria-hidden="true"></span>
-              </button>
-              <div class="exp-acc-panel" id="exp-edu-panel" role="region">
-                <p class="exp-acc-desc" data-i18n="exp.edu.desc">
-                  Formação de novas pessoas em programação — Git/GitHub, HTML/CSS, JavaScript, React, Node.js e APIs/CRUD — em programas que ampliam o acesso à tecnologia.
-                </p>
-              </div>
-            </li>
-            <li class="exp-acc-item">
-              <button type="button" class="exp-acc-trigger" aria-expanded="false" aria-controls="exp-usp-panel">
-                <span class="exp-acc-year">2017</span>
-                <span class="exp-acc-head">
-                  <span class="exp-acc-company">USP</span>
-                  <span class="exp-acc-role" data-i18n="exp.usp.role">Iniciação Científica</span>
-                </span>
-                <span class="exp-acc-icon" aria-hidden="true"></span>
-              </button>
-              <div class="exp-acc-panel" id="exp-usp-panel" role="region">
-                <p class="exp-acc-desc" data-i18n="exp.usp.desc">
-                  Onde tudo começou: pesquisa em Cronobiologia e Neurociência sobre a relação entre o sono e o desenvolvimento neurocognitivo do bebê (revisão sistemática, método PRISMA). Doula e ex-aluna de obstetrícia.
-                </p>
-              </div>
-            </li>
-          </ul>
+            </div>
+            <div role="tabpanel" id="exp-tab-2017" aria-labelledby="tab-2017" class="exp-tab-panel" hidden>
+              <p class="exp-tp-company">USP</p>
+              <p class="exp-tp-role" data-i18n="exp.usp.role">Iniciação Científica</p>
+              <p class="exp-tp-desc" data-i18n="exp.usp.desc">Onde tudo começou: pesquisa em Cronobiologia e Neurociência sobre a relação entre o sono e o desenvolvimento neurocognitivo do bebê (revisão sistemática, método PRISMA). Doula e ex-aluna de obstetrícia.</p>
+            </div>
+          </div>
         </div>
 
         <div class="experience-cta">
@@ -586,74 +544,7 @@
     -->
     <!-- /PROJETOS -->
 
-    <section id="brands" class="brands">
-      <div class="container">
-        <div class="brand-title">
-          <h2 class="title" data-i18n="brands.title">Marcas que transformaram minha carreira</h2>
-          <p class="section-subtitle" data-i18n="brands.subtitle">
-            Lugares onde aprendi, ensinei e cresci.
-          </p>
-        </div>
-        <div class="brand-mosaic">
-          <a class="brand-tile brand-tile-lg" href="https://www.unesco.org/en/teachers/photo-gallery" target="_blank" rel="noopener" aria-label="UNESCO — Galeria de Professores (abre em nova aba)" data-aos="fade-up">
-            <img src="img/logos/unesco.png" alt="UNESCO" class="brand-logo" loading="lazy" />
-            <span class="brand-label" data-i18n="brands.unesco">Galeria global de professores</span>
-          </a>
-          <a class="brand-tile brand-tile-md" href="https://www.youtube.com/watch?v=1SeaQRfk06k" target="_blank" rel="noopener" aria-label="Google.org — When She Rises, We All Rise (abre no YouTube)" data-aos="fade-up" data-aos-delay="50">
-            <img src="img/logos/google.png" alt="Google.org" class="brand-logo" loading="lazy" />
-            <span class="brand-label" data-i18n="brands.google">Impact Challenge for Women</span>
-          </a>
-          <figure class="brand-tile brand-tile-sm" data-aos="fade-up" data-aos-delay="100">
-            <img src="img/logos/estacao-hack.png" alt="Estação Hack" class="brand-logo" loading="lazy" />
-            <figcaption class="brand-label" data-i18n="brands.estacaohack">Talentos Digitais Diversos</figcaption>
-          </figure>
-          <figure class="brand-tile brand-tile-lg" data-aos="fade-up" data-aos-delay="150">
-            <img src="img/logos/reprograma.webp" alt="{reprograma}" class="brand-logo" loading="lazy" />
-            <figcaption class="brand-label" data-i18n="brands.reprograma">Mulheres em tecnologia</figcaption>
-          </figure>
-          <figure class="brand-tile brand-tile-sm" data-aos="fade-up" data-aos-delay="200">
-            <img src="img/logos/tera.png" alt="Tera" class="brand-logo" loading="lazy" />
-            <figcaption class="brand-label" data-i18n="brands.tera">Expert &amp; desenvolvimento</figcaption>
-          </figure>
-          <figure class="brand-tile brand-tile-md" data-aos="fade-up" data-aos-delay="100">
-            <img src="img/logos/itau.png" alt="Itaú" class="brand-logo" loading="lazy" />
-            <figcaption class="brand-label" data-i18n="brands.itau">APIs e BFF no banco</figcaption>
-          </figure>
-          <figure class="brand-tile brand-tile-sm" data-aos="fade-up" data-aos-delay="150">
-            <img src="img/logos/bv.png" alt="Banco BV" class="brand-logo" loading="lazy" />
-            <figcaption class="brand-label" data-i18n="brands.bv">Prevenção a fraudes</figcaption>
-          </figure>
-          <figure class="brand-tile brand-tile-md" data-aos="fade-up" data-aos-delay="200">
-            <img src="img/logos/programaria.svg" alt="PrograMaria" class="brand-logo" loading="lazy" />
-            <figcaption class="brand-label" data-i18n="brands.programaria">Diversidade na tech</figcaption>
-          </figure>
-          <figure class="brand-tile brand-tile-sm" data-aos="fade-up" data-aos-delay="100">
-            <img src="img/logos/minas-programam.png" alt="Minas Programam" class="brand-logo" loading="lazy" />
-            <figcaption class="brand-label" data-i18n="brands.minas">Git &amp; GitHub para todas</figcaption>
-          </figure>
-          <figure class="brand-tile brand-tile-sm" data-aos="fade-up" data-aos-delay="150">
-            <img src="img/logos/usp.png" alt="USP" class="brand-logo" loading="lazy" />
-            <figcaption class="brand-label" data-i18n="brands.usp">Iniciação científica</figcaption>
-          </figure>
-          <figure class="brand-tile brand-tile-sm" data-aos="fade-up" data-aos-delay="200">
-            <img src="img/logos/js-conf.png" alt="JSConf" class="brand-logo" loading="lazy" />
-            <figcaption class="brand-label" data-i18n="brands.jsconf">Comunidade JavaScript</figcaption>
-          </figure>
-          <figure class="brand-tile brand-tile-md" data-aos="fade-up" data-aos-delay="100">
-            <img src="img/logos/change-org.png" alt="Change.org" class="brand-logo" loading="lazy" />
-            <figcaption class="brand-label" data-i18n="brands.changeorg">Tecnologia para impacto</figcaption>
-          </figure>
-          <figure class="brand-tile brand-tile-sm" data-aos="fade-up" data-aos-delay="150">
-            <img src="img/logos/habits.png" alt="Habits" class="brand-logo" loading="lazy" />
-            <figcaption class="brand-label" data-i18n="brands.habits">Produto &amp; dados</figcaption>
-          </figure>
-          <figure class="brand-tile brand-tile-sm" data-aos="fade-up" data-aos-delay="200">
-            <img src="img/logos/mc-kinsey.png" alt="McKinsey" class="brand-logo" loading="lazy" />
-            <figcaption class="brand-label" data-i18n="brands.mckinsey">Mentoria &amp; estratégia</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
+    <!-- BRANDS: seção removida — logos agora ficam na strip de comunidades dentro de #expertise -->
 
     <footer class="footer">
       <div class="container">

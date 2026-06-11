@@ -598,118 +598,7 @@ h5 {
   text-align: center;
 }
 
-.brand-title {
-  margin-bottom: 5rem;
-}
-
-/* --- Mosaico interativo de marcas --- */
-.brand-mosaic {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows: 14rem;
-  gap: 1.2rem;
-  max-width: 110rem;
-  margin: 0 auto;
-}
-
-.brand-tile {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  padding: 2rem;
-  background: var(--white-color);
-  border: 1px solid var(--gray-color);
-  border-radius: 1.2rem;
-  text-decoration: none;
-  overflow: hidden;
-  transition: transform 0.35s ease, box-shadow 0.35s ease,
-    border-color 0.35s ease;
-}
-
-/* faixa de tint marsala que sobe no hover */
-.brand-tile::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(111, 29, 27, 0.06),
-    transparent 60%
-  );
-  opacity: 0;
-  transition: opacity 0.35s ease;
-  pointer-events: none;
-}
-
-.brand-tile-lg {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-.brand-tile-md {
-  grid-column: span 2;
-}
-
-.brand-tile-sm {
-  grid-column: span 1;
-}
-
-.brand-logo {
-  max-width: 78%;
-  max-height: 6rem;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  filter: grayscale(1);
-  opacity: 0.55;
-  transition: filter 0.35s ease, opacity 0.35s ease, transform 0.35s ease;
-}
-
-.brand-tile-lg .brand-logo {
-  max-height: 9rem;
-}
-
-.brand-tile:hover,
-.brand-tile:focus-visible {
-  transform: translateY(-0.5rem);
-  border-color: rgba(111, 29, 27, 0.25);
-  box-shadow: 0 1.6rem 3.6rem rgba(111, 29, 27, 0.12);
-  outline: none;
-}
-
-.brand-tile:hover .brand-logo,
-.brand-tile:focus-visible .brand-logo {
-  filter: grayscale(0);
-  opacity: 1;
-  transform: scale(1.04);
-}
-
-.brand-tile:hover::after,
-.brand-tile:focus-visible::after {
-  opacity: 1;
-}
-
-.brand-label {
-  position: relative;
-  z-index: 1;
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--secondary-accent);
-  text-align: center;
-  line-height: 1.4;
-  opacity: 0;
-  transform: translateY(0.6rem);
-  transition: opacity 0.35s ease, transform 0.35s ease;
-}
-
-.brand-tile:hover .brand-label,
-.brand-tile:focus-visible .brand-label {
-  opacity: 1;
-  transform: translateY(0);
-}
+/* brands section removida — logos na logos-strip em #expertise */
 
 /* Footer */
 .footer {
@@ -894,47 +783,47 @@ h5 {
     brightness(70%) contrast(95%);
 }
 
-/* ---------- Chips (prova social qualitativa) ---------- */
-.chips-row {
+/* ---------- Logos strip (comunidades & programas) ---------- */
+.logos-strip {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
-  gap: 1.2rem;
+  gap: 1.6rem 4rem;
   margin-top: 7rem;
   padding: 4rem 0 0;
   border-top: 1px solid var(--gray-color);
 }
 
-.chips-label {
+.logos-strip-label {
   font-size: 1.3rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.12rem;
   color: var(--gray-text-color);
+  flex-shrink: 0;
 }
 
-.chips {
+.logos-strip-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+  align-items: center;
+  gap: 2.4rem 3.6rem;
+  list-style: none;
 }
 
-.chip {
-  padding: 0.7rem 1.6rem;
-  border: 1px solid var(--gray-color-2);
-  border-radius: 5rem;
-  font-size: 1.4rem;
-  font-weight: 500;
-  color: var(--main-text-color);
-  transition: border-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+.strip-logo {
+  height: 3rem;
+  width: auto;
+  max-width: 10rem;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.45;
+  transition: filter 0.25s ease, opacity 0.25s ease;
 }
 
-.chip:hover {
-  border-color: var(--secondary-accent);
-  color: var(--secondary-accent);
-  transform: translateY(-2px);
+.strip-logo:hover {
+  filter: grayscale(0);
+  opacity: 1;
 }
 
 /* ---------- Experiência (timeline) ---------- */
@@ -1085,116 +974,85 @@ h5 {
   text-transform: uppercase;
   letter-spacing: 0.2em;
   color: var(--gray-text-color);
-  margin-bottom: 1rem;
+  margin-bottom: 2.4rem;
   padding-left: 0.4rem;
 }
 
-.exp-acc {
-  list-style: none;
-}
-
-.exp-acc-item {
-  border-top: 1px solid var(--gray-color);
-}
-
-.exp-acc-item:last-child {
-  border-bottom: 1px solid var(--gray-color);
-}
-
-.exp-acc-trigger {
-  width: 100%;
+/* --- Abas de ano --- */
+.exp-tabs {
   display: flex;
-  align-items: center;
-  gap: 2.4rem;
-  padding: 2.4rem 0.4rem;
+  gap: 0;
+  border-bottom: 1px solid var(--gray-color);
+  margin-bottom: 3.2rem;
+}
+
+.exp-tab {
   background: none;
   border: none;
-  cursor: pointer;
-  text-align: left;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -1px;
+  padding: 0.8rem 2.6rem 1rem;
   font-family: inherit;
-  transition: padding-left 0.25s ease;
-}
-
-.exp-acc-trigger:hover {
-  padding-left: 1.2rem;
-}
-
-.exp-acc-year {
-  flex-shrink: 0;
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 700;
-  color: var(--secondary-accent);
-  letter-spacing: -0.02em;
-  width: 7rem;
-}
-
-.exp-acc-head {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-
-.exp-acc-company {
-  font-size: 1.9rem;
-  font-weight: 600;
-  color: var(--main-text-color);
-  line-height: 1.3;
-}
-
-.exp-acc-role {
-  font-size: 1.4rem;
+  letter-spacing: 0.04em;
   color: var(--gray-text-color);
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
-.exp-acc-icon {
-  flex-shrink: 0;
-  position: relative;
-  width: 1.6rem;
-  height: 1.6rem;
+.exp-tab:hover {
+  color: var(--main-text-color);
 }
 
-.exp-acc-icon::before,
-.exp-acc-icon::after {
-  content: "";
-  position: absolute;
-  background: var(--secondary-accent);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+.exp-tab[aria-selected="true"] {
+  color: var(--main-text-color);
+  border-bottom-color: var(--secondary-accent);
 }
 
-.exp-acc-icon::before {
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  transform: translateY(-50%);
+.exp-tab:focus-visible {
+  outline: 2px solid var(--secondary-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
-.exp-acc-icon::after {
-  top: 0;
-  left: 50%;
-  width: 2px;
-  height: 100%;
-  transform: translateX(-50%);
+/* --- Painéis de conteúdo --- */
+.exp-tab-panel {
+  animation: tabFadeIn 0.2s ease;
 }
 
-.exp-acc-trigger[aria-expanded="true"] .exp-acc-icon::after {
-  transform: translateX(-50%) scaleY(0);
-  opacity: 0;
+@keyframes tabFadeIn {
+  from { opacity: 0; transform: translateY(0.6rem); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-.exp-acc-panel {
-  overflow: hidden;
-  max-height: 0;
-  transition: max-height 0.35s ease;
+.exp-tp-company {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--main-text-color);
+  margin-bottom: 0.4rem;
 }
 
-.exp-acc-desc {
-  font-size: 1.5rem;
+.exp-tp-role {
+  font-size: 1.4rem;
+  color: var(--secondary-accent);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.4rem;
+}
+
+.exp-tp-desc {
+  font-size: 1.55rem;
   line-height: 1.8;
   color: var(--gray-text-color);
-  padding: 0 7rem 2.6rem 9.4rem;
-  max-width: 70rem;
+  max-width: 68rem;
+}
+
+.exp-tp-entry--sep {
+  margin-top: 2.8rem;
+  padding-top: 2.8rem;
+  border-top: 1px solid var(--gray-color);
 }
 
 .experience-cta {
@@ -1660,17 +1518,12 @@ h5 {
   .project-card,
   .service-card,
   .exp-now,
-  .exp-acc-trigger,
-  .exp-acc-icon::before,
-  .exp-acc-icon::after,
-  .brand-tile,
-  .brand-logo,
-  .brand-label {
+  .exp-tab,
+  .strip-logo {
     transition: none;
   }
-  /* Mantém o accordion funcional, só remove a animação de altura */
-  .exp-acc-panel {
-    transition: none;
+  .exp-tab-panel {
+    animation: none;
   }
   .exp-now-dot {
     animation: none;
