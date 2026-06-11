@@ -29,22 +29,19 @@ document.querySelectorAll(".nav-link").forEach((link) => {
   });
 });
 
-// Sticky header & goToTop button & floating CTA
+// Sticky header & goToTop button
 window.addEventListener("scroll", function () {
   const header = document.querySelector("#header");
   const hero = document.querySelector("#home");
   const goToTop = document.querySelector("#goToTop");
-  const floatingCta = document.querySelector("#floating-cta");
   let triggerHeight = hero.offsetHeight - 170;
 
   if (window.scrollY > triggerHeight) {
     header.classList.add("header-sticky");
     goToTop.classList.add("reveal");
-    if (floatingCta) floatingCta.classList.add("show");
   } else {
     header.classList.remove("header-sticky");
     goToTop.classList.remove("reveal");
-    if (floatingCta) floatingCta.classList.remove("show");
   }
 });
 
