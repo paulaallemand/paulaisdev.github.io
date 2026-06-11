@@ -136,7 +136,7 @@ AOS.init({ once: true });
       const typing = typingEl(fb, i);
       chat.appendChild(typing);
       scrollDown();
-      await wait(650 + Math.random() * 500);
+      await wait(1000); // indicador "digitando…" ~1s
 
       typing.remove();
       const msg = messageEl(fb, i);
@@ -144,7 +144,7 @@ AOS.init({ once: true });
       scrollDown();
       // força reflow antes de animar
       requestAnimationFrame(() => msg.classList.add("show"));
-      await wait(900 + Math.random() * 500);
+      await wait(400); // pausa curta antes da próxima mensagem
     }
 
     running = false;

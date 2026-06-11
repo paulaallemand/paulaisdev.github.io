@@ -38,14 +38,15 @@ const TRANSLATIONS = {
     "expertise.fin.desc":
       "Experiência no setor financeiro (BV, Itaú) construindo plataformas e fluxos de dados orientados a produto e impacto.",
 
-    "stats.students": "pessoas formadas",
-    "stats.classes": "turmas &amp; mentorias",
-    "stats.talks": "palestras &amp; eventos",
-    "stats.companies": "empresas &amp; ONGs",
+    "chips.label": "Comunidades &amp; programas:",
 
-    "feedbacks.title": "O que dizem minhas alunas",
+    "feedbacks.title": "O que dizem quem passou pelas minhas aulas",
     "feedbacks.subtitle":
       "Mensagens reais que recebi no chat ao final das aulas. 💬",
+    "feedbacks.story.title": "Educação é o que me move.",
+    "feedbacks.story.body":
+      "Antes da tecnologia, fui doula e estudei obstetrícia. Aprendi cedo que escuta ativa e comunicação clara mudam a experiência de alguém — e foi exatamente isso que carreguei comigo quando migrei para o desenvolvimento de software.<br /><br />Ensinar, pra mim, é abrir portas. Cada turma no {reprograma}, no Minas Programam e na Tera é uma chance de mostrar que tecnologia é para todo mundo. As mensagens ao lado são reais — foi assim que me despedi de tantas aulas.",
+    "feedbacks.story.sign": "— Paula, professora e mentora há mais de 5 anos",
     "feedbacks.window": "Aula ao vivo · {reprograma}",
     "feedbacks.replay": "Reproduzir o chat novamente",
 
@@ -65,7 +66,7 @@ const TRANSLATIONS = {
 
     "brands.title": "Empresas e organizações com quem trabalhei",
 
-    "footer.cta": "Vamos construir algo juntas?",
+    "footer.cta": "Bora construir algo incrível?",
     "footer.contact": "Fale comigo",
     "footer.rights": "Feito com café e código por Paula Allemand.",
   },
@@ -104,14 +105,15 @@ const TRANSLATIONS = {
     "expertise.fin.desc":
       "Experience in the financial sector (BV, Itaú) building platforms and data flows driven by product and impact.",
 
-    "stats.students": "people trained",
-    "stats.classes": "cohorts &amp; mentorships",
-    "stats.talks": "talks &amp; events",
-    "stats.companies": "companies &amp; NGOs",
+    "chips.label": "Communities &amp; programs:",
 
-    "feedbacks.title": "What my students say",
+    "feedbacks.title": "What the people I've taught say",
     "feedbacks.subtitle":
       "Real messages I received in the chat at the end of my classes. 💬",
+    "feedbacks.story.title": "Education is what moves me.",
+    "feedbacks.story.body":
+      "Before tech, I was a doula and studied obstetrics. I learned early that active listening and clear communication change someone's experience — and that's exactly what I carried with me when I moved into software development.<br /><br />Teaching, to me, is about opening doors. Every cohort at {reprograma}, Minas Programam, and Tera is a chance to show that technology is for everyone. The messages beside this are real — that's how I said goodbye to so many classes.",
+    "feedbacks.story.sign": "— Paula, teacher and mentor for 5+ years",
     "feedbacks.window": "Live class · {reprograma}",
     "feedbacks.replay": "Replay the chat",
 

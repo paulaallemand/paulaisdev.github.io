@@ -222,23 +222,16 @@
           </div>
         </div>
 
-        <div class="stats-row" data-aos="fade-up">
-          <div class="stat">
-            <span class="stat-number">300+</span>
-            <span class="stat-label" data-i18n="stats.students">pessoas formadas</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number">100+</span>
-            <span class="stat-label" data-i18n="stats.classes">turmas &amp; mentorias</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number">20+</span>
-            <span class="stat-label" data-i18n="stats.talks">palestras &amp; eventos</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number">14</span>
-            <span class="stat-label" data-i18n="stats.companies">empresas &amp; ONGs</span>
-          </div>
+        <div class="chips-row" data-aos="fade-up">
+          <span class="chips-label" data-i18n="chips.label">Comunidades &amp; programas:</span>
+          <ul class="chips">
+            <li class="chip">{reprograma}</li>
+            <li class="chip">Minas Programam</li>
+            <li class="chip">Tera</li>
+            <li class="chip">Estação Hack · Facebook</li>
+            <li class="chip">PrograMaria</li>
+            <li class="chip">UNESCO</li>
+          </ul>
         </div>
       </div>
     </section>
@@ -246,32 +239,53 @@
     <section id="feedbacks" class="feedbacks">
       <div class="container">
         <div class="feedbacks-title">
-          <h2 class="title" data-i18n="feedbacks.title">O que dizem minhas alunas</h2>
+          <h2 class="title" data-i18n="feedbacks.title">O que dizem quem passou pelas minhas aulas</h2>
           <p class="section-subtitle" data-i18n="feedbacks.subtitle">
             Mensagens reais que recebi no chat ao final das aulas. 💬
           </p>
         </div>
 
-        <div class="zoom-window" data-aos="fade-up">
-          <div class="zoom-bar">
-            <span class="zoom-dots">
-              <span class="zoom-dot red"></span>
-              <span class="zoom-dot yellow"></span>
-              <span class="zoom-dot green"></span>
-            </span>
-            <span class="zoom-bar-title" data-i18n="feedbacks.window">
-              Aula ao vivo · {reprograma}
-            </span>
-            <span class="zoom-live"><span class="zoom-live-dot"></span>LIVE</span>
+        <div class="feedbacks-grid">
+          <div class="feedbacks-story" data-aos="fade-right">
+            <h3 class="feedbacks-story-title" data-i18n="feedbacks.story.title">
+              Educação é o que me move.
+            </h3>
+            <p class="feedbacks-story-body" data-i18n-html="feedbacks.story.body">
+              Antes da tecnologia, fui doula e estudei obstetrícia. Aprendi cedo
+              que escuta ativa e comunicação clara mudam a experiência de alguém —
+              e foi exatamente isso que carreguei comigo quando migrei para o
+              desenvolvimento de software.<br /><br />
+              Ensinar, pra mim, é abrir portas. Cada turma no {reprograma}, no
+              Minas Programam e na Tera é uma chance de mostrar que tecnologia é
+              para todo mundo. As mensagens ao lado são reais — foi assim que me
+              despedi de tantas aulas.
+            </p>
+            <p class="feedbacks-story-sign" data-i18n="feedbacks.story.sign">
+              — Paula, professora e mentora há mais de 5 anos
+            </p>
           </div>
-          <div class="zoom-chat-head">
-            <img src="img/icons/open.svg" alt="" class="zoom-chat-ico" />
-            <span>Chat</span>
+
+          <div class="zoom-window" data-aos="fade-left">
+            <div class="zoom-bar">
+              <span class="zoom-dots">
+                <span class="zoom-dot red"></span>
+                <span class="zoom-dot yellow"></span>
+                <span class="zoom-dot green"></span>
+              </span>
+              <span class="zoom-bar-title" data-i18n="feedbacks.window">
+                Aula ao vivo · {reprograma}
+              </span>
+              <span class="zoom-live"><span class="zoom-live-dot"></span>LIVE</span>
+            </div>
+            <div class="zoom-chat-head">
+              <img src="img/icons/open.svg" alt="" class="zoom-chat-ico" />
+              <span>Chat</span>
+            </div>
+            <div id="zoom-chat" class="zoom-chat" role="log" aria-label="Mensagens de feedback dos estudantes"></div>
+            <button id="chat-replay" class="chat-replay" type="button" hidden data-i18n="feedbacks.replay">
+              Reproduzir o chat novamente
+            </button>
           </div>
-          <div id="zoom-chat" class="zoom-chat" aria-live="polite"></div>
-          <button id="chat-replay" class="chat-replay" type="button" hidden data-i18n="feedbacks.replay">
-            Reproduzir o chat novamente
-          </button>
         </div>
       </div>
     </section>
@@ -400,7 +414,7 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-row">
-          <h2 class="footer-cta" data-i18n="footer.cta">Vamos construir algo juntas?</h2>
+          <h2 class="footer-cta" data-i18n="footer.cta">Bora construir algo incrível?</h2>
           <a
             href="https://www.linkedin.com/in/paulaallemand/"
             target="_blank"

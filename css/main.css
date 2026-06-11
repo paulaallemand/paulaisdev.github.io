@@ -795,38 +795,47 @@ h5 {
     brightness(70%) contrast(95%);
 }
 
-/* ---------- Stats ---------- */
-.stats-row {
+/* ---------- Chips (prova social qualitativa) ---------- */
+.chips-row {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
   margin-top: 7rem;
-  padding: 4rem 0;
+  padding: 4rem 0 0;
   border-top: 1px solid var(--gray-color);
-  border-bottom: 1px solid var(--gray-color);
 }
 
-.stat {
-  flex: 1 1 18rem;
-  text-align: center;
-}
-
-.stat-number {
-  display: block;
-  font-size: 4.4rem;
-  font-weight: 700;
-  line-height: 1;
-  color: var(--secondary-accent);
-}
-
-.stat-label {
-  display: block;
-  margin-top: 0.8rem;
+.chips-label {
   font-size: 1.3rem;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.12rem;
   color: var(--gray-text-color);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.chip {
+  padding: 0.7rem 1.6rem;
+  border: 1px solid var(--gray-color-2);
+  border-radius: 5rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--main-text-color);
+  transition: border-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.chip:hover {
+  border-color: var(--secondary-accent);
+  color: var(--secondary-accent);
+  transform: translateY(-2px);
 }
 
 /* ---------- Feedbacks: mock de chat estilo Zoom ---------- */
@@ -839,9 +848,41 @@ h5 {
   margin-bottom: 5rem;
 }
 
+.feedbacks-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  align-items: stretch;
+}
+
+.feedbacks-story {
+  flex: 1 1 32rem;
+  align-self: center;
+}
+
+.feedbacks-story-title {
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.feedbacks-story-body {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: var(--gray-text-color);
+}
+
+.feedbacks-story-sign {
+  margin-top: 2.4rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--secondary-accent);
+}
+
 .zoom-window {
-  max-width: 74rem;
-  margin: 0 auto;
+  flex: 1 1 42rem;
+  max-width: 56rem;
   background: #1c1c1f;
   border-radius: 1.4rem;
   overflow: hidden;
