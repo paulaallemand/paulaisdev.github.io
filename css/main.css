@@ -600,6 +600,20 @@ h5 {
 
 /* brands section removida — logos na logos-strip em #expertise */
 
+/* Ghost button creme — para usar sobre fundo marsala */
+.btn-ghost-white {
+  background: transparent;
+  border: 2px solid rgba(247, 251, 253, 0.75);
+  color: var(--primary-bg-color);
+  font-weight: 700;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+.btn-ghost-white:hover,
+.btn-ghost-white:focus {
+  background: rgba(247, 251, 253, 0.15);
+  border-color: var(--primary-bg-color);
+}
+
 /* Footer */
 .footer {
   background-color: var(--primary-accent);
@@ -826,6 +840,22 @@ h5 {
   opacity: 1;
 }
 
+/* wrapper para logos com fundo escuro (ex: Estação Hack — texto branco) */
+.strip-logo-dark-bg {
+  display: inline-flex;
+  align-items: center;
+  background: #1c1c1e;
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.8rem;
+}
+.strip-logo-dark-bg .strip-logo {
+  filter: grayscale(0);
+  opacity: 0.75;
+}
+.strip-logo-dark-bg:hover .strip-logo {
+  opacity: 1;
+}
+
 /* ---------- Experiência (timeline) ---------- */
 .experience {
   padding: 9rem 0;
@@ -861,14 +891,14 @@ h5 {
 /* Numeral de ano gigante como marca-d'água assimétrica */
 .exp-now-year {
   position: absolute;
-  top: -2.5rem;
-  right: -1rem;
-  font-size: 22rem;
+  top: -1rem;
+  right: 2rem;
+  font-size: 14rem;
   font-weight: 700;
   line-height: 1;
   letter-spacing: -0.04em;
-  color: var(--secondary-accent);
-  opacity: 0.06;
+  color: var(--gray-text-color);
+  opacity: 0.07;
   pointer-events: none;
   user-select: none;
 }
@@ -980,34 +1010,31 @@ h5 {
 
 /* --- Abas de ano --- */
 .exp-tabs {
-  display: flex;
-  gap: 0;
-  border-bottom: 1px solid var(--gray-color);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   margin-bottom: 3.2rem;
 }
 
 .exp-tab {
   background: none;
   border: none;
-  border-bottom: 3px solid transparent;
-  margin-bottom: -1px;
-  padding: 0.8rem 2.6rem 1rem;
+  padding: 1.4rem 0;
   font-family: inherit;
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   color: var(--gray-text-color);
   cursor: pointer;
-  transition: color 0.2s ease, border-color 0.2s ease;
+  text-align: center;
+  transition: color 0.2s ease;
 }
 
 .exp-tab:hover {
-  color: var(--main-text-color);
+  color: var(--secondary-accent);
 }
 
 .exp-tab[aria-selected="true"] {
-  color: var(--main-text-color);
-  border-bottom-color: var(--secondary-accent);
+  color: var(--secondary-accent);
 }
 
 .exp-tab:focus-visible {

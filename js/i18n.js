@@ -40,7 +40,7 @@ const TRANSLATIONS = {
     "expertise.fin.desc":
       "Finanças, seguros e dados: experiência no BTG Pactual, Banco BV e Itaú, com formação em Inteligência Artificial Aplicada, Data & IT.",
 
-    "chips.label": "Comunidades &amp; programas:",
+    "chips.label": "Onde já atuei:",
 
     "experience.title": "Experiência",
     "experience.subtitle":
@@ -167,7 +167,7 @@ const TRANSLATIONS = {
     "expertise.fin.desc":
       "Finance, insurance, and data: experience at BTG Pactual, Banco BV, and Itaú, with a degree in Applied Artificial Intelligence, Data & IT.",
 
-    "chips.label": "Communities &amp; programs:",
+    "chips.label": "Where I've worked:",
 
     "experience.title": "Experience",
     "experience.subtitle":
