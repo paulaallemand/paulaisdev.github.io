@@ -228,15 +228,6 @@
     max-width: 100%;
   }
 
-  .brand-logos-row {
-    gap: 1.5rem;
-  }
-
-  .brand-logo {
-    max-width: 120px;
-    max-height: 80px;
-  }
-
   .footer-copyright p {
     font-size: 1.2rem;
   }
@@ -245,15 +236,6 @@
 @media (max-width: 406px) {
   html {
     font-size: 50%;
-  }
-
-  .brand-logos-row {
-    flex-direction: column;
-  }
-
-  .brand-logo {
-    max-width: 100px;
-    max-height: 70px;
   }
 
   .footer-copyright p {
@@ -329,5 +311,101 @@
 
   .stat {
     flex: 1 1 100%;
+  }
+}
+
+/* ===== Experiência editorial + mosaico de marcas ===== */
+@media (max-width: 977px) {
+  .brand-mosaic {
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 12rem;
+  }
+
+  .exp-now-year {
+    font-size: 16rem;
+  }
+
+  .exp-now-role {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .exp-now {
+    padding: 3.5rem 2.4rem 3rem;
+  }
+
+  .exp-now-year {
+    font-size: 11rem;
+    top: -1rem;
+  }
+
+  .exp-now-role {
+    font-size: 2.2rem;
+  }
+
+  .exp-now-desc {
+    font-size: 1.5rem;
+  }
+
+  /* Accordion: ano acima do título, mais espaço para o toque */
+  .exp-acc-trigger {
+    gap: 1.6rem;
+    padding: 2rem 0.2rem;
+  }
+
+  .exp-acc-year {
+    width: 5rem;
+    font-size: 2rem;
+  }
+
+  .exp-acc-company {
+    font-size: 1.7rem;
+  }
+
+  .exp-acc-desc {
+    padding: 0 1rem 2.2rem 6.6rem;
+  }
+
+  /* Mosaico: 2 colunas e rótulos sempre visíveis (sem depender de hover) */
+  .brand-mosaic {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 13rem;
+  }
+
+  .brand-tile-lg,
+  .brand-tile-md {
+    grid-column: span 2;
+  }
+
+  .brand-tile-lg {
+    grid-row: span 1;
+  }
+
+  .brand-label {
+    opacity: 1;
+    transform: none;
+  }
+
+  .brand-logo {
+    filter: grayscale(0);
+    opacity: 0.85;
+  }
+}
+
+@media (max-width: 406px) {
+  .exp-now-stack li {
+    font-size: 1.2rem;
+    padding: 0.4rem 1.1rem;
+  }
+
+  .brand-mosaic {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 12rem;
+  }
+
+  .brand-tile-lg,
+  .brand-tile-md {
+    grid-column: span 1;
   }
 }

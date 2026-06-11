@@ -602,70 +602,113 @@ h5 {
   margin-bottom: 5rem;
 }
 
-.brand-logos-section {
-  margin: 8rem 0;
-}
-
-.brand-logos-section .title {
-  margin-bottom: 10rem;
-}
-
-.brand-logos-grid {
+/* --- Mosaico interativo de marcas --- */
+.brand-mosaic {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 2.4rem 1.6rem;
-  align-items: center;
-  justify-items: center;
-  max-width: 100%;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 14rem;
+  gap: 1.2rem;
+  max-width: 110rem;
+  margin: 0 auto;
 }
 
-.brand-logo-item {
+.brand-tile {
   position: relative;
-  margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.8rem;
-  transition: transform 0.3s ease, filter 0.3s ease;
+  gap: 1rem;
+  padding: 2rem;
+  background: var(--white-color);
+  border: 1px solid var(--gray-color);
+  border-radius: 1.2rem;
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease,
+    border-color 0.35s ease;
 }
 
-.brand-logo-item:hover {
-  transform: scale(1.08);
-  filter: drop-shadow(0 0.8rem 1.6rem rgba(111, 29, 27, 0.12));
+/* faixa de tint marsala que sobe no hover */
+.brand-tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(111, 29, 27, 0.06),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
 }
 
-.brand-logo-lg {
+.brand-tile-lg {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.brand-tile-md {
   grid-column: span 2;
 }
 
-.brand-logo-md {
-  grid-column: span 1.5;
-}
-
-.brand-logo-sm {
+.brand-tile-sm {
   grid-column: span 1;
 }
 
 .brand-logo {
-  max-width: 100%;
-  max-height: 80px;
+  max-width: 78%;
+  max-height: 6rem;
   width: auto;
   height: auto;
   object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.55;
+  transition: filter 0.35s ease, opacity 0.35s ease, transform 0.35s ease;
+}
+
+.brand-tile-lg .brand-logo {
+  max-height: 9rem;
+}
+
+.brand-tile:hover,
+.brand-tile:focus-visible {
+  transform: translateY(-0.5rem);
+  border-color: rgba(111, 29, 27, 0.25);
+  box-shadow: 0 1.6rem 3.6rem rgba(111, 29, 27, 0.12);
+  outline: none;
+}
+
+.brand-tile:hover .brand-logo,
+.brand-tile:focus-visible .brand-logo {
+  filter: grayscale(0);
+  opacity: 1;
+  transform: scale(1.04);
+}
+
+.brand-tile:hover::after,
+.brand-tile:focus-visible::after {
+  opacity: 1;
 }
 
 .brand-label {
+  position: relative;
+  z-index: 1;
   font-size: 1.2rem;
   font-weight: 500;
   color: var(--secondary-accent);
   text-align: center;
+  line-height: 1.4;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transform: translateY(0.6rem);
+  transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
-.brand-logo-item:hover .brand-label {
+.brand-tile:hover .brand-label,
+.brand-tile:focus-visible .brand-label {
   opacity: 1;
+  transform: translateY(0);
 }
 
 /* Footer */
@@ -904,84 +947,254 @@ h5 {
   margin-bottom: 5rem;
 }
 
-.timeline {
-  max-width: 82rem;
-  margin: 0 auto;
-  list-style: none;
+/* --- "Agora": trabalho atual em destaque editorial --- */
+.exp-now {
   position: relative;
-  padding-left: 3rem;
+  max-width: 90rem;
+  margin: 0 auto 6rem;
+  padding: 4.5rem 4.5rem 4rem;
+  background: var(--white-color);
+  border-radius: 1.6rem;
+  box-shadow: 0 2.4rem 6rem rgba(12, 22, 24, 0.08);
+  overflow: hidden;
 }
 
-.timeline::before {
+.exp-now::before {
   content: "";
   position: absolute;
-  left: 0.7rem;
-  top: 0.6rem;
-  bottom: 0.6rem;
-  width: 2px;
-  background: var(--gray-color);
-}
-
-.tl-item {
-  position: relative;
-  padding: 0 0 3.2rem 2.6rem;
-}
-
-.tl-item:last-child {
-  padding-bottom: 0;
-}
-
-.tl-item::before {
-  content: "";
-  position: absolute;
-  left: -2.36rem;
-  top: 0.4rem;
-  width: 1.3rem;
-  height: 1.3rem;
-  border-radius: 50%;
+  top: 0;
+  left: 0;
+  width: 0.6rem;
+  height: 100%;
   background: var(--secondary-accent);
-  border: 3px solid var(--primary-bg-color);
-  box-shadow: 0 0 0 1px var(--secondary-accent);
 }
 
-.tl-item.tl-root::before {
-  background: var(--gray-text-color);
-  box-shadow: 0 0 0 1px var(--gray-text-color);
+/* Numeral de ano gigante como marca-d'água assimétrica */
+.exp-now-year {
+  position: absolute;
+  top: -2.5rem;
+  right: -1rem;
+  font-size: 22rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--secondary-accent);
+  opacity: 0.06;
+  pointer-events: none;
+  user-select: none;
 }
 
-.tl-period {
-  display: inline-block;
-  font-size: 1.25rem;
+.exp-now-body {
+  position: relative;
+  z-index: 1;
+}
+
+.exp-now-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1.2rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.2em;
   color: var(--secondary-accent);
-  margin-bottom: 0.6rem;
+  margin-bottom: 1.8rem;
 }
 
-.tl-card {
-  transition: transform 0.25s ease;
+.exp-now-dot {
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  background: var(--secondary-accent);
+  box-shadow: 0 0 0 0 rgba(111, 29, 27, 0.5);
+  animation: pulse-dot 2s infinite;
 }
 
-.tl-item:hover .tl-card {
-  transform: translateX(4px);
+@keyframes pulse-dot {
+  0% {
+    box-shadow: 0 0 0 0 rgba(111, 29, 27, 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 0.9rem rgba(111, 29, 27, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(111, 29, 27, 0);
+  }
 }
 
-.tl-role {
-  font-size: 1.9rem;
+.exp-now-role {
+  font-size: 3.2rem;
   font-weight: 600;
-  line-height: 1.3;
-  margin-bottom: 0.6rem;
+  line-height: 1.2;
+  margin-bottom: 1.6rem;
 }
 
-.tl-company {
+.exp-now-company {
   color: var(--main-text-color);
 }
 
-.tl-desc {
-  font-size: 1.5rem;
-  line-height: 1.7;
+.exp-now-sep {
+  color: var(--secondary-accent);
+  margin: 0 0.6rem;
+}
+
+.exp-now-role span:last-child {
   color: var(--gray-text-color);
+  font-weight: 500;
+}
+
+.exp-now-desc {
+  font-size: 1.6rem;
+  line-height: 1.8;
+  color: var(--gray-text-color);
+  max-width: 62rem;
+  margin-bottom: 2.4rem;
+}
+
+.exp-now-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  list-style: none;
+}
+
+.exp-now-stack li {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--main-text-color);
+  padding: 0.5rem 1.4rem;
+  border: 1px solid var(--gray-color);
+  border-radius: 5rem;
+  transition: border-color 0.25s ease, color 0.25s ease;
+}
+
+.exp-now-stack li:hover {
+  border-color: var(--secondary-accent);
+  color: var(--secondary-accent);
+}
+
+/* --- "Antes disso": trajetória anterior em accordion --- */
+.exp-past {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.exp-past-label {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--gray-text-color);
+  margin-bottom: 1rem;
+  padding-left: 0.4rem;
+}
+
+.exp-acc {
+  list-style: none;
+}
+
+.exp-acc-item {
+  border-top: 1px solid var(--gray-color);
+}
+
+.exp-acc-item:last-child {
+  border-bottom: 1px solid var(--gray-color);
+}
+
+.exp-acc-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  padding: 2.4rem 0.4rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  transition: padding-left 0.25s ease;
+}
+
+.exp-acc-trigger:hover {
+  padding-left: 1.2rem;
+}
+
+.exp-acc-year {
+  flex-shrink: 0;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: var(--secondary-accent);
+  letter-spacing: -0.02em;
+  width: 7rem;
+}
+
+.exp-acc-head {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.exp-acc-company {
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: var(--main-text-color);
+  line-height: 1.3;
+}
+
+.exp-acc-role {
+  font-size: 1.4rem;
+  color: var(--gray-text-color);
+}
+
+.exp-acc-icon {
+  flex-shrink: 0;
+  position: relative;
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.exp-acc-icon::before,
+.exp-acc-icon::after {
+  content: "";
+  position: absolute;
+  background: var(--secondary-accent);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.exp-acc-icon::before {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transform: translateY(-50%);
+}
+
+.exp-acc-icon::after {
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+.exp-acc-trigger[aria-expanded="true"] .exp-acc-icon::after {
+  transform: translateX(-50%) scaleY(0);
+  opacity: 0;
+}
+
+.exp-acc-panel {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s ease;
+}
+
+.exp-acc-desc {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  color: var(--gray-text-color);
+  padding: 0 7rem 2.6rem 9.4rem;
+  max-width: 70rem;
 }
 
 .experience-cta {
@@ -1203,7 +1416,9 @@ h5 {
   display: flex;
   flex-direction: column;
   gap: 1.8rem;
-  scroll-behavior: smooth;
+  /* auto (não smooth): mantém o auto-scroll instantâneo e a detecção de
+     "rolou para cima" confiável (smooth atrasa a leitura de scrollTop). */
+  scroll-behavior: auto;
 }
 
 .zoom-chat::-webkit-scrollbar { width: 8px; }
@@ -1296,27 +1511,6 @@ h5 {
 @keyframes chat-typing {
   0%, 60%, 100% { transform: translateY(0); opacity: 0.4; }
   30% { transform: translateY(-5px); opacity: 1; }
-}
-
-.chat-replay {
-  display: block;
-  margin: 2rem auto 0;
-  background: transparent;
-  border: 1px solid var(--secondary-accent);
-  color: var(--secondary-accent);
-  font-family: inherit;
-  font-size: 1.3rem;
-  font-weight: 500;
-  letter-spacing: 0.05rem;
-  padding: 1rem 2.4rem;
-  border-radius: 0.4rem;
-  cursor: pointer;
-  transition: all 0.25s ease;
-}
-
-.chat-replay:hover {
-  background: var(--secondary-accent);
-  color: #fff;
 }
 
 /* ---------- Carrossel de palestras ---------- */
@@ -1464,7 +1658,21 @@ h5 {
   }
   .carousel-image,
   .project-card,
-  .service-card {
+  .service-card,
+  .exp-now,
+  .exp-acc-trigger,
+  .exp-acc-icon::before,
+  .exp-acc-icon::after,
+  .brand-tile,
+  .brand-logo,
+  .brand-label {
     transition: none;
+  }
+  /* Mantém o accordion funcional, só remove a animação de altura */
+  .exp-acc-panel {
+    transition: none;
+  }
+  .exp-now-dot {
+    animation: none;
   }
 }

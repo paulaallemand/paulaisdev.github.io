@@ -46,24 +46,26 @@ const TRANSLATIONS = {
     "experience.subtitle":
       "Da pesquisa em neurociência aos sistemas críticos do mercado financeiro.",
     "experience.cta": "Ver trajetória completa no LinkedIn",
+    "experience.past": "Antes disso",
+    "exp.now.label": "Agora",
     "exp.btg.role": "Software Analyst",
     "exp.btg.desc":
-      "Sistemas críticos de Seguros (regulados pela SUSEP): emissão de apólices, resseguro e provisões. Java, Quarkus, Kafka e AWS.",
+      "Atuo na área de Seguros — soluções para seguradoras, resseguradoras e times de vendas — participando de todo o ciclo de sistemas críticos no setor regulado pela SUSEP. Construo aplicações que vão da emissão de apólices a resseguro e provisões técnicas, em arquitetura de microsserviços de alto volume e baixa latência, com modelagem de dados para cálculos atuariais. Faço a ponte entre requisitos regulatórios, produto e engenharia, garantindo conformidade, segurança e escalabilidade.",
     "exp.bv.role": "Engenheira de Software",
     "exp.bv.desc":
-      "Prevenção a fraudes (via Act Digital): segurança de fluxos e dados de todas as áreas do banco. Java, Spring Boot, GCP e AWS.",
+      "Prevenção a Fraudes (via Act Digital): segurança dos fluxos e dados de todas as áreas do banco, com Java, Spring Boot, GCP e AWS.",
     "exp.itau.role": "Engenheira de Software Pleno",
     "exp.itau.desc":
-      "Construção de APIs do zero e arquitetura BFF (Backend for Frontend), com integrações entre múltiplas APIs e serviços de segurança.",
+      "Back-end: construção de APIs do zero (Java, Spring Boot, Maven, SQL) e arquitetura BFF conectando múltiplas APIs e serviços de segurança. Manutenção de serviços em Python, Kotlin e iOS.",
     "exp.tera.role": "Expert &amp; Fullstack Developer",
     "exp.tera.desc":
-      "Ensino de fullstack e back-end (arquitetura web, bancos de dados, Node.js, APIs) e desenvolvimento de plataformas com foco em acessibilidade.",
+      "Ensino de fullstack e back-end (lógica, algoritmos, arquitetura web, SQL/NoSQL, Node.js, web APIs e segurança) e desenvolvimento de plataformas em Vue, React, Node e Firebase — sempre com foco em acessibilidade.",
     "exp.edu.role": "Professora",
     "exp.edu.desc":
-      "Formando novas pessoas em programação — lógica, Git, HTML/CSS, JavaScript, React e Node.js — em programas que abrem a tecnologia para mais gente.",
+      "Formação de novas pessoas em programação — Git/GitHub, HTML/CSS, JavaScript, React, Node.js e APIs/CRUD — em programas que ampliam o acesso à tecnologia.",
     "exp.usp.role": "Iniciação Científica",
     "exp.usp.desc":
-      "Onde tudo começou: pesquisa em neurociência sobre o sono e o desenvolvimento do bebê. Doula e ex-aluna de obstetrícia.",
+      "Onde tudo começou: pesquisa em Cronobiologia e Neurociência sobre a relação entre o sono e o desenvolvimento neurocognitivo do bebê (revisão sistemática, método PRISMA). Doula e ex-aluna de obstetrícia.",
 
     "featured.title": "Destaques",
     "featured.subtitle":
@@ -84,7 +86,6 @@ const TRANSLATIONS = {
       "Antes da tecnologia, fui doula e estudei obstetrícia. Aprendi cedo que escuta ativa e comunicação clara mudam a experiência de alguém — e foi exatamente isso que carreguei comigo quando migrei para o desenvolvimento de software.<br /><br />Ensinar, pra mim, é abrir portas. Cada turma no {reprograma}, no Minas Programam e na Tera é uma chance de mostrar que tecnologia é para todo mundo. As mensagens ao lado são reais — foi assim que me despedi de tantas aulas.",
     "feedbacks.story.sign": "— Paula, professora e mentora há mais de 5 anos",
     "feedbacks.window": "Aula ao vivo · {reprograma}",
-    "feedbacks.replay": "Reproduzir o chat novamente",
 
     "talks.title": "Palestras &amp; vivências",
     "talks.subtitle": "Um pouco da minha trajetória em eventos e comunidades.",
@@ -108,11 +109,20 @@ const TRANSLATIONS = {
 
     "brands.title": "Marcas que transformaram minha carreira",
     "brands.subtitle": "Lugares onde aprendi, ensinei e cresci.",
-    "brands.unesco": "Referência global em educação",
-    "brands.google": "Inovação com propósito",
+    "brands.unesco": "Galeria global de professores",
+    "brands.google": "Impact Challenge for Women",
     "brands.reprograma": "Mulheres em tecnologia",
-    "brands.itau": "Fintech nacional",
-    "brands.tera": "Educação de qualidade",
+    "brands.itau": "APIs e BFF no banco",
+    "brands.tera": "Expert & desenvolvimento",
+    "brands.estacaohack": "Talentos Digitais Diversos",
+    "brands.usp": "Iniciação científica",
+    "brands.jsconf": "Comunidade JavaScript",
+    "brands.programaria": "Diversidade na tech",
+    "brands.minas": "Git & GitHub para todas",
+    "brands.bv": "Prevenção a fraudes",
+    "brands.changeorg": "Tecnologia para impacto",
+    "brands.habits": "Produto & dados",
+    "brands.mckinsey": "Mentoria & estratégia",
 
     "footer.cta": "Bora construir algo incrível?",
     "footer.contact": "Fale comigo",
@@ -163,24 +173,26 @@ const TRANSLATIONS = {
     "experience.subtitle":
       "From neuroscience research to mission-critical financial systems.",
     "experience.cta": "See full career on LinkedIn",
+    "experience.past": "Before that",
+    "exp.now.label": "Now",
     "exp.btg.role": "Software Analyst",
     "exp.btg.desc":
-      "Mission-critical insurance systems (SUSEP-regulated): policy issuance, reinsurance, and reserves. Java, Quarkus, Kafka, and AWS.",
+      "I work in Insurance — solutions for insurers, reinsurers, and sales teams — across the full lifecycle of mission-critical systems in the SUSEP-regulated sector. I build applications spanning policy issuance, reinsurance, and technical reserves, in high-volume, low-latency microservice architecture, with data modeling for actuarial calculations. I bridge regulatory requirements, product, and engineering — ensuring compliance, security, and scalability.",
     "exp.bv.role": "Software Engineer",
     "exp.bv.desc":
-      "Fraud prevention (via Act Digital): security of flows and data across all bank areas. Java, Spring Boot, GCP, and AWS.",
+      "Fraud Prevention (via Act Digital): security of flows and data across all areas of the bank, with Java, Spring Boot, GCP, and AWS.",
     "exp.itau.role": "Software Engineer (Mid)",
     "exp.itau.desc":
-      "Building APIs from scratch and BFF (Backend for Frontend) architecture, integrating multiple APIs and security services.",
+      "Backend: building APIs from scratch (Java, Spring Boot, Maven, SQL) and BFF architecture connecting multiple APIs and security services. Service maintenance in Python, Kotlin, and iOS.",
     "exp.tera.role": "Expert &amp; Fullstack Developer",
     "exp.tera.desc":
-      "Teaching fullstack and backend (web architecture, databases, Node.js, APIs) and building platforms with a focus on accessibility.",
+      "Teaching fullstack and backend (logic, algorithms, web architecture, SQL/NoSQL, Node.js, web APIs, and security) and building platforms in Vue, React, Node, and Firebase — always with a focus on accessibility.",
     "exp.edu.role": "Teacher",
     "exp.edu.desc":
-      "Training new people in programming — logic, Git, HTML/CSS, JavaScript, React, and Node.js — in programs that open tech up to more people.",
+      "Training new people in programming — Git/GitHub, HTML/CSS, JavaScript, React, Node.js, and APIs/CRUD — in programs that widen access to tech.",
     "exp.usp.role": "Research Scholarship",
     "exp.usp.desc":
-      "Where it all began: neuroscience research on infant sleep and development. Doula and former obstetrics student.",
+      "Where it all began: Chronobiology and Neuroscience research on the relationship between sleep and infant neurocognitive development (systematic review, PRISMA method). Doula and former obstetrics student.",
 
     "featured.title": "Featured",
     "featured.subtitle":
@@ -201,7 +213,6 @@ const TRANSLATIONS = {
       "Before tech, I was a doula and studied obstetrics. I learned early that active listening and clear communication change someone's experience — and that's exactly what I carried with me when I moved into software development.<br /><br />Teaching, to me, is about opening doors. Every cohort at {reprograma}, Minas Programam, and Tera is a chance to show that technology is for everyone. The messages beside this are real — that's how I said goodbye to so many classes.",
     "feedbacks.story.sign": "— Paula, teacher and mentor for 5+ years",
     "feedbacks.window": "Live class · {reprograma}",
-    "feedbacks.replay": "Replay the chat",
 
     "talks.title": "Talks &amp; experiences",
     "talks.subtitle": "A glimpse of my journey across events and communities.",
@@ -225,11 +236,20 @@ const TRANSLATIONS = {
 
     "brands.title": "Brands that transformed my career",
     "brands.subtitle": "Places where I learned, taught, and grew.",
-    "brands.unesco": "Global education reference",
-    "brands.google": "Innovation with purpose",
+    "brands.unesco": "Global teachers gallery",
+    "brands.google": "Impact Challenge for Women",
     "brands.reprograma": "Women in technology",
-    "brands.itau": "Brazilian fintech",
-    "brands.tera": "Quality education",
+    "brands.itau": "APIs and BFF at the bank",
+    "brands.tera": "Expert & development",
+    "brands.estacaohack": "Diverse Digital Talents",
+    "brands.usp": "Research scholarship",
+    "brands.jsconf": "JavaScript community",
+    "brands.programaria": "Diversity in tech",
+    "brands.minas": "Git & GitHub for all",
+    "brands.bv": "Fraud prevention",
+    "brands.changeorg": "Tech for impact",
+    "brands.habits": "Product & data",
+    "brands.mckinsey": "Mentoring & strategy",
 
     "footer.cta": "Shall we build something together?",
     "footer.contact": "Get in touch",

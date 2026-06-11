@@ -49,11 +49,43 @@ window.addEventListener("scroll", function () {
 AOS.init({ once: true });
 
 /* ============================================================
+   Experiência — accordion "Antes disso"
+   ============================================================ */
+(function initExperienceAccordion() {
+  const triggers = document.querySelectorAll(".exp-acc-trigger");
+  if (!triggers.length) return;
+
+  triggers.forEach((trigger) => {
+    const panel = document.getElementById(
+      trigger.getAttribute("aria-controls")
+    );
+    if (!panel) return;
+
+    trigger.addEventListener("click", () => {
+      const isOpen = trigger.getAttribute("aria-expanded") === "true";
+      trigger.setAttribute("aria-expanded", String(!isOpen));
+      panel.style.maxHeight = isOpen ? null : panel.scrollHeight + "px";
+    });
+  });
+
+  // Reajusta a altura do painel aberto ao trocar de idioma/redimensionar
+  window.addEventListener("resize", () => {
+    document
+      .querySelectorAll('.exp-acc-trigger[aria-expanded="true"]')
+      .forEach((trigger) => {
+        const panel = document.getElementById(
+          trigger.getAttribute("aria-controls")
+        );
+        if (panel) panel.style.maxHeight = panel.scrollHeight + "px";
+      });
+  });
+})();
+
+/* ============================================================
    Chat de feedbacks estilo Zoom — animação de mensagens
    ============================================================ */
 (function initFeedbackChat() {
   const chat = document.getElementById("zoom-chat");
-  const replayBtn = document.getElementById("chat-replay");
   const windowEl = document.querySelector(".zoom-window");
   if (!chat || typeof FEEDBACKS === "undefined") return;
 
@@ -63,10 +95,38 @@ AOS.init({ once: true });
   let timers = [];
   let running = false;
 
-  function clearTimers() {
-    timers.forEach(clearTimeout);
-    timers = [];
+  // Controle do auto-scroll: só "gruda" no fim se o usuário não rolou para
+  // cima e não está segurando o dedo dentro do chat (mobile).
+  let stickToBottom = true;
+  let holding = false;
+  const NEAR_BOTTOM = 24; // px de tolerância para considerar "no fim"
+
+  function isNearBottom() {
+    return (
+      chat.scrollHeight - chat.scrollTop - chat.clientHeight < NEAR_BOTTOM
+    );
   }
+
+  // Quando o usuário rola manualmente, decide se religa ou desliga o stick.
+  chat.addEventListener("scroll", () => {
+    if (holding) return; // durante o toque, a posição é reavaliada no release
+    stickToBottom = isNearBottom();
+  });
+
+  // Mobile: segurar o dedo dentro do chat pausa o auto-scroll.
+  function pause() {
+    holding = true;
+    stickToBottom = false;
+  }
+  function release() {
+    holding = false;
+    stickToBottom = isNearBottom();
+  }
+  chat.addEventListener("pointerdown", pause);
+  chat.addEventListener("touchstart", pause, { passive: true });
+  window.addEventListener("pointerup", release);
+  window.addEventListener("touchend", release);
+  window.addEventListener("touchcancel", release);
 
   function wait(ms) {
     return new Promise((resolve) => timers.push(setTimeout(resolve, ms)));
@@ -113,7 +173,7 @@ AOS.init({ once: true });
   }
 
   function scrollDown() {
-    chat.scrollTop = chat.scrollHeight;
+    if (stickToBottom) chat.scrollTop = chat.scrollHeight;
   }
 
   function renderStatic() {
@@ -128,7 +188,6 @@ AOS.init({ once: true });
   async function play() {
     if (running) return;
     running = true;
-    if (replayBtn) replayBtn.hidden = true;
     chat.innerHTML = "";
 
     for (let i = 0; i < FEEDBACKS.length; i++) {
@@ -148,20 +207,11 @@ AOS.init({ once: true });
     }
 
     running = false;
-    if (replayBtn) replayBtn.hidden = false;
   }
 
   if (reduceMotion) {
     renderStatic();
     return;
-  }
-
-  if (replayBtn) {
-    replayBtn.addEventListener("click", () => {
-      clearTimers();
-      running = false;
-      play();
-    });
   }
 
   // Dispara a animação quando a janela do chat entra na viewport
