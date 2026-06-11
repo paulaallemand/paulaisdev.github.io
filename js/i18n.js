@@ -15,7 +15,8 @@ const TRANSLATIONS = {
     "lang.toggle": "Ver em inglês",
 
     "hero.greeting": "Olá, eu sou",
-    "hero.subtitle": "Engenheira de Software · Educadora · Finanças &amp; Dados",
+    "hero.subtitle":
+      "Engenheira de Software · Educadora · Finanças &amp; Dados",
     "hero.cta.projects": "Ver projetos",
     "hero.cta.contact": "Fale comigo",
 
@@ -40,7 +41,7 @@ const TRANSLATIONS = {
     "expertise.fin.desc":
       "Finanças, seguros e dados: experiência no BTG Pactual, Banco BV e Itaú, com formação em Inteligência Artificial Aplicada, Data & IT.",
 
-    "chips.label": "Onde já atuei:",
+    "chips.label": "Empresas que impactaram minha carreira:",
 
     "experience.title": "Experiência",
     "experience.subtitle":
@@ -84,27 +85,37 @@ const TRANSLATIONS = {
     "feedbacks.story.title": "Educação é o que me move.",
     "feedbacks.story.body":
       "Antes da tecnologia, fui doula e estudei obstetrícia. Aprendi cedo que escuta ativa e comunicação clara mudam a experiência de alguém — e foi exatamente isso que carreguei comigo quando migrei para o desenvolvimento de software.<br /><br />Ensinar, pra mim, é abrir portas. Cada turma no {reprograma}, no Minas Programam e na Tera é uma chance de mostrar que tecnologia é para todo mundo. As mensagens ao lado são reais — foi assim que me despedi de tantas aulas.",
-    "feedbacks.story.sign": "— Paula, professora e mentora há mais de 5 anos",
+    "feedbacks.story.sign": "— Professora e mentora há 10 anos",
     "feedbacks.window": "Aula ao vivo · {reprograma}",
 
     "talks.title": "Palestras &amp; vivências",
     "talks.subtitle": "Um pouco da minha trajetória em eventos e comunidades.",
-    "talks.tera.desc": "Aula aberta sobre carreira e back-end para a comunidade.",
-    "talks.programaria.desc": "Palestra sobre mulheres e diversidade na tecnologia.",
-    "talks.inovazl.desc": "Mentoria a times no hackathon de inovação da Zona Leste.",
-    "talks.eh.desc": "Turma de Talentos Digitais Diversos, em parceria com o Itaú.",
-    "talks.dpw.desc": "Imersão em produto e tecnologia com a comunidade da Tera.",
-    "talks.wftech.desc": "Encontro de tecnologia com foco em comunidade e diversidade.",
+    "talks.tera.desc":
+      "Aula aberta sobre carreira e back-end para a comunidade.",
+    "talks.programaria.desc":
+      "Palestra sobre mulheres e diversidade na tecnologia.",
+    "talks.inovazl.desc":
+      "Mentoria a times no hackathon de inovação da Zona Leste.",
+    "talks.eh.desc":
+      "Turma de Talentos Digitais Diversos, em parceria com o Itaú.",
+    "talks.dpw.desc":
+      "Imersão em produto e tecnologia com a comunidade da Tera.",
+    "talks.wftech.desc":
+      "Encontro de tecnologia com foco em comunidade e diversidade.",
 
     "projects.title": "Projetos",
     "projects.trilha.title": "Trilha",
-    "projects.trilha.desc": "Plataforma modular de microaprendizagem (Expo / React Native).",
+    "projects.trilha.desc":
+      "Plataforma modular de microaprendizagem (Expo / React Native).",
     "projects.fin.title": "Plataforma Financeira",
-    "projects.fin.desc": "Back-end e fluxos de dados para produtos do setor financeiro.",
+    "projects.fin.desc":
+      "Back-end e fluxos de dados para produtos do setor financeiro.",
     "projects.bv.title": "Baixada Vacinada",
-    "projects.bv.desc": "Projeto de dados e impacto social acompanhando indicadores de saúde.",
+    "projects.bv.desc":
+      "Projeto de dados e impacto social acompanhando indicadores de saúde.",
     "projects.travel.title": "Travel Mapper",
-    "projects.travel.desc": "Gerador de roteiros de viagem com IA (Python / LangChain).",
+    "projects.travel.desc":
+      "Gerador de roteiros de viagem com IA (Python / LangChain).",
     "projects.cta": "Ver no GitHub",
 
     "brands.title": "Marcas que transformaram minha carreira",
@@ -195,8 +206,7 @@ const TRANSLATIONS = {
       "Where it all began: Chronobiology and Neuroscience research on the relationship between sleep and infant neurocognitive development (systematic review, PRISMA method). Doula and former obstetrics student.",
 
     "featured.title": "Featured",
-    "featured.subtitle":
-      "A bit of the recognition of my work as an educator.",
+    "featured.subtitle": "A bit of the recognition of my work as an educator.",
     "featured.link": "View →",
     "featured.unesco.title": "UNESCO Teachers Photo Gallery",
     "featured.unesco.desc":
@@ -218,20 +228,27 @@ const TRANSLATIONS = {
     "talks.subtitle": "A glimpse of my journey across events and communities.",
     "talks.tera.desc": "Open class on careers and backend for the community.",
     "talks.programaria.desc": "Talk on women and diversity in technology.",
-    "talks.inovazl.desc": "Mentoring teams at the East Zone innovation hackathon.",
-    "talks.eh.desc": "Diverse Digital Talents cohort, in partnership with Itaú.",
-    "talks.dpw.desc": "A product and technology immersion with the Tera community.",
+    "talks.inovazl.desc":
+      "Mentoring teams at the East Zone innovation hackathon.",
+    "talks.eh.desc":
+      "Diverse Digital Talents cohort, in partnership with Itaú.",
+    "talks.dpw.desc":
+      "A product and technology immersion with the Tera community.",
     "talks.wftech.desc": "A tech meetup focused on community and diversity.",
 
     "projects.title": "Projects",
     "projects.trilha.title": "Trilha",
-    "projects.trilha.desc": "Modular micro-learning platform (Expo / React Native).",
+    "projects.trilha.desc":
+      "Modular micro-learning platform (Expo / React Native).",
     "projects.fin.title": "Finance Platform",
-    "projects.fin.desc": "Backend and data flows for financial-sector products.",
+    "projects.fin.desc":
+      "Backend and data flows for financial-sector products.",
     "projects.bv.title": "Baixada Vacinada",
-    "projects.bv.desc": "Data and social-impact project tracking public-health indicators.",
+    "projects.bv.desc":
+      "Data and social-impact project tracking public-health indicators.",
     "projects.travel.title": "Travel Mapper",
-    "projects.travel.desc": "AI travel-itinerary generator (Python / LangChain).",
+    "projects.travel.desc":
+      "AI travel-itinerary generator (Python / LangChain).",
     "projects.cta": "View on GitHub",
 
     "brands.title": "Brands that transformed my career",
@@ -262,7 +279,9 @@ const TRANSLATIONS = {
 function detectLang() {
   const stored = localStorage.getItem("lang");
   if (stored === "pt" || stored === "en") return stored;
-  return (navigator.language || "pt").toLowerCase().startsWith("en") ? "en" : "pt";
+  return (navigator.language || "pt").toLowerCase().startsWith("en")
+    ? "en"
+    : "pt";
 }
 
 function applyLang(lang) {
