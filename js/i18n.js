@@ -106,7 +106,13 @@ const TRANSLATIONS = {
     "projects.travel.desc": "Gerador de roteiros de viagem com IA (Python / LangChain).",
     "projects.cta": "Ver no GitHub",
 
-    "brands.title": "Empresas e organizações com quem trabalhei",
+    "brands.title": "Marcas que transformaram minha carreira",
+    "brands.subtitle": "Lugares onde aprendi, ensinei e cresci.",
+    "brands.unesco": "Referência global em educação",
+    "brands.google": "Inovação com propósito",
+    "brands.reprograma": "Mulheres em tecnologia",
+    "brands.itau": "Fintech nacional",
+    "brands.tera": "Educação de qualidade",
 
     "footer.cta": "Bora construir algo incrível?",
     "footer.contact": "Fale comigo",
@@ -217,7 +223,13 @@ const TRANSLATIONS = {
     "projects.travel.desc": "AI travel-itinerary generator (Python / LangChain).",
     "projects.cta": "View on GitHub",
 
-    "brands.title": "Companies & organizations I've worked with",
+    "brands.title": "Brands that transformed my career",
+    "brands.subtitle": "Places where I learned, taught, and grew.",
+    "brands.unesco": "Global education reference",
+    "brands.google": "Innovation with purpose",
+    "brands.reprograma": "Women in technology",
+    "brands.itau": "Brazilian fintech",
+    "brands.tera": "Quality education",
 
     "footer.cta": "Shall we build something together?",
     "footer.contact": "Get in touch",

@@ -610,23 +610,62 @@ h5 {
   margin-bottom: 10rem;
 }
 
-.brand-logos-row {
-  display: flex;
-  justify-content: center;
+.brand-logos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2.4rem 1.6rem;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
+  justify-items: center;
+  max-width: 100%;
+}
+
+.brand-logo-item {
+  position: relative;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.brand-logo-item:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 0.8rem 1.6rem rgba(111, 29, 27, 0.12));
+}
+
+.brand-logo-lg {
+  grid-column: span 2;
+}
+
+.brand-logo-md {
+  grid-column: span 1.5;
+}
+
+.brand-logo-sm {
+  grid-column: span 1;
 }
 
 .brand-logo {
-  max-width: 130px;
+  max-width: 100%;
   max-height: 80px;
-  margin: 10px;
-  transition: transform 0.3s ease;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
-.brand-logo:hover {
-  transform: scale(1.1);
+.brand-label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--secondary-accent);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.brand-logo-item:hover .brand-label {
+  opacity: 1;
 }
 
 /* Footer */
@@ -1417,6 +1456,173 @@ h5 {
   margin-top: 1.5rem;
 }
 
+/* ---------- Section dividers ---------- */
+.section-divider {
+  position: relative;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 6rem 0;
+  overflow: hidden;
+}
+
+.section-divider::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--secondary-accent),
+    transparent
+  );
+}
+
+.divider-icon {
+  position: relative;
+  z-index: 1;
+  width: 3rem;
+  height: 3rem;
+  background: var(--primary-bg-color);
+  border: 2px solid var(--secondary-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  transition: transform 0.3s ease;
+}
+
+.section-divider:hover .divider-icon {
+  transform: rotate(180deg) scale(1.1);
+}
+
+/* ---------- Breather cards ---------- */
+.breather-card {
+  background: linear-gradient(
+    135deg,
+    rgba(111, 29, 27, 0.05),
+    rgba(12, 22, 24, 0.02)
+  );
+  border: 1px solid rgba(111, 29, 27, 0.1);
+  border-radius: 1.2rem;
+  padding: 2.4rem;
+  text-align: center;
+  margin: 4rem auto;
+  max-width: 600px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.breather-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1rem 2.4rem rgba(111, 29, 27, 0.08);
+}
+
+.breather-quote {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--secondary-accent);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.breather-quote::before {
+  content: '"';
+  margin-right: 0.5rem;
+}
+
+.breather-quote::after {
+  content: '"';
+  margin-left: 0.5rem;
+}
+
+.breather-author {
+  font-size: 1.3rem;
+  color: var(--gray-text-color);
+  margin-top: 1rem;
+}
+
+/* ---------- Enhanced CTAs ---------- */
+.btn {
+  transition: all 0.3s ease;
+  box-shadow: 0 0.4rem 1.2rem rgba(111, 29, 27, 0.15);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.8rem 2.4rem rgba(111, 29, 27, 0.25);
+}
+
+.btn-red {
+  background-color: var(--secondary-accent);
+  color: white;
+  border: 2px solid var(--secondary-accent);
+}
+
+.btn-red:hover {
+  background-color: #5a1814;
+  border-color: #5a1814;
+}
+
+.btn-white {
+  background-color: transparent;
+  color: var(--secondary-accent);
+  border: 2px solid var(--secondary-accent);
+}
+
+.btn-white:hover {
+  background-color: var(--secondary-accent);
+  color: white;
+}
+
+/* Floating CTA button (appears on scroll) */
+.floating-cta {
+  position: fixed;
+  bottom: 3rem;
+  right: 2rem;
+  display: none;
+  z-index: 50;
+  animation: slideIn 0.3s ease-out;
+}
+
+.floating-cta.show {
+  display: block;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.floating-cta .btn {
+  padding: 1.2rem 2.4rem;
+  border-radius: 5rem;
+  box-shadow: 0 0.8rem 2.4rem rgba(111, 29, 27, 0.3);
+  background: var(--secondary-accent);
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.2rem;
+}
+
+.floating-cta .btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 1.2rem 3.2rem rgba(111, 29, 27, 0.4);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .chat-msg {
     opacity: 1;
@@ -1425,7 +1631,14 @@ h5 {
   }
   .carousel-image,
   .project-card,
-  .service-card {
+  .service-card,
+  .section-divider,
+  .breather-card,
+  .btn,
+  .floating-cta {
     transition: none;
+  }
+  .floating-cta.show {
+    animation: none;
   }
 }
