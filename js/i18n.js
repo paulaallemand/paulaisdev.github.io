@@ -88,6 +88,12 @@ const TRANSLATIONS = {
 
     "talks.title": "Palestras &amp; vivências",
     "talks.subtitle": "Um pouco da minha trajetória em eventos e comunidades.",
+    "talks.tera.desc": "Aula aberta sobre carreira e back-end para a comunidade.",
+    "talks.programaria.desc": "Palestra sobre mulheres e diversidade na tecnologia.",
+    "talks.inovazl.desc": "Mentoria a times no hackathon de inovação da Zona Leste.",
+    "talks.eh.desc": "Turma de Talentos Digitais Diversos, em parceria com o Itaú.",
+    "talks.dpw.desc": "Imersão em produto e tecnologia com a comunidade da Tera.",
+    "talks.wftech.desc": "Encontro de tecnologia com foco em comunidade e diversidade.",
 
     "projects.title": "Projetos",
     "projects.trilha.title": "Trilha",
@@ -191,6 +197,12 @@ const TRANSLATIONS = {
 
     "talks.title": "Talks &amp; experiences",
     "talks.subtitle": "A glimpse of my journey across events and communities.",
+    "talks.tera.desc": "Open class on careers and backend for the community.",
+    "talks.programaria.desc": "Talk on women and diversity in technology.",
+    "talks.inovazl.desc": "Mentoring teams at the East Zone innovation hackathon.",
+    "talks.eh.desc": "Diverse Digital Talents cohort, in partnership with Itaú.",
+    "talks.dpw.desc": "A product and technology immersion with the Tera community.",
+    "talks.wftech.desc": "A tech meetup focused on community and diversity.",
 
     "projects.title": "Projects",
     "projects.trilha.title": "Trilha",

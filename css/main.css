@@ -1322,6 +1322,18 @@ h5 {
   color: #fff;
 }
 
+.carousel-text {
+  margin-top: 0.5rem;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.carousel:focus-visible {
+  outline: 3px solid var(--secondary-accent);
+  outline-offset: 4px;
+}
+
 /* ---------- Projetos ---------- */
 .project-grid {
   display: grid;
