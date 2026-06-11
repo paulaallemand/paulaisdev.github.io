@@ -260,3 +260,74 @@
     font-size: 1.2rem;
   }
 }
+
+/* ===== Seções novas (revamp 2026) ===== */
+@media (max-width: 977px) {
+  .expertise .service-card {
+    flex: 0 0 47%;
+  }
+
+  .stat-number {
+    font-size: 3.8rem;
+  }
+
+  /* Evita colisão da bandeira com o botão do menu */
+  .lang-toggle {
+    position: absolute;
+    top: 2.8rem;
+    right: 7.2rem;
+    z-index: 10;
+  }
+}
+
+@media (max-width: 720px) {
+  .expertise,
+  .feedbacks,
+  .carousel-section {
+    padding: 7rem 0;
+  }
+
+  .expertise .service-card {
+    flex: 0 0 100%;
+  }
+
+  .stat {
+    flex: 1 1 40%;
+  }
+
+  .zoom-bar-title {
+    display: none;
+  }
+
+  .zoom-chat {
+    min-height: 38rem;
+    max-height: 60vh;
+    padding: 2rem 1.4rem;
+  }
+
+  .chat-body {
+    max-width: 100%;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .carousel-card {
+    flex: 0 0 26rem;
+  }
+
+  .footer-cta {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 406px) {
+  .carousel-card {
+    flex: 0 0 22rem;
+  }
+
+  .stat {
+    flex: 1 1 100%;
+  }
+}
