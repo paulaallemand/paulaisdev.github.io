@@ -8,8 +8,10 @@ const TRANSLATIONS = {
     "nav.home": "Início",
     "nav.about": "Sobre",
     "nav.expertise": "Atuação",
+    "nav.experience": "Experiência",
     "nav.feedbacks": "Feedbacks",
     "nav.talks": "Palestras",
+    "nav.blog": "Blog",
     "lang.toggle": "Ver em inglês",
 
     "hero.greeting": "Olá, eu sou",
@@ -36,9 +38,43 @@ const TRANSLATIONS = {
       "Professora e mentora no {reprograma}, Minas Programam e Tera. Centenas de pessoas formadas, com palestras Brasil afora.",
     "expertise.fin.title": "Finanças &amp; Dados",
     "expertise.fin.desc":
-      "Experiência no setor financeiro (BV, Itaú) construindo plataformas e fluxos de dados orientados a produto e impacto.",
+      "Finanças, seguros e dados: experiência no BTG Pactual, Banco BV e Itaú, com formação em Inteligência Artificial Aplicada, Data & IT.",
 
     "chips.label": "Comunidades &amp; programas:",
+
+    "experience.title": "Experiência",
+    "experience.subtitle":
+      "Da pesquisa em neurociência aos sistemas críticos do mercado financeiro.",
+    "experience.cta": "Ver trajetória completa no LinkedIn",
+    "exp.btg.role": "Software Analyst",
+    "exp.btg.desc":
+      "Sistemas críticos de Seguros (regulados pela SUSEP): emissão de apólices, resseguro e provisões. Java, Quarkus, Kafka e AWS.",
+    "exp.bv.role": "Engenheira de Software",
+    "exp.bv.desc":
+      "Prevenção a fraudes (via Act Digital): segurança de fluxos e dados de todas as áreas do banco. Java, Spring Boot, GCP e AWS.",
+    "exp.itau.role": "Engenheira de Software Pleno",
+    "exp.itau.desc":
+      "Construção de APIs do zero e arquitetura BFF (Backend for Frontend), com integrações entre múltiplas APIs e serviços de segurança.",
+    "exp.tera.role": "Expert &amp; Fullstack Developer",
+    "exp.tera.desc":
+      "Ensino de fullstack e back-end (arquitetura web, bancos de dados, Node.js, APIs) e desenvolvimento de plataformas com foco em acessibilidade.",
+    "exp.edu.role": "Professora",
+    "exp.edu.desc":
+      "Formando novas pessoas em programação — lógica, Git, HTML/CSS, JavaScript, React e Node.js — em programas que abrem a tecnologia para mais gente.",
+    "exp.usp.role": "Iniciação Científica",
+    "exp.usp.desc":
+      "Onde tudo começou: pesquisa em neurociência sobre o sono e o desenvolvimento do bebê. Doula e ex-aluna de obstetrícia.",
+
+    "featured.title": "Destaques",
+    "featured.subtitle":
+      "Um pouco do reconhecimento do meu trabalho como educadora.",
+    "featured.link": "Ver →",
+    "featured.unesco.title": "Galeria de Professores da UNESCO",
+    "featured.unesco.desc":
+      "Reconhecida entre educadores do mundo na galeria de professores da UNESCO.",
+    "featured.google.title": "Google.org — When She Rises, We All Rise",
+    "featured.google.desc":
+      "Participação no vídeo do Impact Challenge for Women and Girls, do Google.org.",
 
     "feedbacks.title": "O que dizem quem passou pelas minhas aulas",
     "feedbacks.subtitle":
@@ -75,8 +111,10 @@ const TRANSLATIONS = {
     "nav.home": "Home",
     "nav.about": "About",
     "nav.expertise": "Expertise",
+    "nav.experience": "Experience",
     "nav.feedbacks": "Feedback",
     "nav.talks": "Talks",
+    "nav.blog": "Blog",
     "lang.toggle": "View in Portuguese",
 
     "hero.greeting": "Hello, I am",
@@ -103,9 +141,43 @@ const TRANSLATIONS = {
       "Teacher and mentor at {reprograma}, Minas Programam, and Tera. Hundreds of people trained, with talks across Brazil.",
     "expertise.fin.title": "Finance &amp; Data",
     "expertise.fin.desc":
-      "Experience in the financial sector (BV, Itaú) building platforms and data flows driven by product and impact.",
+      "Finance, insurance, and data: experience at BTG Pactual, Banco BV, and Itaú, with a degree in Applied Artificial Intelligence, Data & IT.",
 
     "chips.label": "Communities &amp; programs:",
+
+    "experience.title": "Experience",
+    "experience.subtitle":
+      "From neuroscience research to mission-critical financial systems.",
+    "experience.cta": "See full career on LinkedIn",
+    "exp.btg.role": "Software Analyst",
+    "exp.btg.desc":
+      "Mission-critical insurance systems (SUSEP-regulated): policy issuance, reinsurance, and reserves. Java, Quarkus, Kafka, and AWS.",
+    "exp.bv.role": "Software Engineer",
+    "exp.bv.desc":
+      "Fraud prevention (via Act Digital): security of flows and data across all bank areas. Java, Spring Boot, GCP, and AWS.",
+    "exp.itau.role": "Software Engineer (Mid)",
+    "exp.itau.desc":
+      "Building APIs from scratch and BFF (Backend for Frontend) architecture, integrating multiple APIs and security services.",
+    "exp.tera.role": "Expert &amp; Fullstack Developer",
+    "exp.tera.desc":
+      "Teaching fullstack and backend (web architecture, databases, Node.js, APIs) and building platforms with a focus on accessibility.",
+    "exp.edu.role": "Teacher",
+    "exp.edu.desc":
+      "Training new people in programming — logic, Git, HTML/CSS, JavaScript, React, and Node.js — in programs that open tech up to more people.",
+    "exp.usp.role": "Research Scholarship",
+    "exp.usp.desc":
+      "Where it all began: neuroscience research on infant sleep and development. Doula and former obstetrics student.",
+
+    "featured.title": "Featured",
+    "featured.subtitle":
+      "A bit of the recognition of my work as an educator.",
+    "featured.link": "View →",
+    "featured.unesco.title": "UNESCO Teachers Photo Gallery",
+    "featured.unesco.desc":
+      "Featured among educators worldwide in UNESCO's teachers photo gallery.",
+    "featured.google.title": "Google.org — When She Rises, We All Rise",
+    "featured.google.desc":
+      "Featured in Google.org's Impact Challenge for Women and Girls video.",
 
     "feedbacks.title": "What the people I've taught say",
     "feedbacks.subtitle":

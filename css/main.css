@@ -838,6 +838,179 @@ h5 {
   transform: translateY(-2px);
 }
 
+/* ---------- Experiência (timeline) ---------- */
+.experience {
+  padding: 9rem 0;
+  background-color: var(--primary-bg-color);
+}
+
+.experience-title {
+  margin-bottom: 5rem;
+}
+
+.timeline {
+  max-width: 82rem;
+  margin: 0 auto;
+  list-style: none;
+  position: relative;
+  padding-left: 3rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0.7rem;
+  top: 0.6rem;
+  bottom: 0.6rem;
+  width: 2px;
+  background: var(--gray-color);
+}
+
+.tl-item {
+  position: relative;
+  padding: 0 0 3.2rem 2.6rem;
+}
+
+.tl-item:last-child {
+  padding-bottom: 0;
+}
+
+.tl-item::before {
+  content: "";
+  position: absolute;
+  left: -2.36rem;
+  top: 0.4rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  background: var(--secondary-accent);
+  border: 3px solid var(--primary-bg-color);
+  box-shadow: 0 0 0 1px var(--secondary-accent);
+}
+
+.tl-item.tl-root::before {
+  background: var(--gray-text-color);
+  box-shadow: 0 0 0 1px var(--gray-text-color);
+}
+
+.tl-period {
+  display: inline-block;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: var(--secondary-accent);
+  margin-bottom: 0.6rem;
+}
+
+.tl-card {
+  transition: transform 0.25s ease;
+}
+
+.tl-item:hover .tl-card {
+  transform: translateX(4px);
+}
+
+.tl-role {
+  font-size: 1.9rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 0.6rem;
+}
+
+.tl-company {
+  color: var(--main-text-color);
+}
+
+.tl-desc {
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: var(--gray-text-color);
+}
+
+.experience-cta {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+/* ---------- Destaques / Imprensa ---------- */
+.featured {
+  padding: 9rem 0;
+}
+
+.featured-title {
+  margin-bottom: 5rem;
+}
+
+.featured-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+  justify-content: center;
+}
+
+.featured-card {
+  flex: 1 1 36rem;
+  max-width: 46rem;
+  display: block;
+  text-decoration: none;
+  color: var(--main-text-color);
+  background: var(--white-color);
+  border: 1px solid var(--gray-color);
+  border-radius: 1.2rem;
+  padding: 3rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.featured-card:hover,
+.featured-card:focus-visible {
+  transform: translateY(-6px);
+  box-shadow: 0 1.4rem 3rem rgba(12, 22, 24, 0.1);
+  border-color: var(--secondary-accent);
+}
+
+.featured-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 4.4rem;
+  height: 3.2rem;
+  padding: 0 1.2rem;
+  border-radius: 0.6rem;
+  background: var(--primary-accent);
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  margin-bottom: 1.8rem;
+}
+
+.featured-badge-play {
+  background: var(--secondary-accent);
+  font-size: 1.2rem;
+}
+
+.featured-card-title {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.featured-card-desc {
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: var(--gray-text-color);
+}
+
+.featured-link {
+  display: inline-block;
+  margin-top: 1.8rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--secondary-accent);
+}
+
 /* ---------- Feedbacks: mock de chat estilo Zoom ---------- */
 .feedbacks {
   padding: 8rem 0 10rem;
