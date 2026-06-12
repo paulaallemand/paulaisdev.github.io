@@ -45,8 +45,6 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// AOS animations
-AOS.init({ once: true });
 
 /* ============================================================
    Experiência — abas de ano "Antes disso"

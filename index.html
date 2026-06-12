@@ -31,13 +31,6 @@
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/media.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-      integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
   </head>
 
   <body>
@@ -113,20 +106,14 @@
     <main id="main-content">
       <section id="home" class="hero">
         <div class="container container-lg">
-          <div
-            class="hero-row"
-            data-aos="fade-zoom-in"
-            data-aos-easing="ease-in-out"
-            data-aos-delay="1800"
-            data-aos-duration="2000"
-          >
+          <div class="hero-row">
             <div class="hero-content">
               <span class="hero-greeting" data-i18n="hero.greeting"
                 >Olá, eu sou</span
               >
               <h1 class="hero-heading">Paula Allemand</h1>
               <span class="hero-heading-subtitle" data-i18n="hero.subtitle"
-                >Engenheira de Software · Educadora · Finanças &amp; Dados</span
+                >Engenheira de Software · Tecnologia, Finanças e Educação</span
               >
               <div class="about-social-list">
                 <div class="social-links-row">
@@ -214,7 +201,7 @@
           </div>
 
           <div class="services-row">
-            <div class="service-card" data-aos="fade-up">
+            <div class="service-card">
               <img class="service-card-img" src="img/services/02.svg" alt="" />
               <h3 class="service-card-title" data-i18n="expertise.eng.title">
                 Engenharia de Software
@@ -225,7 +212,7 @@
               </p>
             </div>
 
-            <div class="service-card" data-aos="fade-up" data-aos-delay="150">
+            <div class="service-card">
               <img class="service-card-img" src="img/services/03.svg" alt="" />
               <h3 class="service-card-title" data-i18n="expertise.edu.title">
                 Educação &amp; Mentoria
@@ -235,7 +222,7 @@
               </p>
             </div>
 
-            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-card">
               <img class="service-card-img" src="img/services/01.svg" alt="" />
               <h3 class="service-card-title" data-i18n="expertise.fin.title">
                 Finanças &amp; Dados
@@ -247,7 +234,7 @@
             </div>
           </div>
 
-          <div class="logos-strip" data-aos="fade-up">
+          <div class="logos-strip">
             <span class="logos-strip-label" data-i18n="chips.label"
               >Onde já atuei:</span
             >
@@ -382,7 +369,7 @@
           </div>
 
           <!-- AGORA: trabalho atual em destaque editorial -->
-          <article class="exp-now" data-aos="fade-up">
+          <article class="exp-now">
             <span class="exp-now-year" aria-hidden="true">2025</span>
             <div class="exp-now-body">
               <span class="exp-now-badge">
@@ -411,36 +398,6 @@
               </ul>
             </div>
           </article>
-
-          <!-- Badges de reconhecimento -->
-          <div class="exp-highlights" data-aos="fade-up">
-            <a
-              href="https://www.unesco.org/en/teachers/photo-gallery"
-              class="exp-highlight-badge"
-              target="_blank"
-              rel="noopener"
-              aria-label="UNESCO — Galeria de Professores (abre em nova aba)"
-            >
-              <span class="exp-highlight-org">UNESCO</span>
-              <span class="exp-highlight-desc" data-i18n="featured.unesco.title"
-                >Galeria de Professores</span
-              >
-              <span class="exp-highlight-arrow">→</span>
-            </a>
-            <a
-              href="https://www.youtube.com/watch?v=1SeaQRfk06k"
-              class="exp-highlight-badge"
-              target="_blank"
-              rel="noopener"
-              aria-label="Google.org — When She Rises, We All Rise (abre no YouTube)"
-            >
-              <span class="exp-highlight-org">Google.org</span>
-              <span class="exp-highlight-desc" data-i18n="featured.google.title"
-                >When She Rises, We All Rise</span
-              >
-              <span class="exp-highlight-arrow">→</span>
-            </a>
-          </div>
 
           <!-- PASSADO: trajetória anterior em abas de ano -->
           <div class="exp-past">
@@ -604,7 +561,7 @@
           </div>
 
           <div class="feedbacks-grid">
-            <div class="feedbacks-story" data-aos="fade-right">
+            <div class="feedbacks-story">
               <p
                 class="feedbacks-story-body"
                 data-i18n-html="feedbacks.story.body"
@@ -623,7 +580,7 @@
               </p>
             </div>
 
-            <div class="zoom-window" data-aos="fade-left">
+            <div class="zoom-window">
               <div class="zoom-bar">
                 <span class="zoom-dots">
                   <span class="zoom-dot red"></span>
@@ -687,6 +644,35 @@
                   >Aulas ministradas</span
                 >
               </div>
+            </div>
+
+            <div class="exp-highlights talks-highlights">
+              <a
+                href="https://www.unesco.org/en/teachers/photo-gallery"
+                class="exp-highlight-badge"
+                target="_blank"
+                rel="noopener"
+                aria-label="UNESCO — Galeria de Professores (abre em nova aba)"
+              >
+                <span class="exp-highlight-org">UNESCO</span>
+                <span class="exp-highlight-desc" data-i18n="featured.unesco.title"
+                  >Galeria de Professores</span
+                >
+                <span class="exp-highlight-arrow">→</span>
+              </a>
+              <a
+                href="https://www.youtube.com/watch?v=1SeaQRfk06k"
+                class="exp-highlight-badge"
+                target="_blank"
+                rel="noopener"
+                aria-label="Google.org — When She Rises, We All Rise (abre no YouTube)"
+              >
+                <span class="exp-highlight-org">Google.org</span>
+                <span class="exp-highlight-desc" data-i18n="featured.google.title"
+                  >When She Rises, We All Rise</span
+                >
+                <span class="exp-highlight-arrow">→</span>
+              </a>
             </div>
           </div>
 
@@ -957,9 +943,9 @@
               href="https://www.linkedin.com/in/paulaallemand/"
               target="_blank"
               rel="noopener"
-              class="btn btn-red"
+              class="btn btn-ghost-white"
               data-i18n="footer.contact"
-              >Fale comigo</a
+              >Fale comigo</
             >
             <div class="social-links-row footer-social">
               <a
@@ -994,12 +980,6 @@
       </a>
     </div>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
-      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
     <script src="js/feedbacks.js"></script>
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>

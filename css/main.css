@@ -605,7 +605,7 @@ h5 {
 
 /* Footer */
 .footer {
-  background-color: var(--primary-accent);
+  background-color: var(--secondary-accent);
   color: var(--gray-color-3);
 }
 
@@ -758,6 +758,27 @@ h5 {
 /* ---------- Expertise (pilares) ---------- */
 .expertise {
   padding: var(--section-v) 0;
+  background-color: var(--secondary-accent);
+}
+
+.expertise .section-eyebrow {
+  color: rgba(247, 251, 253, 0.72);
+}
+
+.expertise .expertise-title .title {
+  color: var(--primary-bg-color);
+}
+
+.expertise .logos-strip {
+  border-top-color: rgba(247, 251, 253, 0.18);
+}
+
+.expertise .logos-strip-label {
+  color: rgba(247, 251, 253, 0.6);
+}
+
+.expertise .strip-logo {
+  opacity: 0.6;
 }
 
 .expertise-title {
@@ -1124,6 +1145,26 @@ h5 {
 .exp-highlight-arrow {
   font-size: 1.1rem;
   opacity: 0.6;
+}
+
+/* --- Badges em contexto escuro (seção Talks) --- */
+.talks-highlights {
+  margin-top: 2.4rem;
+}
+
+.talks-highlights .exp-highlight-badge {
+  border-color: rgba(247, 251, 253, 0.22);
+  color: rgba(247, 251, 253, 0.72);
+}
+
+.talks-highlights .exp-highlight-org {
+  color: var(--primary-bg-color);
+}
+
+.talks-highlights .exp-highlight-badge:hover,
+.talks-highlights .exp-highlight-badge:focus-visible {
+  border-color: rgba(247, 251, 253, 0.6);
+  color: var(--primary-bg-color);
 }
 
 /* ---------- Feedbacks: mock de chat estilo Zoom ---------- */
