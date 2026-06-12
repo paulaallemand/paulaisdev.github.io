@@ -347,9 +347,9 @@ window.addEventListener("scroll", function () {
     isDragging = true;
     right.setPointerCapture(e.pointerId);
     stopAuto();
-  });
+  }, { passive: true });
 
-  right.addEventListener("pointerup", (e) => {
+  window.addEventListener("pointerup", (e) => {
     if (!isDragging) return;
     isDragging = false;
     const delta = e.clientX - dragStartX;
@@ -357,12 +357,12 @@ window.addEventListener("scroll", function () {
       delta < 0 ? goTo(current + 1) : goTo(current - 1);
     }
     startAuto();
-  });
+  }, { passive: true });
 
-  right.addEventListener("pointercancel", () => {
+  window.addEventListener("pointercancel", () => {
     isDragging = false;
     startAuto();
-  });
+  }, { passive: true });
 
   // Recalcula offset ao redimensionar
   window.addEventListener("resize", () => goTo(current), { passive: true });
