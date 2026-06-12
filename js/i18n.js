@@ -14,13 +14,20 @@ const TRANSLATIONS = {
     "nav.blog": "Blog",
     "lang.toggle": "Ver em inglês",
 
+    "eyebrow.about": "Sobre mim",
+    "eyebrow.expertise": "Atuação",
+    "eyebrow.experience": "Experiência",
+    "eyebrow.feedbacks": "Feedbacks",
+    "eyebrow.talks": "Palestras &amp; Vivências",
+
     "hero.greeting": "Olá, eu sou",
     "hero.subtitle":
       "Engenheira de Software · Educadora · Finanças &amp; Dados",
-    "hero.cta.projects": "Ver projetos",
+    "hero.cta.projects": "Ver experiência",
     "hero.cta.contact": "Fale comigo",
 
     "about.title": "Sobre mim",
+    "about.headline": "Movida por propósito, alimentada por aprendizado.",
     "about.descr":
       "Sou uma engenheira de software multifacetada, com base sólida em desenvolvimento back-end, design de APIs e computação em nuvem (AWS, GCP). Meu trabalho integra tecnologias como Java, Spring Boot e Python. Apaixonada por ensinar, contribuo com programas como {reprograma} e Minas Programam, formando novos talentos da tecnologia — sempre com foco em soluções robustas, seguras e escaláveis.<br /><br />Acredito no poder da tecnologia para transformar: movida por propósito, alimentada pelo aprendizado e comprometida em construir soluções de impacto para um amanhã melhor.",
     "about.cv": "Baixar CV",
@@ -29,7 +36,7 @@ const TRANSLATIONS = {
     "skill.data": "Dados",
     "skill.frontend": "Front-end",
 
-    "expertise.title": "No que eu atuo",
+    "expertise.title": "Três frentes que se complementam.",
     "expertise.subtitle": "Três frentes que se complementam.",
     "expertise.eng.title": "Engenharia de Software",
     "expertise.eng.desc":
@@ -43,7 +50,8 @@ const TRANSLATIONS = {
 
     "chips.label": "Empresas que impactaram minha carreira:",
 
-    "experience.title": "Experiência",
+    "experience.title":
+      "Da neurociência aos sistemas críticos do mercado financeiro.",
     "experience.subtitle":
       "Da pesquisa em neurociência aos sistemas críticos do mercado financeiro.",
     "experience.cta": "Ver trajetória completa no LinkedIn",
@@ -79,10 +87,9 @@ const TRANSLATIONS = {
     "featured.google.desc":
       "Participação no vídeo do Impact Challenge for Women and Girls, do Google.org.",
 
-    "feedbacks.title": "O que dizem quem passou pelas minhas aulas",
+    "feedbacks.title": "Educação é o que me move",
     "feedbacks.subtitle":
-      "Mensagens reais que recebi no chat ao final das aulas. 💬",
-    "feedbacks.story.title": "Educação é o que me move.",
+      "Mensagens reais que recebi no chat ao final das aulas",
     "feedbacks.story.body":
       "Antes da tecnologia, fui doula e estudei obstetrícia. Aprendi cedo que escuta ativa e comunicação clara mudam a experiência de alguém — e foi exatamente isso que carreguei comigo quando migrei para o desenvolvimento de software.<br /><br />Ensinar, pra mim, é abrir portas. Cada turma no {reprograma}, no Minas Programam e na Tera é uma chance de mostrar que tecnologia é para todo mundo. As mensagens ao lado são reais — foi assim que me despedi de tantas aulas.",
     "feedbacks.story.sign": "— Professora e mentora há 10 anos",
@@ -137,8 +144,6 @@ const TRANSLATIONS = {
 
     "footer.cta": "Bora construir algo incrível?",
     "footer.contact": "Fale comigo",
-    "footer.rights": "Feito com café e código por Paula Allemand.",
-
     "a11y.skip": "Pular para o conteúdo",
   },
 
@@ -152,12 +157,19 @@ const TRANSLATIONS = {
     "nav.blog": "Blog",
     "lang.toggle": "View in Portuguese",
 
+    "eyebrow.about": "About me",
+    "eyebrow.expertise": "Expertise",
+    "eyebrow.experience": "Experience",
+    "eyebrow.feedbacks": "Feedbacks",
+    "eyebrow.talks": "Talks &amp; Experiences",
+
     "hero.greeting": "Hello, I am",
     "hero.subtitle": "Software Engineer · Educator · Finance &amp; Data",
-    "hero.cta.projects": "View projects",
+    "hero.cta.projects": "View experience",
     "hero.cta.contact": "Get in touch",
 
     "about.title": "About me",
+    "about.headline": "Driven by purpose, fueled by learning.",
     "about.descr":
       "I am a versatile software engineer with a solid foundation in backend development, API design, and cloud computing (AWS, GCP). My work integrates technologies like Java, Spring Boot, and Python. Passionate about teaching, I contribute to programs like {reprograma} and Minas Programam, empowering new tech talent — always focused on robust, secure, and scalable solutions.<br /><br />I believe in the power of technology to transform: driven by purpose, fueled by learning, and committed to building impactful solutions for a better tomorrow.",
     "about.cv": "Download CV",
@@ -166,7 +178,7 @@ const TRANSLATIONS = {
     "skill.data": "Data",
     "skill.frontend": "Frontend",
 
-    "expertise.title": "What I do",
+    "expertise.title": "Three complementary fronts.",
     "expertise.subtitle": "Three complementary fronts.",
     "expertise.eng.title": "Software Engineering",
     "expertise.eng.desc":
@@ -180,7 +192,8 @@ const TRANSLATIONS = {
 
     "chips.label": "Where I've worked:",
 
-    "experience.title": "Experience",
+    "experience.title":
+      "From neuroscience to mission-critical financial systems.",
     "experience.subtitle":
       "From neuroscience research to mission-critical financial systems.",
     "experience.cta": "See full career on LinkedIn",
@@ -215,10 +228,9 @@ const TRANSLATIONS = {
     "featured.google.desc":
       "Featured in Google.org's Impact Challenge for Women and Girls video.",
 
-    "feedbacks.title": "What the people I've taught say",
+    "feedbacks.title": "Education is what moves me",
     "feedbacks.subtitle":
-      "Real messages I received in the chat at the end of my classes. 💬",
-    "feedbacks.story.title": "Education is what moves me.",
+      "Real messages I received in the chat at the end of my classes",
     "feedbacks.story.body":
       "Before tech, I was a doula and studied obstetrics. I learned early that active listening and clear communication change someone's experience — and that's exactly what I carried with me when I moved into software development.<br /><br />Teaching, to me, is about opening doors. Every cohort at {reprograma}, Minas Programam, and Tera is a chance to show that technology is for everyone. The messages beside this are real — that's how I said goodbye to so many classes.",
     "feedbacks.story.sign": "— Paula, teacher and mentor for 5+ years",

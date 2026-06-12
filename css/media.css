@@ -33,15 +33,6 @@
     font-size: 7rem;
   }
 
-  .about-skills {
-    min-width: 60%;
-    padding-left: 0;
-  }
-
-  .about-content {
-    padding-right: 0;
-  }
-
   .service-card-title {
     font-size: 1.8rem;
   }
@@ -77,6 +68,11 @@
   .about-row {
     row-gap: 5rem;
     margin-bottom: 5rem;
+  }
+
+  .about-split {
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
   }
 
   .about-descr {
@@ -217,8 +213,6 @@
     display: block;
   }
 
-  .about-skills,
-  .about-content,
   .service-card {
     flex: 0 0 100%;
     max-width: 100%;
@@ -260,12 +254,25 @@
     right: 7.2rem;
     z-index: 10;
   }
+
+  /* Talks split: tablet — compacta padding e fonte do bloco esquerdo */
+  .carousel-left {
+    padding: 6rem 3.2rem 6rem 2.4rem;
+    max-width: none;
+  }
+
+  .carousel-title {
+    font-size: 2.8rem;
+  }
+
+  .carousel-narrative {
+    font-size: 1.4rem;
+  }
 }
 
 @media (max-width: 720px) {
   .expertise,
-  .feedbacks,
-  .carousel-section {
+  .feedbacks {
     padding: 7rem 0;
   }
 
@@ -295,8 +302,36 @@
     grid-template-columns: 1fr;
   }
 
-  .carousel-card {
-    flex: 0 0 26rem;
+  /* Talks split: coluna única no mobile */
+  .carousel-container {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .carousel-left {
+    flex: none;
+    max-width: 100%;
+    margin-left: 0;
+    padding: 5rem 2.4rem 3.2rem;
+  }
+
+  .carousel-right {
+    min-height: auto;
+    padding: 0 0 2rem;
+  }
+
+  .carousel-slide {
+    /* 1 card + pequena espiada do próximo */
+    width: 78vw;
+    height: min(28rem, 46vh);
+  }
+
+  .carousel-track {
+    padding: 0 2.4rem 0 0;
+  }
+
+  .carousel-title {
+    font-size: 2.4rem;
   }
 
   .footer-cta {
@@ -305,10 +340,6 @@
 }
 
 @media (max-width: 406px) {
-  .carousel-card {
-    flex: 0 0 22rem;
-  }
-
   .stat {
     flex: 1 1 100%;
   }
