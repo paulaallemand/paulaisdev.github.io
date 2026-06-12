@@ -1509,6 +1509,13 @@ h5 {
   overflow: hidden;
   display: flex;
   align-items: center;
+  background: linear-gradient(
+    to right,
+    rgba(12, 22, 24, 0.4) 0%,
+    rgba(12, 22, 24, 0) 15%,
+    rgba(12, 22, 24, 0) 85%,
+    rgba(12, 22, 24, 0.6) 100%
+  );
 }
 
 .carousel-track {
@@ -1516,7 +1523,7 @@ h5 {
   width: max-content;
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.6rem;
   padding-right: 3.2rem;
   /* translateX controlado por JS */
   transition: transform 0.55s cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -1526,8 +1533,8 @@ h5 {
 /* slides preenchem 100% da altura da coluna direita */
 .carousel-slide {
   flex-shrink: 0;
-  width: min(38rem, 30vw);
-  height: min(30rem, 48vh);
+  width: 36rem;
+  height: 50rem;
   position: relative;
   overflow: hidden;
   border-radius: 0.4rem;
@@ -1573,40 +1580,32 @@ h5 {
   line-height: 1.6;
 }
 
-/* Setas */
+/* Setas - ocultas visualmente, mantidas para acessibilidade */
 .carousel-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(247, 251, 253, 0.1);
-  border: 1px solid rgba(247, 251, 253, 0.2);
-  color: var(--primary-bg-color);
-  width: 4.8rem;
-  height: 4.8rem;
+  background: transparent;
+  border: none;
+  color: transparent;
+  width: 0;
+  height: 0;
   border-radius: 50%;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  transition: background 0.2s ease;
+  cursor: auto;
+  transition: none;
   z-index: 3;
 }
 
-.carousel-arrow:hover,
-.carousel-arrow:focus-visible {
-  background: rgba(247, 251, 253, 0.22);
-}
-
-.carousel-arrow:focus-visible {
-  outline: 2px solid var(--secondary-accent);
-  outline-offset: 3px;
-}
-
-.carousel-prev {
-  left: 1.6rem;
-}
-.carousel-next {
-  right: 1.6rem;
+@media (prefers-reduced-motion: no-preference) {
+  /* Setas visíveis apenas para usuários de tecnologia assistiva */
+  @supports (clip-path: polygon(0 0)) {
+    .carousel-arrow {
+      clip-path: inset(100%);
+    }
+  }
 }
 
 /* Dots — centralizados na base do bloco direito */

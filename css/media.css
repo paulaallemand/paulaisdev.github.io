@@ -323,7 +323,7 @@
   .carousel-slide {
     /* 1 card + pequena espiada do próximo */
     width: 70vw;
-    height: min(26rem, 44vh);
+    height: 50rem;
   }
 
   .carousel-track {
