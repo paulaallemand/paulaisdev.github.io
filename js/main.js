@@ -49,24 +49,94 @@ window.addEventListener("scroll", function () {
 AOS.init({ once: true });
 
 /* ============================================================
+   Experiência — abas de ano "Antes disso"
+   ============================================================ */
+(function initExperienceTabs() {
+  const tabs = Array.from(document.querySelectorAll(".exp-tab"));
+  if (!tabs.length) return;
+
+  function activate(tab) {
+    tabs.forEach((t) => {
+      const isActive = t === tab;
+      t.setAttribute("aria-selected", String(isActive));
+      t.setAttribute("tabindex", isActive ? "0" : "-1");
+      const panel = document.getElementById(t.getAttribute("aria-controls"));
+      if (panel) panel.hidden = !isActive;
+    });
+  }
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => activate(tab));
+    tab.addEventListener("keydown", (e) => {
+      const idx = tabs.indexOf(e.currentTarget);
+      if (e.key === "ArrowRight") {
+        e.preventDefault();
+        activate(tabs[(idx + 1) % tabs.length]);
+        tabs[(idx + 1) % tabs.length].focus();
+      }
+      if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        activate(tabs[(idx - 1 + tabs.length) % tabs.length]);
+        tabs[(idx - 1 + tabs.length) % tabs.length].focus();
+      }
+      if (e.key === "Home") {
+        e.preventDefault();
+        activate(tabs[0]);
+        tabs[0].focus();
+      }
+      if (e.key === "End") {
+        e.preventDefault();
+        activate(tabs[tabs.length - 1]);
+        tabs[tabs.length - 1].focus();
+      }
+    });
+  });
+})();
+
+/* ============================================================
    Chat de feedbacks estilo Zoom — animação de mensagens
    ============================================================ */
 (function initFeedbackChat() {
   const chat = document.getElementById("zoom-chat");
-  const replayBtn = document.getElementById("chat-replay");
   const windowEl = document.querySelector(".zoom-window");
   if (!chat || typeof FEEDBACKS === "undefined") return;
 
   const reduceMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
+    "(prefers-reduced-motion: reduce)",
   ).matches;
   let timers = [];
   let running = false;
 
-  function clearTimers() {
-    timers.forEach(clearTimeout);
-    timers = [];
+  // Controle do auto-scroll: só "gruda" no fim se o usuário não rolou para
+  // cima e não está segurando o dedo dentro do chat (mobile).
+  let stickToBottom = true;
+  let holding = false;
+  const NEAR_BOTTOM = 24; // px de tolerância para considerar "no fim"
+
+  function isNearBottom() {
+    return chat.scrollHeight - chat.scrollTop - chat.clientHeight < NEAR_BOTTOM;
   }
+
+  // Quando o usuário rola manualmente, decide se religa ou desliga o stick.
+  chat.addEventListener("scroll", () => {
+    if (holding) return; // durante o toque, a posição é reavaliada no release
+    stickToBottom = isNearBottom();
+  });
+
+  // Mobile: segurar o dedo dentro do chat pausa o auto-scroll.
+  function pause() {
+    holding = true;
+    stickToBottom = false;
+  }
+  function release() {
+    holding = false;
+    stickToBottom = isNearBottom();
+  }
+  chat.addEventListener("pointerdown", pause);
+  chat.addEventListener("touchstart", pause, { passive: true });
+  window.addEventListener("pointerup", release);
+  window.addEventListener("touchend", release);
+  window.addEventListener("touchcancel", release);
 
   function wait(ms) {
     return new Promise((resolve) => timers.push(setTimeout(resolve, ms)));
@@ -113,7 +183,7 @@ AOS.init({ once: true });
   }
 
   function scrollDown() {
-    chat.scrollTop = chat.scrollHeight;
+    if (stickToBottom) chat.scrollTop = chat.scrollHeight;
   }
 
   function renderStatic() {
@@ -128,7 +198,6 @@ AOS.init({ once: true });
   async function play() {
     if (running) return;
     running = true;
-    if (replayBtn) replayBtn.hidden = true;
     chat.innerHTML = "";
 
     for (let i = 0; i < FEEDBACKS.length; i++) {
@@ -148,20 +217,11 @@ AOS.init({ once: true });
     }
 
     running = false;
-    if (replayBtn) replayBtn.hidden = false;
   }
 
   if (reduceMotion) {
     renderStatic();
     return;
-  }
-
-  if (replayBtn) {
-    replayBtn.addEventListener("click", () => {
-      clearTimers();
-      running = false;
-      play();
-    });
   }
 
   // Dispara a animação quando a janela do chat entra na viewport
@@ -174,7 +234,141 @@ AOS.init({ once: true });
         }
       });
     },
-    { threshold: 0.3 }
+    { threshold: 0.3 },
   );
   observer.observe(windowEl || chat);
+})();
+
+/* ============================================================
+   Palestras — carousel horizontal de fotos (split layout)
+   ============================================================ */
+(function initTalksCarousel() {
+  const track = document.getElementById("talks-track");
+  const right = track && track.closest(".carousel-right");
+  if (!track || !right) return;
+
+  const slides = Array.from(track.querySelectorAll(".carousel-slide"));
+  const dots = Array.from(
+    document.querySelectorAll(".carousel-dots .carousel-dot"),
+  );
+  const btnPrev = right.querySelector(".carousel-prev");
+  const btnNext = right.querySelector(".carousel-next");
+  const total = slides.length;
+  let current = 0;
+  let autoTimer = null;
+
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
+
+  if (reduceMotion) {
+    track.style.transition = "none";
+  }
+
+  /* Calcula o translateX para centrar o slide `i` na área direita */
+  function getOffset(i) {
+    const slideW = slides[0].offsetWidth;
+    const gapPx = parseFloat(getComputedStyle(track).gap) || 20;
+    const rightW = right.offsetWidth;
+    const trackPad = parseFloat(getComputedStyle(track).paddingLeft) || 0;
+    // posição do início do slide i
+    const slideStart = i * (slideW + gapPx);
+    // queremos centrar o slide dentro da área direita
+    const centerOffset = (rightW - slideW) / 2;
+    return -(slideStart - centerOffset + trackPad);
+  }
+
+  function goTo(i) {
+    current = (i + total) % total;
+
+    track.style.transform = `translateX(${getOffset(current)}px)`;
+
+    slides.forEach((s, idx) => {
+      const active = idx === current;
+      s.toggleAttribute("data-active", active);
+      s.setAttribute("aria-hidden", String(!active));
+    });
+
+    dots.forEach((d, idx) => {
+      const active = idx === current;
+      d.setAttribute("aria-selected", String(active));
+    });
+  }
+
+  function startAuto() {
+    if (reduceMotion) return;
+    clearInterval(autoTimer);
+    autoTimer = setInterval(() => goTo(current + 1), 6000);
+  }
+
+  function stopAuto() {
+    clearInterval(autoTimer);
+  }
+
+  // Setas
+  btnPrev &&
+    btnPrev.addEventListener("click", () => {
+      goTo(current - 1);
+      startAuto();
+    });
+  btnNext &&
+    btnNext.addEventListener("click", () => {
+      goTo(current + 1);
+      startAuto();
+    });
+
+  // Dots
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      goTo(i);
+      startAuto();
+    });
+  });
+
+  // Teclado (← →) quando foco dentro do bloco direito
+  right.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      goTo(current - 1);
+      startAuto();
+    }
+    if (e.key === "ArrowRight") {
+      e.preventDefault();
+      goTo(current + 1);
+      startAuto();
+    }
+  });
+
+  // Pausa ao hover / foco
+  right.addEventListener("mouseenter", stopAuto);
+  right.addEventListener("mouseleave", startAuto);
+  right.addEventListener("focusin", stopAuto);
+  right.addEventListener("focusout", startAuto);
+
+  // Touch swipe
+  let touchStartX = 0;
+  right.addEventListener(
+    "touchstart",
+    (e) => {
+      touchStartX = e.changedTouches[0].clientX;
+    },
+    { passive: true },
+  );
+  right.addEventListener(
+    "touchend",
+    (e) => {
+      const delta = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(delta) < 50) return;
+      delta < 0 ? goTo(current + 1) : goTo(current - 1);
+      startAuto();
+    },
+    { passive: true },
+  );
+
+  // Recalcula offset ao redimensionar
+  window.addEventListener("resize", () => goTo(current), { passive: true });
+
+  // Inicializa
+  goTo(0);
+  startAuto();
 })();

@@ -33,15 +33,6 @@
     font-size: 7rem;
   }
 
-  .about-skills {
-    min-width: 60%;
-    padding-left: 0;
-  }
-
-  .about-content {
-    padding-right: 0;
-  }
-
   .service-card-title {
     font-size: 1.8rem;
   }
@@ -77,6 +68,11 @@
   .about-row {
     row-gap: 5rem;
     margin-bottom: 5rem;
+  }
+
+  .about-split {
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
   }
 
   .about-descr {
@@ -217,8 +213,6 @@
     display: block;
   }
 
-  .about-skills,
-  .about-content,
   .service-card {
     flex: 0 0 100%;
     max-width: 100%;
@@ -226,15 +220,6 @@
 
   .project-box {
     max-width: 100%;
-  }
-
-  .brand-logos-row {
-    gap: 1.5rem;
-  }
-
-  .brand-logo {
-    max-width: 120px;
-    max-height: 80px;
   }
 
   .footer-copyright p {
@@ -245,15 +230,6 @@
 @media (max-width: 406px) {
   html {
     font-size: 50%;
-  }
-
-  .brand-logos-row {
-    flex-direction: column;
-  }
-
-  .brand-logo {
-    max-width: 100px;
-    max-height: 70px;
   }
 
   .footer-copyright p {
@@ -278,12 +254,25 @@
     right: 7.2rem;
     z-index: 10;
   }
+
+  /* Talks split: tablet — compacta padding e fonte do bloco esquerdo */
+  .carousel-left {
+    padding: 6rem 3.2rem 6rem 2.4rem;
+    max-width: none;
+  }
+
+  .carousel-title {
+    font-size: 2.8rem;
+  }
+
+  .carousel-narrative {
+    font-size: 1.4rem;
+  }
 }
 
 @media (max-width: 720px) {
   .expertise,
-  .feedbacks,
-  .carousel-section {
+  .feedbacks {
     padding: 7rem 0;
   }
 
@@ -313,8 +302,36 @@
     grid-template-columns: 1fr;
   }
 
-  .carousel-card {
-    flex: 0 0 26rem;
+  /* Talks split: coluna única no mobile */
+  .carousel-container {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .carousel-left {
+    flex: none;
+    max-width: 100%;
+    margin-left: 0;
+    padding: 5rem 2.4rem 3.2rem;
+  }
+
+  .carousel-right {
+    min-height: auto;
+    padding: 0 0 2rem;
+  }
+
+  .carousel-slide {
+    /* 1 card + pequena espiada do próximo */
+    width: 78vw;
+    height: min(28rem, 46vh);
+  }
+
+  .carousel-track {
+    padding: 0 2.4rem 0 0;
+  }
+
+  .carousel-title {
+    font-size: 2.4rem;
   }
 
   .footer-cta {
@@ -323,11 +340,82 @@
 }
 
 @media (max-width: 406px) {
-  .carousel-card {
-    flex: 0 0 22rem;
-  }
-
   .stat {
     flex: 1 1 100%;
+  }
+}
+
+/* ===== Experiência editorial ===== */
+@media (max-width: 977px) {
+  .exp-now-year {
+    font-size: 16rem;
+  }
+
+  .exp-now-role {
+    font-size: 2.6rem;
+  }
+
+  .exp-tab {
+    font-size: 1.7rem;
+    padding: 0.8rem 1.8rem 1rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .exp-now {
+    padding: 3.5rem 2.4rem 3rem;
+  }
+
+  .exp-now-year {
+    font-size: 11rem;
+    top: -1rem;
+  }
+
+  .exp-now-role {
+    font-size: 2.2rem;
+  }
+
+  .exp-now-desc {
+    font-size: 1.5rem;
+  }
+
+  .exp-tabs {
+    gap: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .exp-tab {
+    font-size: 1.6rem;
+    padding: 0.8rem 1.4rem 1rem;
+    white-space: nowrap;
+  }
+
+  /* logos strip: quebra em coluna no mobile */
+  .logos-strip {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logos-strip-list {
+    gap: 2rem 2.8rem;
+  }
+
+  .strip-logo {
+    height: 2.6rem;
+    filter: grayscale(0);
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 406px) {
+  .exp-now-stack li {
+    font-size: 1.2rem;
+    padding: 0.4rem 1.1rem;
+  }
+
+  .exp-tab {
+    font-size: 1.5rem;
+    padding: 0.8rem 1.2rem 1rem;
   }
 }
