@@ -1349,6 +1349,83 @@ h5 {
   }
 }
 
+/* ---------- Comunidades & Logos — fundo escuro ---------- */
+.communities {
+  background-color: var(--primary-accent);
+  padding: 6rem 0;
+}
+
+.communities-label {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(247, 251, 253, 0.6);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.communities-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1.2rem;
+}
+
+.community-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  background: rgba(247, 251, 253, 0.05);
+  border: 1px solid rgba(247, 251, 253, 0.1);
+  border-radius: 0.8rem;
+  padding: 1rem;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.community-item:hover {
+  background: rgba(247, 251, 253, 0.08);
+  border-color: rgba(247, 251, 253, 0.25);
+}
+
+.community-logo {
+  max-height: 2.8rem;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.85;
+  transition: opacity 0.3s;
+}
+
+.community-item:hover .community-logo {
+  opacity: 1;
+}
+
+/* Responsivo */
+@media (max-width: 977px) {
+  .communities-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .communities {
+    padding: 4rem 0;
+  }
+
+  .communities-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .community-item {
+    padding: 0.8rem;
+  }
+
+  .community-logo {
+    max-height: 2.4rem;
+  }
+}
+
 /* ---------- Palestras — split layout ARQ-style ---------- */
 
 /* A seção ocupa largura total — sem container interno */

@@ -27,7 +27,7 @@ const TRANSLATIONS = {
     "hero.cta.contact": "Fale comigo",
 
     "about.title": "Sobre mim",
-    "about.headline": "Movida por propósito, alimentada por aprendizado.",
+    "about.headline": "Tudo que você toca, você transforma. Tudo que você transforma, transforma você. —Octavia Butler",
     "about.descr":
       "Sou uma engenheira de software multifacetada, com base sólida em desenvolvimento back-end, design de APIs e computação em nuvem (AWS, GCP). Meu trabalho integra tecnologias como Java, Spring Boot e Python. Apaixonada por ensinar, contribuo com programas como {reprograma} e Minas Programam, formando novos talentos da tecnologia — sempre com foco em soluções robustas, seguras e escaláveis.<br /><br />Acredito no poder da tecnologia para transformar: movida por propósito, alimentada pelo aprendizado e comprometida em construir soluções de impacto para um amanhã melhor.",
     "about.cv": "Baixar CV",
@@ -55,6 +55,7 @@ const TRANSLATIONS = {
       "Da pesquisa em neurociência aos sistemas críticos do mercado financeiro.",
     "experience.cta": "Ver trajetória completa no LinkedIn",
     "experience.past": "Antes disso",
+    "experience.logos.title": "Empresas &amp; comunidades",
     "exp.now.label": "Agora",
     "exp.btg.role": "Software Analyst",
     "exp.btg.desc":
@@ -168,7 +169,7 @@ const TRANSLATIONS = {
     "hero.cta.contact": "Get in touch",
 
     "about.title": "About me",
-    "about.headline": "Driven by purpose, fueled by learning.",
+    "about.headline": "All that you touch you change. All that you change changes you. —Octavia Butler",
     "about.descr":
       "I am a versatile software engineer with a solid foundation in backend development, API design, and cloud computing (AWS, GCP). My work integrates technologies like Java, Spring Boot, and Python. Passionate about teaching, I contribute to programs like {reprograma} and Minas Programam, empowering new tech talent — always focused on robust, secure, and scalable solutions.<br /><br />I believe in the power of technology to transform: driven by purpose, fueled by learning, and committed to building impactful solutions for a better tomorrow.",
     "about.cv": "Download CV",
@@ -195,6 +196,7 @@ const TRANSLATIONS = {
     "experience.subtitle": "From neuroscience research to financial systems.",
     "experience.cta": "See full career on LinkedIn",
     "experience.past": "Before that",
+    "experience.logos.title": "Companies &amp; communities",
     "exp.now.label": "Now",
     "exp.btg.role": "Software Analyst",
     "exp.btg.desc":
