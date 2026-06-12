@@ -1093,7 +1093,7 @@ h5 {
 }
 
 .feedbacks-title {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 
 .feedbacks-grid {
@@ -1131,7 +1131,6 @@ h5 {
 .zoom-window {
   flex: 1 1 42rem;
   max-width: 56rem;
-  max-height: 42rem;
   background: #1c1c1f;
   border-radius: 1.4rem;
   overflow: hidden;
@@ -1230,8 +1229,8 @@ h5 {
 
 .zoom-chat {
   padding: 2.4rem 2rem;
-  min-height: 32rem;
-  max-height: 38rem;
+  min-height: 42rem;
+  max-height: 46rem;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
