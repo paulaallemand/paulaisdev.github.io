@@ -346,6 +346,11 @@ h5 {
 /* About section */
 .about {
   padding: var(--section-v) 0;
+  background-color: var(--secondary-accent);
+}
+
+.about .section-eyebrow {
+  color: rgba(247, 251, 253, 0.72);
 }
 
 .about-title {
@@ -393,16 +398,20 @@ h5 {
   font-size: 4.4rem;
   font-weight: 400;
   line-height: 1.35;
-  color: var(--main-text-color);
+  color: var(--primary-bg-color);
   margin: 0 0 1.6rem 0;
 }
 
 .about-quote-author {
   font-size: 1.6rem;
   font-weight: 600;
-  color: var(--secondary-accent);
+  color: rgba(247, 251, 253, 0.72);
   margin: 0;
   letter-spacing: 0.02em;
+}
+
+.about-descr {
+  color: var(--primary-bg-color);
 }
 
 .about-download-btn {
@@ -420,13 +429,6 @@ h5 {
   flex: 33.33333333%;
 }
 
-.service-card-img {
-  display: block;
-  height: 5rem;
-  margin: 0 auto 2rem;
-  filter: invert(33%) sepia(7%) saturate(243%) hue-rotate(145deg)
-    brightness(94%) contrast(81%);
-}
 
 .service-card-title {
   text-align: center;
@@ -776,60 +778,6 @@ h5 {
   margin-top: 1.2rem;
 }
 
-/* ---------- Expertise (pilares) ---------- */
-.expertise {
-  padding: var(--section-v) 0;
-  background-color: var(--secondary-accent);
-}
-
-.expertise .section-eyebrow {
-  color: rgba(247, 251, 253, 0.72);
-}
-
-.expertise .expertise-title .title {
-  color: var(--primary-bg-color);
-}
-
-.expertise .logos-strip {
-  border-top-color: rgba(247, 251, 253, 0.18);
-}
-
-.expertise .logos-strip-label {
-  color: rgba(247, 251, 253, 0.6);
-}
-
-.expertise .strip-logo {
-  opacity: 0.6;
-}
-
-.expertise-title {
-  margin-bottom: 5rem;
-}
-
-.expertise .service-card {
-  background: var(--white-color);
-  border: 1px solid var(--gray-color);
-  border-radius: 1.2rem;
-  padding: 3.5rem 2.5rem;
-  flex: 0 0 31%;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    border-color 0.3s ease;
-}
-
-.expertise .service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 1.4rem 3rem rgba(12, 22, 24, 0.08);
-  border-color: var(--secondary-accent);
-}
-
-.expertise .service-card-img {
-  height: 4.4rem;
-  margin-bottom: 2.4rem;
-  filter: invert(15%) sepia(38%) saturate(2200%) hue-rotate(335deg)
-    brightness(70%) contrast(95%);
-}
 
 /* ---------- Experiência (timeline) ---------- */
 .experience {
@@ -1114,7 +1062,7 @@ h5 {
 }
 
 .feedbacks-title {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .feedbacks-grid {
@@ -1152,6 +1100,7 @@ h5 {
 .zoom-window {
   flex: 1 1 42rem;
   max-width: 56rem;
+  min-height: 52rem;
   background: #1c1c1f;
   border-radius: 1.4rem;
   overflow: hidden;
@@ -1369,9 +1318,9 @@ h5 {
   }
 }
 
-/* ---------- Comunidades & Logos — fundo escuro ---------- */
+/* ---------- Comunidades & Logos — fundo off-white ---------- */
 .communities {
-  background-color: var(--primary-accent);
+  background-color: var(--primary-bg-color);
   padding: 6rem 0;
 }
 
@@ -1380,7 +1329,7 @@ h5 {
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(247, 251, 253, 0.6);
+  color: var(--gray-text-color);
   margin-bottom: 3rem;
   text-align: center;
 }
@@ -1396,27 +1345,28 @@ h5 {
   align-items: center;
   justify-content: center;
   aspect-ratio: 1;
-  background: rgba(247, 251, 253, 0.05);
-  border: 1px solid rgba(247, 251, 253, 0.1);
+  background: #fff;
+  border: 1px solid rgba(12, 22, 24, 0.08);
   border-radius: 0.8rem;
   padding: 1rem;
-  transition: background 0.3s, border-color 0.3s;
+  transition: box-shadow 0.2s;
 }
 
 .community-item:hover {
-  background: rgba(247, 251, 253, 0.08);
-  border-color: rgba(247, 251, 253, 0.25);
+  box-shadow: 0 4px 12px rgba(12, 22, 24, 0.1);
 }
 
 .community-logo {
   max-height: 2.8rem;
   width: auto;
   object-fit: contain;
-  opacity: 0.85;
-  transition: opacity 0.3s;
+  filter: grayscale(1);
+  opacity: 0.55;
+  transition: filter 0.25s, opacity 0.25s;
 }
 
 .community-item:hover .community-logo {
+  filter: grayscale(0);
   opacity: 1;
 }
 
@@ -1544,6 +1494,7 @@ h5 {
   display: flex;
   align-items: center;
   gap: 1.6rem;
+  padding-left: 3.2rem;
   padding-right: 3.2rem;
   /* translateX controlado por JS */
   transition: transform 0.55s cubic-bezier(0.25, 0.1, 0.25, 1);

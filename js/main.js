@@ -263,17 +263,12 @@ window.addEventListener("scroll", function () {
     track.style.transition = "none";
   }
 
-  /* Calcula o translateX para centrar o slide `i` na área direita */
+  /* Calcula o translateX para posicionar o slide `i` alinhado à esquerda */
   function getOffset(i) {
     const slideW = slides[0].offsetWidth;
-    const gapPx = parseFloat(getComputedStyle(track).gap) || 20;
-    const rightW = right.offsetWidth;
+    const gapPx = parseFloat(getComputedStyle(track).gap) || 16;
     const trackPad = parseFloat(getComputedStyle(track).paddingLeft) || 0;
-    // posição do início do slide i
-    const slideStart = i * (slideW + gapPx);
-    // queremos centrar o slide dentro da área direita
-    const centerOffset = (rightW - slideW) / 2;
-    return -(slideStart - centerOffset + trackPad);
+    return -(i * (slideW + gapPx) - trackPad);
   }
 
   function goTo(i) {
@@ -343,25 +338,31 @@ window.addEventListener("scroll", function () {
   right.addEventListener("focusin", stopAuto);
   right.addEventListener("focusout", startAuto);
 
-  // Touch swipe
-  let touchStartX = 0;
-  right.addEventListener(
-    "touchstart",
-    (e) => {
-      touchStartX = e.changedTouches[0].clientX;
-    },
-    { passive: true },
-  );
-  right.addEventListener(
-    "touchend",
-    (e) => {
-      const delta = e.changedTouches[0].clientX - touchStartX;
-      if (Math.abs(delta) < 50) return;
+  // Drag (mouse + touch via Pointer Events)
+  let dragStartX = 0;
+  let isDragging = false;
+
+  right.addEventListener("pointerdown", (e) => {
+    dragStartX = e.clientX;
+    isDragging = true;
+    right.setPointerCapture(e.pointerId);
+    stopAuto();
+  });
+
+  right.addEventListener("pointerup", (e) => {
+    if (!isDragging) return;
+    isDragging = false;
+    const delta = e.clientX - dragStartX;
+    if (Math.abs(delta) > 50) {
       delta < 0 ? goTo(current + 1) : goTo(current - 1);
-      startAuto();
-    },
-    { passive: true },
-  );
+    }
+    startAuto();
+  });
+
+  right.addEventListener("pointercancel", () => {
+    isDragging = false;
+    startAuto();
+  });
 
   // Recalcula offset ao redimensionar
   window.addEventListener("resize", () => goTo(current), { passive: true });

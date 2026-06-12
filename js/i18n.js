@@ -7,7 +7,6 @@ const TRANSLATIONS = {
   pt: {
     "nav.home": "Início",
     "nav.about": "Sobre",
-    "nav.expertise": "Atuação",
     "nav.experience": "Experiência",
     "nav.feedbacks": "Feedbacks",
     "nav.talks": "Palestras",
@@ -54,7 +53,7 @@ const TRANSLATIONS = {
     "experience.title": "Da neurociência a sistemas do mercado financeiro",
     "experience.subtitle":
       "Da pesquisa em neurociência aos sistemas críticos do mercado financeiro.",
-    "experience.cta": "Ver trajetória completa no LinkedIn",
+    "experience.cta": "Ver trajetória completa",
     "experience.past": "Antes disso",
     "experience.logos.title": "Empresas &amp; comunidades",
     "exp.now.label": "Agora",
@@ -151,7 +150,6 @@ const TRANSLATIONS = {
   en: {
     "nav.home": "Home",
     "nav.about": "About",
-    "nav.expertise": "Expertise",
     "nav.experience": "Experience",
     "nav.feedbacks": "Feedback",
     "nav.talks": "Talks",
@@ -196,7 +194,7 @@ const TRANSLATIONS = {
 
     "experience.title": "From neuroscience to financial systems",
     "experience.subtitle": "From neuroscience research to financial systems.",
-    "experience.cta": "See full career on LinkedIn",
+    "experience.cta": "See full trajectory",
     "experience.past": "Before that",
     "experience.logos.title": "Companies &amp; communities",
     "exp.now.label": "Now",
