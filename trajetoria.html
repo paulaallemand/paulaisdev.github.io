@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trajetória · Paula Allemand</title>
+    <meta
+      name="description"
+      content="Trajetória profissional de Paula Allemand — de neurociência e pesquisa até sistemas críticos do mercado financeiro."
+    />
+    <meta name="author" content="Paula Allemand" />
+    <meta name="theme-color" content="#6f1d1b" />
+
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/media.css" />
+  </head>
+
+  <body>
+    <header id="header" class="header">
+      <div class="container container-lg">
+        <div class="header-nav">
+          <a href="index.html" class="logo">Paula<span>.</span>Allemand</a>
+          <nav id="nav" class="nav">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link" data-i18n="nav.home"
+                  >Início</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="index.html#about" class="nav-link" data-i18n="nav.about"
+                  >Sobre</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="index.html#expertise" class="nav-link" data-i18n="nav.expertise"
+                  >Atuação</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="index.html#experience" class="nav-link active" data-i18n="nav.experience"
+                  >Experiência</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="index.html#feedbacks" class="nav-link" data-i18n="nav.feedbacks"
+                  >Feedbacks</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="index.html#talks" class="nav-link" data-i18n="nav.talks"
+                  >Palestras</a
+                >
+              </li>
+              <li class="nav-item">
+                <a href="blog.html" class="nav-link" data-i18n="nav.blog"
+                  >Blog</a
+                >
+              </li>
+            </ul>
+            <button
+              id="lang-toggle"
+              class="lang-toggle"
+              type="button"
+              aria-label="Ver em inglês"
+            >
+              <img src="img/flags/us.svg" alt="Ver em inglês" />
+            </button>
+            <button id="nav-btn" class="nav-btn">
+              <img id="nav-btn-img" src="img/icons/open.svg" alt="Menu" />
+            </button>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- Trajetória: abas de ano em destaque -->
+      <section id="trajectory" class="experience">
+        <div class="container">
+          <div class="experience-title">
+            <p class="section-eyebrow" data-i18n="eyebrow.experience">Antes disso</p>
+            <h1 class="title">Minha trajetória</h1>
+          </div>
+
+          <!-- Timeline em abas por ano -->
+          <div class="exp-past" style="max-width: 100%; margin: 0;">
+            <div class="exp-tabs" role="tablist" aria-label="Linha do tempo">
+              <button
+                role="tab"
+                class="exp-tab"
+                aria-selected="true"
+                aria-controls="traj-tab-2024"
+                id="traj-tab-2024"
+                tabindex="0"
+              >
+                2024
+              </button>
+              <button
+                role="tab"
+                class="exp-tab"
+                aria-selected="false"
+                aria-controls="traj-tab-2021"
+                id="traj-tab-2021"
+                tabindex="-1"
+              >
+                2021
+              </button>
+              <button
+                role="tab"
+                class="exp-tab"
+                aria-selected="false"
+                aria-controls="traj-tab-2019"
+                id="traj-tab-2019"
+                tabindex="-1"
+              >
+                2019
+              </button>
+              <button
+                role="tab"
+                class="exp-tab"
+                aria-selected="false"
+                aria-controls="traj-tab-2017"
+                id="traj-tab-2017"
+                tabindex="-1"
+              >
+                2017
+              </button>
+            </div>
+            <div class="exp-tab-panels">
+              <div
+                role="tabpanel"
+                id="traj-tab-2024"
+                aria-labelledby="traj-tab-2024"
+                class="exp-tab-panel"
+              >
+                <p class="exp-tp-company">Banco BV</p>
+                <p class="exp-tp-role" data-i18n="exp.bv.role">
+                  Engenheira de Software
+                </p>
+                <p class="exp-tp-desc" data-i18n="exp.bv.desc">
+                  Prevenção a Fraudes (via Act Digital): segurança dos fluxos e
+                  dados de todas as áreas do banco, com Java, Spring Boot, GCP e
+                  AWS.
+                </p>
+              </div>
+              <div
+                role="tabpanel"
+                id="traj-tab-2021"
+                aria-labelledby="traj-tab-2021"
+                class="exp-tab-panel"
+                hidden
+              >
+                <p class="exp-tp-company">Itaú Unibanco</p>
+                <p class="exp-tp-role" data-i18n="exp.itau.role">
+                  Engenheira de Software Pleno
+                </p>
+                <p class="exp-tp-desc" data-i18n="exp.itau.desc">
+                  Back-end: construção de APIs do zero (Java, Spring Boot,
+                  Maven, SQL) e arquitetura BFF conectando múltiplas APIs e
+                  serviços de segurança. Manutenção de serviços em Python,
+                  Kotlin e iOS.
+                </p>
+              </div>
+              <div
+                role="tabpanel"
+                id="traj-tab-2019"
+                aria-labelledby="traj-tab-2019"
+                class="exp-tab-panel"
+                hidden
+              >
+                <div class="exp-tp-entry">
+                  <p class="exp-tp-company">Tera</p>
+                  <p class="exp-tp-role" data-i18n="exp.tera.role">
+                    Expert &amp; Fullstack Developer
+                  </p>
+                  <p class="exp-tp-desc" data-i18n="exp.tera.desc">
+                    Ensino de fullstack e back-end (lógica, algoritmos,
+                    arquitetura web, SQL/NoSQL, Node.js, web APIs e segurança) e
+                    desenvolvimento de plataformas em Vue, React, Node e
+                    Firebase — sempre com foco em acessibilidade.
+                  </p>
+                </div>
+                <div class="exp-tp-entry exp-tp-entry--sep">
+                  <p class="exp-tp-company">
+                    {reprograma} · Minas Programam · Estação Hack
+                  </p>
+                  <p class="exp-tp-role" data-i18n="exp.edu.role">Professora</p>
+                  <p class="exp-tp-desc" data-i18n="exp.edu.desc">
+                    Formação de novas pessoas em programação — Git/GitHub,
+                    HTML/CSS, JavaScript, React, Node.js e APIs/CRUD — em
+                    programas que ampliam o acesso à tecnologia.
+                  </p>
+                </div>
+              </div>
+              <div
+                role="tabpanel"
+                id="traj-tab-2017"
+                aria-labelledby="traj-tab-2017"
+                class="exp-tab-panel"
+                hidden
+              >
+                <p class="exp-tp-company">USP</p>
+                <p class="exp-tp-role" data-i18n="exp.usp.role">
+                  Iniciação Científica
+                </p>
+                <p class="exp-tp-desc" data-i18n="exp.usp.desc">
+                  Onde tudo começou: pesquisa em Cronobiologia e Neurociência
+                  sobre a relação entre o sono e o desenvolvimento
+                  neurocognitivo do bebê (revisão sistemática, método PRISMA).
+                  Doula e ex-aluna de obstetrícia.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="experience-cta" style="margin-top: 6rem;">
+            <a
+              href="https://www.linkedin.com/in/paulaallemand/"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-white"
+              data-i18n="experience.cta"
+              >Ver trajetória completa no LinkedIn</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-row">
+          <h2 class="footer-cta" data-i18n="footer.cta">
+            Bora construir algo incrível?
+          </h2>
+          <a
+            href="https://www.linkedin.com/in/paulaallemand/"
+            target="_blank"
+            rel="noopener"
+            class="btn btn-ghost-white"
+            data-i18n="footer.contact"
+            >Fale comigo</a
+          >
+          <div class="social-links-row footer-social">
+            <a
+              href="https://github.com/paulaisdev"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+            >
+              <img src="img/social_icons/github.svg" alt="GitHub" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/paulaallemand/"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+            >
+              <img src="img/social_icons/linkedin.svg" alt="LinkedIn" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#main-content" class="skip-link" data-i18n="a11y.skip"
+      >Pular para o conteúdo</a
+    >
+
+    <div id="goToTop" class="goToTop">
+      <a href="#main-content" aria-label="Voltar ao topo">
+        <img src="img/icons/arrow_up.svg" alt="Voltar ao topo" />
+      </a>
+    </div>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
