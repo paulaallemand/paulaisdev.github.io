@@ -27,7 +27,8 @@ const TRANSLATIONS = {
     "hero.cta.contact": "Fale comigo",
 
     "about.title": "Sobre mim",
-    "about.headline": "Tudo que você toca, você transforma. Tudo que você transforma, transforma você. —Octavia Butler",
+    "about.headline.quote": "Tudo que você toca, você transforma. Tudo que você transforma, transforma você.",
+    "about.headline.author": "— Octavia Butler",
     "about.descr":
       "Sou uma engenheira de software multifacetada, com base sólida em desenvolvimento back-end, design de APIs e computação em nuvem (AWS, GCP). Meu trabalho integra tecnologias como Java, Spring Boot e Python. Apaixonada por ensinar, contribuo com programas como {reprograma} e Minas Programam, formando novos talentos da tecnologia — sempre com foco em soluções robustas, seguras e escaláveis.<br /><br />Acredito no poder da tecnologia para transformar: movida por propósito, alimentada pelo aprendizado e comprometida em construir soluções de impacto para um amanhã melhor.",
     "about.cv": "Baixar CV",
@@ -169,7 +170,8 @@ const TRANSLATIONS = {
     "hero.cta.contact": "Get in touch",
 
     "about.title": "About me",
-    "about.headline": "All that you touch you change. All that you change changes you. —Octavia Butler",
+    "about.headline.quote": "All that you touch you change. All that you change changes you.",
+    "about.headline.author": "— Octavia Butler",
     "about.descr":
       "I am a versatile software engineer with a solid foundation in backend development, API design, and cloud computing (AWS, GCP). My work integrates technologies like Java, Spring Boot, and Python. Passionate about teaching, I contribute to programs like {reprograma} and Minas Programam, empowering new tech talent — always focused on robust, secure, and scalable solutions.<br /><br />I believe in the power of technology to transform: driven by purpose, fueled by learning, and committed to building impactful solutions for a better tomorrow.",
     "about.cv": "Download CV",
