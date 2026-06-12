@@ -810,67 +810,6 @@ h5 {
     brightness(70%) contrast(95%);
 }
 
-/* ---------- Logos strip (comunidades & programas) ---------- */
-.logos-strip {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 1.6rem 4rem;
-  margin-top: 7rem;
-  padding: 4rem 0 0;
-  border-top: 1px solid var(--gray-color);
-}
-
-.logos-strip-label {
-  font-size: 1.3rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.12rem;
-  color: var(--gray-text-color);
-  flex-shrink: 0;
-}
-
-.logos-strip-list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 2.4rem 3.6rem;
-  list-style: none;
-}
-
-.strip-logo {
-  height: 3rem;
-  width: auto;
-  max-width: 10rem;
-  object-fit: contain;
-  filter: grayscale(1);
-  opacity: 0.45;
-  transition:
-    filter 0.25s ease,
-    opacity 0.25s ease;
-}
-
-.strip-logo:hover {
-  filter: grayscale(0);
-  opacity: 1;
-}
-
-/* wrapper para logos com fundo escuro (ex: Estação Hack — texto branco) */
-.strip-logo-dark-bg {
-  display: inline-flex;
-  align-items: center;
-  background: #1c1c1e;
-  border-radius: 0.5rem;
-  padding: 0.4rem 0.8rem;
-}
-.strip-logo-dark-bg .strip-logo {
-  filter: grayscale(0);
-  opacity: 0.75;
-}
-.strip-logo-dark-bg:hover .strip-logo {
-  opacity: 1;
-}
-
 /* ---------- Experiência (timeline) ---------- */
 .experience {
   padding: var(--section-v) 0;
@@ -1147,26 +1086,6 @@ h5 {
   opacity: 0.6;
 }
 
-/* --- Badges em contexto escuro (seção Talks) --- */
-.talks-highlights {
-  margin-top: 2.4rem;
-}
-
-.talks-highlights .exp-highlight-badge {
-  border-color: rgba(247, 251, 253, 0.22);
-  color: rgba(247, 251, 253, 0.72);
-}
-
-.talks-highlights .exp-highlight-org {
-  color: var(--primary-bg-color);
-}
-
-.talks-highlights .exp-highlight-badge:hover,
-.talks-highlights .exp-highlight-badge:focus-visible {
-  border-color: rgba(247, 251, 253, 0.6);
-  color: var(--primary-bg-color);
-}
-
 /* ---------- Feedbacks: mock de chat estilo Zoom ---------- */
 .feedbacks {
   padding: var(--section-v) 0;
@@ -1180,7 +1099,7 @@ h5 {
 .feedbacks-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 4rem;
+  gap: 3rem;
   align-items: stretch;
 }
 
@@ -1197,8 +1116,8 @@ h5 {
 }
 
 .feedbacks-story-body {
-  font-size: 1.6rem;
-  line-height: 1.8;
+  font-size: 1.5rem;
+  line-height: 1.7;
   color: var(--gray-text-color);
 }
 
@@ -1212,6 +1131,7 @@ h5 {
 .zoom-window {
   flex: 1 1 42rem;
   max-width: 56rem;
+  max-height: 42rem;
   background: #1c1c1f;
   border-radius: 1.4rem;
   overflow: hidden;
@@ -1310,8 +1230,8 @@ h5 {
 
 .zoom-chat {
   padding: 2.4rem 2rem;
-  min-height: 42rem;
-  max-height: 46rem;
+  min-height: 32rem;
+  max-height: 38rem;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -1441,24 +1361,24 @@ h5 {
 .carousel-container {
   display: flex;
   align-items: stretch;
-  min-height: max(52rem, 62vh);
+  min-height: max(44rem, 54vh);
 }
 
 /* ---------- Bloco esquerdo: narrativa ---------- */
 .carousel-left {
-  flex: 0 0 42%;
+  flex: 0 0 38%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   /* alinha com a grelha de conteúdo sem container explícito */
-  padding: var(--section-v) 5rem var(--section-v)
+  padding: var(--section-v) 4rem var(--section-v)
     max(3.2rem, calc((100vw - 120rem) / 2 + 3.2rem));
-  max-width: 58rem;
+  max-width: 52rem;
   margin-left: auto;
 }
 
 .carousel-title {
-  font-size: 3.4rem;
+  font-size: 3rem;
   font-weight: 400;
   color: var(--primary-bg-color);
   line-height: 1.35;
@@ -1470,7 +1390,7 @@ h5 {
 }
 
 .carousel-narrative {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   line-height: 1.85;
   color: var(--primary-bg-color);
   margin-bottom: 3.6rem;
@@ -1529,8 +1449,8 @@ h5 {
 /* slides preenchem 100% da altura da coluna direita */
 .carousel-slide {
   flex-shrink: 0;
-  width: min(44rem, 34vw);
-  height: min(34rem, 52vh);
+  width: min(38rem, 30vw);
+  height: min(30rem, 48vh);
   position: relative;
   overflow: hidden;
   border-radius: 0.4rem;
@@ -1646,6 +1566,44 @@ h5 {
 .carousel-dot:focus-visible {
   outline: 2px solid var(--secondary-accent);
   outline-offset: 3px;
+}
+
+/* Badge slides (UNESCO/Google) */
+.badge-slide {
+  background: linear-gradient(
+    135deg,
+    var(--secondary-accent) 0%,
+    rgba(111, 29, 27, 0.8) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.4rem;
+}
+
+.badge-slide-content {
+  text-align: center;
+  padding: 2rem;
+}
+
+.badge-slide-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  text-decoration: none;
+  color: var(--primary-bg-color);
+}
+
+.badge-org {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.badge-desc {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  opacity: 0.9;
 }
 
 /* ---------- Projetos ---------- */

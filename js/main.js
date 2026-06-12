@@ -251,7 +251,7 @@ window.addEventListener("scroll", function () {
   );
   const btnPrev = right.querySelector(".carousel-prev");
   const btnNext = right.querySelector(".carousel-next");
-  const total = slides.length;
+  const total = slides.length; /* 8: 6 fotos + 2 badges (UNESCO, Google.org) */
   let current = 0;
   let autoTimer = null;
 

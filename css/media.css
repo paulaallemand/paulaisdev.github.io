@@ -322,8 +322,8 @@
 
   .carousel-slide {
     /* 1 card + pequena espiada do próximo */
-    width: 78vw;
-    height: min(28rem, 46vh);
+    width: 70vw;
+    height: min(26rem, 44vh);
   }
 
   .carousel-track {

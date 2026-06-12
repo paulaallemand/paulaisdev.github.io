@@ -22,7 +22,7 @@ const TRANSLATIONS = {
 
     "hero.greeting": "Olá, eu sou",
     "hero.subtitle":
-      "Engenheira de Software · Educadora · Finanças &amp; Dados",
+      "Engenharia de Software · Tecnologia, Finanças e Educação",
     "hero.cta.projects": "Ver experiência",
     "hero.cta.contact": "Fale comigo",
 
@@ -50,8 +50,7 @@ const TRANSLATIONS = {
 
     "chips.label": "Empresas que impactaram minha carreira:",
 
-    "experience.title":
-      "Da neurociência aos sistemas críticos do mercado financeiro.",
+    "experience.title": "Da neurociência a sistemas do mercado financeiro",
     "experience.subtitle":
       "Da pesquisa em neurociência aos sistemas críticos do mercado financeiro.",
     "experience.cta": "Ver trajetória completa no LinkedIn",
@@ -91,7 +90,7 @@ const TRANSLATIONS = {
     "feedbacks.subtitle":
       "Mensagens reais que recebi no chat ao final das aulas",
     "feedbacks.story.body":
-      "Antes da tecnologia, fui doula e estudei obstetrícia. Aprendi cedo que escuta ativa e comunicação clara mudam a experiência de alguém — e foi exatamente isso que carreguei comigo quando migrei para o desenvolvimento de software.<br /><br />Ensinar, pra mim, é abrir portas. Cada turma no {reprograma}, no Minas Programam e na Tera é uma chance de mostrar que tecnologia é para todo mundo. As mensagens ao lado são reais — foi assim que me despedi de tantas aulas.",
+      "Antes da tecnologia, fui doula e estudei obstetrícia. Aprendi cedo que escuta ativa e comunicação clara mudam a experiência de alguém. Então, ensinar, pra mim, é abrir portas: abre uma passagem para mim e para o outro. E mostra que tecnologia é para todo mundo.<br /><br />As mensagens ao lado são reais, foi assim que me despedi de tantas aulas.",
     "feedbacks.story.sign": "— Professora e mentora há 10 anos",
     "feedbacks.window": "Aula ao vivo · {reprograma}",
 
@@ -192,10 +191,8 @@ const TRANSLATIONS = {
 
     "chips.label": "Where I've worked:",
 
-    "experience.title":
-      "From neuroscience to mission-critical financial systems.",
-    "experience.subtitle":
-      "From neuroscience research to mission-critical financial systems.",
+    "experience.title": "From neuroscience to financial systems",
+    "experience.subtitle": "From neuroscience research to financial systems.",
     "experience.cta": "See full career on LinkedIn",
     "experience.past": "Before that",
     "exp.now.label": "Now",
