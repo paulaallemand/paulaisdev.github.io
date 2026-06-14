@@ -1541,11 +1541,7 @@ h5 {
   left: 0;
   right: 0;
   padding: 2rem 3.2rem 2.8rem;
-  background: linear-gradient(
-    to top,
-    rgba(12, 22, 24, 0.85) 0%,
-    rgba(12, 22, 24, 0.5) 100%
-  );
+  background: rgba(12, 22, 24, 0.9);
 }
 
 .slide-label {
