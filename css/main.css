@@ -1540,21 +1540,12 @@ h5 {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 8rem 3.2rem 2.8rem;
+  padding: 2rem 3.2rem 2.8rem;
   background: linear-gradient(
     to top,
-    rgba(12, 22, 24, 0.95) 0%,
-    rgba(12, 22, 24, 0.6) 45%,
-    transparent 100%
+    rgba(12, 22, 24, 0.85) 0%,
+    rgba(12, 22, 24, 0.5) 100%
   );
-  backdrop-filter: blur(8px);
-  /* Alternativa (overlay sólido): remover backdrop-filter e trocar background por:
-     background: linear-gradient(
-       to top,
-       rgba(12, 22, 24, 0.85) 0%,
-       rgba(12, 22, 24, 0.5) 100%
-     );
-  */
 }
 
 .slide-label {
