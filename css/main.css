@@ -1724,7 +1724,7 @@ h5 {
 .footer-cta {
   font-size: 2.8rem;
   font-weight: 600;
-  color: var(--white-color);
+  color: var(--main-text-color);
   text-align: center;
   margin-bottom: 2.4rem;
 }
