@@ -16,6 +16,7 @@ const TRANSLATIONS = {
     "eyebrow.about": "Sobre mim",
     "eyebrow.expertise": "Atuação",
     "eyebrow.experience": "Experiência",
+    "eyebrow.companies": "Empresas que impactaram minha carreira",
     "eyebrow.feedbacks": "Feedbacks",
     "eyebrow.talks": "Palestras &amp; Vivências",
 
@@ -159,6 +160,7 @@ const TRANSLATIONS = {
     "eyebrow.about": "About me",
     "eyebrow.expertise": "Expertise",
     "eyebrow.experience": "Experience",
+    "eyebrow.companies": "Companies that shaped my career",
     "eyebrow.feedbacks": "Feedbacks",
     "eyebrow.talks": "Talks &amp; Experiences",
 

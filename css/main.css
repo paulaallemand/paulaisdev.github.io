@@ -1062,6 +1062,44 @@ h5 {
   opacity: 0.6;
 }
 
+/* ---------- Companies: seção compacta de logos ---------- */
+.companies {
+  padding: calc(var(--section-v) / 3) 0;
+  background-color: var(--primary-bg-color);
+}
+
+.companies .section-eyebrow {
+  margin-bottom: 2.4rem;
+}
+
+.logos-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logos-strip-list {
+  display: flex;
+  gap: 2rem 2.8rem;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.strip-logo {
+  height: 4rem;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.5;
+  transition: opacity 0.25s ease, filter 0.25s ease;
+}
+
+.strip-logo:hover {
+  opacity: 1;
+  filter: grayscale(0);
+}
+
 /* ---------- Feedbacks: mock de chat estilo Zoom ---------- */
 .feedbacks {
   padding: var(--section-v) 0;
