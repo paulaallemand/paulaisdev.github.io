@@ -45,8 +45,6 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// AOS animations
-AOS.init({ once: true });
 
 /* ============================================================
    Experiência — abas de ano "Antes disso"
@@ -253,29 +251,15 @@ AOS.init({ once: true });
   );
   const btnPrev = right.querySelector(".carousel-prev");
   const btnNext = right.querySelector(".carousel-next");
-  const total = slides.length;
+  const total = slides.length; /* 8: 6 fotos + 2 badges (UNESCO, Google.org) */
   let current = 0;
-  let autoTimer = null;
 
-  const reduceMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)",
-  ).matches;
-
-  if (reduceMotion) {
-    track.style.transition = "none";
-  }
-
-  /* Calcula o translateX para centrar o slide `i` na área direita */
+  /* Posiciona o slide `i` alinhado à esquerda. O inset inicial do 1º card
+     vem do padding-left do .carousel-track (não somar aqui). */
   function getOffset(i) {
     const slideW = slides[0].offsetWidth;
-    const gapPx = parseFloat(getComputedStyle(track).gap) || 20;
-    const rightW = right.offsetWidth;
-    const trackPad = parseFloat(getComputedStyle(track).paddingLeft) || 0;
-    // posição do início do slide i
-    const slideStart = i * (slideW + gapPx);
-    // queremos centrar o slide dentro da área direita
-    const centerOffset = (rightW - slideW) / 2;
-    return -(slideStart - centerOffset + trackPad);
+    const gapPx = parseFloat(getComputedStyle(track).gap) || 16;
+    return -(i * (slideW + gapPx));
   }
 
   function goTo(i) {
@@ -295,34 +279,13 @@ AOS.init({ once: true });
     });
   }
 
-  function startAuto() {
-    if (reduceMotion) return;
-    clearInterval(autoTimer);
-    autoTimer = setInterval(() => goTo(current + 1), 6000);
-  }
-
-  function stopAuto() {
-    clearInterval(autoTimer);
-  }
-
-  // Setas
-  btnPrev &&
-    btnPrev.addEventListener("click", () => {
-      goTo(current - 1);
-      startAuto();
-    });
-  btnNext &&
-    btnNext.addEventListener("click", () => {
-      goTo(current + 1);
-      startAuto();
-    });
+  // Setas (mantidas para tecnologia assistiva)
+  btnPrev && btnPrev.addEventListener("click", () => goTo(current - 1));
+  btnNext && btnNext.addEventListener("click", () => goTo(current + 1));
 
   // Dots
   dots.forEach((dot, i) => {
-    dot.addEventListener("click", () => {
-      goTo(i);
-      startAuto();
-    });
+    dot.addEventListener("click", () => goTo(i));
   });
 
   // Teclado (← →) quando foco dentro do bloco direito
@@ -330,37 +293,47 @@ AOS.init({ once: true });
     if (e.key === "ArrowLeft") {
       e.preventDefault();
       goTo(current - 1);
-      startAuto();
     }
     if (e.key === "ArrowRight") {
       e.preventDefault();
       goTo(current + 1);
-      startAuto();
     }
   });
 
-  // Pausa ao hover / foco
-  right.addEventListener("mouseenter", stopAuto);
-  right.addEventListener("mouseleave", startAuto);
-  right.addEventListener("focusin", stopAuto);
-  right.addEventListener("focusout", startAuto);
+  // Impede o native image-drag (imagem fantasma) ao arrastar sobre as fotos
+  right.addEventListener("dragstart", (e) => e.preventDefault());
 
-  // Touch swipe
-  let touchStartX = 0;
+  // Drag (mouse + touch via Pointer Events)
+  let dragStartX = 0;
+  let isDragging = false;
+
   right.addEventListener(
-    "touchstart",
+    "pointerdown",
     (e) => {
-      touchStartX = e.changedTouches[0].clientX;
+      dragStartX = e.clientX;
+      isDragging = true;
+      right.setPointerCapture(e.pointerId);
     },
     { passive: true },
   );
-  right.addEventListener(
-    "touchend",
+
+  window.addEventListener(
+    "pointerup",
     (e) => {
-      const delta = e.changedTouches[0].clientX - touchStartX;
-      if (Math.abs(delta) < 50) return;
-      delta < 0 ? goTo(current + 1) : goTo(current - 1);
-      startAuto();
+      if (!isDragging) return;
+      isDragging = false;
+      const delta = e.clientX - dragStartX;
+      if (Math.abs(delta) > 50) {
+        delta < 0 ? goTo(current + 1) : goTo(current - 1);
+      }
+    },
+    { passive: true },
+  );
+
+  window.addEventListener(
+    "pointercancel",
+    () => {
+      isDragging = false;
     },
     { passive: true },
   );
@@ -370,5 +343,4 @@ AOS.init({ once: true });
 
   // Inicializa
   goTo(0);
-  startAuto();
 })();

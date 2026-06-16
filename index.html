@@ -31,13 +31,6 @@
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/media.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-      integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
   </head>
 
   <body>
@@ -63,11 +56,6 @@
               <li class="nav-item">
                 <a href="#about" class="nav-link" data-i18n="nav.about"
                   >Sobre</a
-                >
-              </li>
-              <li class="nav-item">
-                <a href="#expertise" class="nav-link" data-i18n="nav.expertise"
-                  >Atuação</a
                 >
               </li>
               <li class="nav-item">
@@ -113,20 +101,14 @@
     <main id="main-content">
       <section id="home" class="hero">
         <div class="container container-lg">
-          <div
-            class="hero-row"
-            data-aos="fade-zoom-in"
-            data-aos-easing="ease-in-out"
-            data-aos-delay="1800"
-            data-aos-duration="2000"
-          >
+          <div class="hero-row">
             <div class="hero-content">
               <span class="hero-greeting" data-i18n="hero.greeting"
                 >Olá, eu sou</span
               >
               <h1 class="hero-heading">Paula Allemand</h1>
               <span class="hero-heading-subtitle" data-i18n="hero.subtitle"
-                >Engenheira de Software · Educadora · Finanças &amp; Dados</span
+                >Engenheira de Software · Tecnologia, Finanças e Educação</span
               >
               <div class="about-social-list">
                 <div class="social-links-row">
@@ -180,9 +162,14 @@
           </div>
           <div class="about-row about-split">
             <div class="about-lead">
-              <h2 class="title" data-i18n="about.headline">
-                Movida por propósito, alimentada por aprendizado.
-              </h2>
+              <blockquote class="about-quote">
+                <p class="about-quote-text" data-i18n="about.headline.quote">
+                  Tudo que você toca, você transforma. Tudo que você transforma, transforma você.
+                </p>
+                <p class="about-quote-author" data-i18n="about.headline.author">
+                  — Octavia Butler
+                </p>
+              </blockquote>
             </div>
             <div class="about-content">
               <p class="about-descr" data-i18n-html="about.descr">
@@ -194,178 +181,12 @@
                   href="docs/Paula-Allemand-Resume.pdf"
                   target="_blank"
                   rel="noopener"
-                  class="btn btn-white"
+                  class="btn btn-ghost-white"
                   data-i18n="about.cv"
                   >Baixar CV</a
                 >
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="expertise" class="expertise">
-        <div class="container">
-          <div class="expertise-title">
-            <p class="section-eyebrow" data-i18n="eyebrow.expertise">Atuação</p>
-            <h2 class="title" data-i18n="expertise.title">
-              Três frentes que se complementam.
-            </h2>
-          </div>
-
-          <div class="services-row">
-            <div class="service-card" data-aos="fade-up">
-              <img class="service-card-img" src="img/services/02.svg" alt="" />
-              <h3 class="service-card-title" data-i18n="expertise.eng.title">
-                Engenharia de Software
-              </h3>
-              <p data-i18n="expertise.eng.desc">
-                Back-end, design de APIs e nuvem (AWS, GCP) com Java, Spring
-                Boot, Node.js e Python.
-              </p>
-            </div>
-
-            <div class="service-card" data-aos="fade-up" data-aos-delay="150">
-              <img class="service-card-img" src="img/services/03.svg" alt="" />
-              <h3 class="service-card-title" data-i18n="expertise.edu.title">
-                Educação &amp; Mentoria
-              </h3>
-              <p data-i18n="expertise.edu.desc">
-                Professora e mentora no {reprograma}, Minas Programam e Tera.
-              </p>
-            </div>
-
-            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-              <img class="service-card-img" src="img/services/01.svg" alt="" />
-              <h3 class="service-card-title" data-i18n="expertise.fin.title">
-                Finanças &amp; Dados
-              </h3>
-              <p data-i18n="expertise.fin.desc">
-                Experiência no setor financeiro (BV, Itaú) construindo
-                plataformas e fluxos de dados.
-              </p>
-            </div>
-          </div>
-
-          <div class="logos-strip" data-aos="fade-up">
-            <span class="logos-strip-label" data-i18n="chips.label"
-              >Onde já atuei:</span
-            >
-            <ul class="logos-strip-list">
-              <li>
-                <img
-                  src="img/logos/reprograma.webp"
-                  alt="{reprograma}"
-                  class="strip-logo"
-                  loading="lazy"
-                />
-              </li>
-              <li>
-                <img
-                  src="img/logos/tera.png"
-                  alt="Tera"
-                  class="strip-logo"
-                  loading="lazy"
-                />
-              </li>
-              <li>
-                <img
-                  src="img/logos/itau.png"
-                  alt="Itaú Unibanco"
-                  class="strip-logo"
-                  loading="lazy"
-                />
-              </li>
-              <li>
-                <img
-                  src="img/logos/bv.png"
-                  alt="Banco BV"
-                  class="strip-logo"
-                  loading="lazy"
-                />
-              </li>
-              <li>
-                <img
-                  src="img/logos/google.png"
-                  alt="Google.org"
-                  class="strip-logo"
-                  loading="lazy"
-                />
-              </li>
-              <li>
-                <img
-                  src="img/logos/unesco.png"
-                  alt="UNESCO"
-                  class="strip-logo"
-                  loading="lazy"
-                />
-              </li>
-              <li>
-                <img
-                  src="img/logos/minas-programam.png"
-                  alt="Minas Programam"
-                  class="strip-logo"
-                  loading="lazy"
-                />
-              </li>
-              <li>
-                <img
-                  src="img/logos/programaria.svg"
-                  alt="PrograMaria"
-                  class="strip-logo"
-                  loading="lazy"
-                />
-              </li>
-              <li>
-                <span class="strip-logo-dark-bg"
-                  ><img
-                    src="img/logos/estacao-hack.png"
-                    alt="Estação Hack · Facebook"
-                    class="strip-logo"
-                    loading="lazy"
-                /></span>
-              </li>
-              <li>
-                <img
-                  src="img/logos/usp.png"
-                  alt="USP"
-                  class="strip-logo"
-                  loading="lazy"
-                />
-              </li>
-              <li>
-                <img
-                  src="img/logos/js-conf.png"
-                  alt="JSConf"
-                  class="strip-logo"
-                  loading="lazy"
-                />
-              </li>
-              <li>
-                <img
-                  src="img/logos/change-org.png"
-                  alt="Change.org"
-                  class="strip-logo"
-                  loading="lazy"
-                />
-              </li>
-              <li>
-                <img
-                  src="img/logos/habits.png"
-                  alt="Habits"
-                  class="strip-logo"
-                  loading="lazy"
-                />
-              </li>
-              <li>
-                <img
-                  src="img/logos/mc-kinsey.png"
-                  alt="McKinsey"
-                  class="strip-logo"
-                  loading="lazy"
-                />
-              </li>
-            </ul>
           </div>
         </div>
       </section>
@@ -382,7 +203,7 @@
           </div>
 
           <!-- AGORA: trabalho atual em destaque editorial -->
-          <article class="exp-now" data-aos="fade-up">
+          <article class="exp-now">
             <span class="exp-now-year" aria-hidden="true">2025</span>
             <div class="exp-now-body">
               <span class="exp-now-badge">
@@ -412,178 +233,12 @@
             </div>
           </article>
 
-          <!-- Badges de reconhecimento -->
-          <div class="exp-highlights" data-aos="fade-up">
-            <a
-              href="https://www.unesco.org/en/teachers/photo-gallery"
-              class="exp-highlight-badge"
-              target="_blank"
-              rel="noopener"
-              aria-label="UNESCO — Galeria de Professores (abre em nova aba)"
-            >
-              <span class="exp-highlight-org">UNESCO</span>
-              <span class="exp-highlight-desc" data-i18n="featured.unesco.title"
-                >Galeria de Professores</span
-              >
-              <span class="exp-highlight-arrow">→</span>
-            </a>
-            <a
-              href="https://www.youtube.com/watch?v=1SeaQRfk06k"
-              class="exp-highlight-badge"
-              target="_blank"
-              rel="noopener"
-              aria-label="Google.org — When She Rises, We All Rise (abre no YouTube)"
-            >
-              <span class="exp-highlight-org">Google.org</span>
-              <span class="exp-highlight-desc" data-i18n="featured.google.title"
-                >When She Rises, We All Rise</span
-              >
-              <span class="exp-highlight-arrow">→</span>
-            </a>
-          </div>
-
-          <!-- PASSADO: trajetória anterior em abas de ano -->
-          <div class="exp-past">
-            <h3 class="exp-past-label" data-i18n="experience.past">
-              Antes disso
-            </h3>
-            <div class="exp-tabs" role="tablist" aria-label="Linha do tempo">
-              <button
-                role="tab"
-                class="exp-tab"
-                aria-selected="true"
-                aria-controls="exp-tab-2024"
-                id="tab-2024"
-                tabindex="0"
-              >
-                2024
-              </button>
-              <button
-                role="tab"
-                class="exp-tab"
-                aria-selected="false"
-                aria-controls="exp-tab-2021"
-                id="tab-2021"
-                tabindex="-1"
-              >
-                2021
-              </button>
-              <button
-                role="tab"
-                class="exp-tab"
-                aria-selected="false"
-                aria-controls="exp-tab-2019"
-                id="tab-2019"
-                tabindex="-1"
-              >
-                2019
-              </button>
-              <button
-                role="tab"
-                class="exp-tab"
-                aria-selected="false"
-                aria-controls="exp-tab-2017"
-                id="tab-2017"
-                tabindex="-1"
-              >
-                2017
-              </button>
-            </div>
-            <div class="exp-tab-panels">
-              <div
-                role="tabpanel"
-                id="exp-tab-2024"
-                aria-labelledby="tab-2024"
-                class="exp-tab-panel"
-              >
-                <p class="exp-tp-company">Banco BV</p>
-                <p class="exp-tp-role" data-i18n="exp.bv.role">
-                  Engenheira de Software
-                </p>
-                <p class="exp-tp-desc" data-i18n="exp.bv.desc">
-                  Prevenção a Fraudes (via Act Digital): segurança dos fluxos e
-                  dados de todas as áreas do banco, com Java, Spring Boot, GCP e
-                  AWS.
-                </p>
-              </div>
-              <div
-                role="tabpanel"
-                id="exp-tab-2021"
-                aria-labelledby="tab-2021"
-                class="exp-tab-panel"
-                hidden
-              >
-                <p class="exp-tp-company">Itaú Unibanco</p>
-                <p class="exp-tp-role" data-i18n="exp.itau.role">
-                  Engenheira de Software Pleno
-                </p>
-                <p class="exp-tp-desc" data-i18n="exp.itau.desc">
-                  Back-end: construção de APIs do zero (Java, Spring Boot,
-                  Maven, SQL) e arquitetura BFF conectando múltiplas APIs e
-                  serviços de segurança. Manutenção de serviços em Python,
-                  Kotlin e iOS.
-                </p>
-              </div>
-              <div
-                role="tabpanel"
-                id="exp-tab-2019"
-                aria-labelledby="tab-2019"
-                class="exp-tab-panel"
-                hidden
-              >
-                <div class="exp-tp-entry">
-                  <p class="exp-tp-company">Tera</p>
-                  <p class="exp-tp-role" data-i18n="exp.tera.role">
-                    Expert &amp; Fullstack Developer
-                  </p>
-                  <p class="exp-tp-desc" data-i18n="exp.tera.desc">
-                    Ensino de fullstack e back-end (lógica, algoritmos,
-                    arquitetura web, SQL/NoSQL, Node.js, web APIs e segurança) e
-                    desenvolvimento de plataformas em Vue, React, Node e
-                    Firebase — sempre com foco em acessibilidade.
-                  </p>
-                </div>
-                <div class="exp-tp-entry exp-tp-entry--sep">
-                  <p class="exp-tp-company">
-                    {reprograma} · Minas Programam · Estação Hack
-                  </p>
-                  <p class="exp-tp-role" data-i18n="exp.edu.role">Professora</p>
-                  <p class="exp-tp-desc" data-i18n="exp.edu.desc">
-                    Formação de novas pessoas em programação — Git/GitHub,
-                    HTML/CSS, JavaScript, React, Node.js e APIs/CRUD — em
-                    programas que ampliam o acesso à tecnologia.
-                  </p>
-                </div>
-              </div>
-              <div
-                role="tabpanel"
-                id="exp-tab-2017"
-                aria-labelledby="tab-2017"
-                class="exp-tab-panel"
-                hidden
-              >
-                <p class="exp-tp-company">USP</p>
-                <p class="exp-tp-role" data-i18n="exp.usp.role">
-                  Iniciação Científica
-                </p>
-                <p class="exp-tp-desc" data-i18n="exp.usp.desc">
-                  Onde tudo começou: pesquisa em Cronobiologia e Neurociência
-                  sobre a relação entre o sono e o desenvolvimento
-                  neurocognitivo do bebê (revisão sistemática, método PRISMA).
-                  Doula e ex-aluna de obstetrícia.
-                </p>
-              </div>
-            </div>
-          </div>
-
           <div class="experience-cta">
             <a
-              href="https://www.linkedin.com/in/paulaallemand/"
-              target="_blank"
-              rel="noopener"
+              href="trajetoria.html"
               class="btn btn-white"
               data-i18n="experience.cta"
-              >Ver trajetória completa no LinkedIn</a
+              >Ver trajetória completa</a
             >
           </div>
         </div>
@@ -604,26 +259,20 @@
           </div>
 
           <div class="feedbacks-grid">
-            <div class="feedbacks-story" data-aos="fade-right">
+            <div class="feedbacks-story">
               <p
                 class="feedbacks-story-body"
                 data-i18n-html="feedbacks.story.body"
               >
-                Antes da tecnologia, fui doula e estudei obstetrícia. Aprendi
-                cedo que escuta ativa e comunicação clara mudam a experiência de
-                alguém — e foi exatamente isso que carreguei comigo quando
-                migrei para o desenvolvimento de software.<br /><br />
-                Ensinar, pra mim, é abrir portas. Cada turma no {reprograma}, no
-                Minas Programam e na Tera é uma chance de mostrar que tecnologia
-                é para todo mundo. As mensagens ao lado são reais — foi assim
-                que me despedi de tantas aulas.
+                Antes da tecnologia, fui doula e estudei obstetrícia. Aprendi cedo que escuta ativa e comunicação clara mudam a experiência de alguém. Então, ensinar, pra mim, é abrir portas: abre uma passagem para mim e para o outro. E mostra que tecnologia é para todo mundo.<br /><br />
+                As mensagens ao lado são reais, foi assim que me despedi de tantas aulas.
               </p>
               <p class="feedbacks-story-sign" data-i18n="feedbacks.story.sign">
                 — Paula, professora e mentora há mais de 5 anos
               </p>
             </div>
 
-            <div class="zoom-window" data-aos="fade-left">
+            <div class="zoom-window">
               <div class="zoom-bar">
                 <span class="zoom-dots">
                   <span class="zoom-dot red"></span>
@@ -688,6 +337,7 @@
                 >
               </div>
             </div>
+
           </div>
 
           <!-- Bloco direito: carousel de fotos -->
@@ -703,7 +353,61 @@
                 data-active
                 role="group"
                 aria-roledescription="slide"
-                aria-label="1 de 6"
+                aria-label="1 de 8"
+              >
+                <img
+                  src="img/carousel/unesco.png"
+                  alt="UNESCO Teachers Photo Gallery"
+                  class="carousel-slide-img"
+                  loading="lazy"
+                />
+                <figcaption class="carousel-caption">
+                  <p class="slide-label">UNESCO</p>
+                  <p class="slide-desc" data-i18n="featured.unesco.title">
+                    Galeria de Professores da UNESCO
+                  </p>
+                  <a
+                    href="https://www.unesco.org/en/teachers/photo-gallery"
+                    target="_blank"
+                    rel="noopener"
+                    style="margin-top: 1rem; color: var(--primary-bg-color); text-decoration: underline; font-size: 1.2rem;"
+                  >
+                    Ver galeria
+                  </a>
+                </figcaption>
+              </figure>
+              <figure
+                class="carousel-slide"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="2 de 8"
+              >
+                <img
+                  src="img/carousel/google-org.png"
+                  alt="When She Rises, We All Rise"
+                  class="carousel-slide-img"
+                  loading="lazy"
+                />
+                <figcaption class="carousel-caption">
+                  <p class="slide-label">Google.org</p>
+                  <p class="slide-desc" data-i18n="featured.google.title">
+                    When She Rises, We All Rise
+                  </p>
+                  <a
+                    href="https://www.youtube.com/watch?v=1SeaQRfk06k"
+                    target="_blank"
+                    rel="noopener"
+                    style="margin-top: 1rem; color: var(--primary-bg-color); text-decoration: underline; font-size: 1.2rem;"
+                  >
+                    Assistir no YouTube
+                  </a>
+                </figcaption>
+              </figure>
+              <figure
+                class="carousel-slide"
+                role="group"
+                aria-roledescription="slide"
+                aria-label="3 de 8"
               >
                 <img
                   src="img/carousel/masterclass-tera.png"
@@ -722,7 +426,7 @@
                 class="carousel-slide"
                 role="group"
                 aria-roledescription="slide"
-                aria-label="2 de 6"
+                aria-label="4 de 8"
               >
                 <img
                   src="img/carousel/palestra-programaria.png"
@@ -741,7 +445,7 @@
                 class="carousel-slide"
                 role="group"
                 aria-roledescription="slide"
-                aria-label="3 de 6"
+                aria-label="5 de 8"
               >
                 <img
                   src="img/carousel/hackathon-inovazl.png"
@@ -760,7 +464,7 @@
                 class="carousel-slide"
                 role="group"
                 aria-roledescription="slide"
-                aria-label="4 de 6"
+                aria-label="6 de 8"
               >
                 <img
                   src="img/carousel/turma-eh.png"
@@ -779,7 +483,7 @@
                 class="carousel-slide"
                 role="group"
                 aria-roledescription="slide"
-                aria-label="5 de 6"
+                aria-label="7 de 8"
               >
                 <img
                   src="img/carousel/dpw.png"
@@ -798,7 +502,7 @@
                 class="carousel-slide"
                 role="group"
                 aria-roledescription="slide"
-                aria-label="6 de 6"
+                aria-label="8 de 8"
               >
                 <img
                   src="img/carousel/wf-tech.png"
@@ -888,6 +592,18 @@
                 class="carousel-dot"
                 aria-selected="false"
                 aria-label="Slide 6"
+              ></button>
+              <button
+                role="tab"
+                class="carousel-dot"
+                aria-selected="false"
+                aria-label="Slide 7"
+              ></button>
+              <button
+                role="tab"
+                class="carousel-dot"
+                aria-selected="false"
+                aria-label="Slide 8"
               ></button>
             </div>
           </div>
@@ -994,12 +710,6 @@
       </a>
     </div>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
-      integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
     <script src="js/feedbacks.js"></script>
     <script src="js/i18n.js"></script>
     <script src="js/main.js"></script>

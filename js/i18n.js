@@ -7,7 +7,6 @@ const TRANSLATIONS = {
   pt: {
     "nav.home": "Início",
     "nav.about": "Sobre",
-    "nav.expertise": "Atuação",
     "nav.experience": "Experiência",
     "nav.feedbacks": "Feedbacks",
     "nav.talks": "Palestras",
@@ -21,15 +20,18 @@ const TRANSLATIONS = {
     "eyebrow.talks": "Palestras &amp; Vivências",
 
     "hero.greeting": "Olá, eu sou",
-    "hero.subtitle":
-      "Engenheira de Software · Educadora · Finanças &amp; Dados",
+    "hero.subtitle": "Engenharia de Software · Tecnologia, Finanças e Educação",
     "hero.cta.projects": "Ver experiência",
     "hero.cta.contact": "Fale comigo",
 
     "about.title": "Sobre mim",
-    "about.headline": "Movida por propósito, alimentada por aprendizado.",
+    "about.headline.quote":
+      "Tudo que você toca, você transforma. Tudo que você transforma, transforma você.",
+    "about.headline.author": "— Octavia Butler",
     "about.descr":
-      "Sou uma engenheira de software multifacetada, com base sólida em desenvolvimento back-end, design de APIs e computação em nuvem (AWS, GCP). Meu trabalho integra tecnologias como Java, Spring Boot e Python. Apaixonada por ensinar, contribuo com programas como {reprograma} e Minas Programam, formando novos talentos da tecnologia — sempre com foco em soluções robustas, seguras e escaláveis.<br /><br />Acredito no poder da tecnologia para transformar: movida por propósito, alimentada pelo aprendizado e comprometida em construir soluções de impacto para um amanhã melhor.",
+      "Acredito no poder da tecnologia para transformar: movida por propósito, alimentada pelo aprendizado e comprometida em construir soluções de impacto para um amanhã melhor.",
+    "trajectory.intro":
+      "Sou uma engenheira de software multifacetada, com base sólida em desenvolvimento back-end, design de APIs e computação em nuvem (AWS, GCP). Meu trabalho integra tecnologias como Java, Spring Boot e Python. Apaixonada por ensinar, contribuo com programas como {reprograma} e Minas Programam, formando novos talentos da tecnologia — sempre com foco em soluções robustas, seguras e escaláveis.",
     "about.cv": "Baixar CV",
     "skill.backend": "Back-end",
     "skill.teaching": "Ensino &amp; Mentoria",
@@ -50,12 +52,12 @@ const TRANSLATIONS = {
 
     "chips.label": "Empresas que impactaram minha carreira:",
 
-    "experience.title":
-      "Da neurociência aos sistemas críticos do mercado financeiro.",
+    "experience.title": "Da neurociência a sistemas do mercado financeiro",
     "experience.subtitle":
       "Da pesquisa em neurociência aos sistemas críticos do mercado financeiro.",
-    "experience.cta": "Ver trajetória completa no LinkedIn",
+    "experience.cta": "Ver trajetória completa",
     "experience.past": "Antes disso",
+    "experience.logos.title": "Empresas &amp; comunidades",
     "exp.now.label": "Agora",
     "exp.btg.role": "Software Analyst",
     "exp.btg.desc":
@@ -91,20 +93,18 @@ const TRANSLATIONS = {
     "feedbacks.subtitle":
       "Mensagens reais que recebi no chat ao final das aulas",
     "feedbacks.story.body":
-      "Antes da tecnologia, fui doula e estudei obstetrícia. Aprendi cedo que escuta ativa e comunicação clara mudam a experiência de alguém — e foi exatamente isso que carreguei comigo quando migrei para o desenvolvimento de software.<br /><br />Ensinar, pra mim, é abrir portas. Cada turma no {reprograma}, no Minas Programam e na Tera é uma chance de mostrar que tecnologia é para todo mundo. As mensagens ao lado são reais — foi assim que me despedi de tantas aulas.",
+      "Antes da tecnologia, fui doula e estudei obstetrícia. Aprendi cedo que escuta ativa e comunicação clara mudam a experiência de alguém. Então considero que en é abrir portas: abre uma passagem para mim e para o outro. E mostra que tecnologia é para todo mundo.<br /><br />As mensagens ao lado são reais, foi assim que me despedi de tantas aulas.",
     "feedbacks.story.sign": "— Professora e mentora há 10 anos",
     "feedbacks.window": "Aula ao vivo · {reprograma}",
 
     "talks.title": "Palestras &amp; vivências",
     "talks.subtitle": "Um pouco da minha trajetória em eventos e comunidades.",
     "talks.tera.desc":
-      "Aula aberta sobre carreira e back-end para a comunidade.",
-    "talks.programaria.desc":
-      "Palestra sobre mulheres e diversidade na tecnologia.",
+      "Roda de conversa sobre times interdisciplinares para a comunidade da Tera.",
+    "talks.programaria.desc": "Palestra sobre acessibilidade web.",
     "talks.inovazl.desc":
-      "Mentoria a times no hackathon de inovação da Zona Leste.",
-    "talks.eh.desc":
-      "Turma de Talentos Digitais Diversos, em parceria com o Itaú.",
+      "Apresentação de projeto em parceira com a Change.org no Inova Zona Leste.",
+    "talks.eh.desc": "Turma {reprograma} em parceria com Accenture",
     "talks.dpw.desc":
       "Imersão em produto e tecnologia com a comunidade da Tera.",
     "talks.wftech.desc":
@@ -150,7 +150,6 @@ const TRANSLATIONS = {
   en: {
     "nav.home": "Home",
     "nav.about": "About",
-    "nav.expertise": "Expertise",
     "nav.experience": "Experience",
     "nav.feedbacks": "Feedback",
     "nav.talks": "Talks",
@@ -169,9 +168,13 @@ const TRANSLATIONS = {
     "hero.cta.contact": "Get in touch",
 
     "about.title": "About me",
-    "about.headline": "Driven by purpose, fueled by learning.",
+    "about.headline.quote":
+      "All that you touch you change. All that you change changes you.",
+    "about.headline.author": "— Octavia Butler",
     "about.descr":
-      "I am a versatile software engineer with a solid foundation in backend development, API design, and cloud computing (AWS, GCP). My work integrates technologies like Java, Spring Boot, and Python. Passionate about teaching, I contribute to programs like {reprograma} and Minas Programam, empowering new tech talent — always focused on robust, secure, and scalable solutions.<br /><br />I believe in the power of technology to transform: driven by purpose, fueled by learning, and committed to building impactful solutions for a better tomorrow.",
+      "I believe in the power of technology to transform: driven by purpose, fueled by learning, and committed to building impactful solutions for a better tomorrow.",
+    "trajectory.intro":
+      "I am a versatile software engineer with a solid foundation in backend development, API design, and cloud computing (AWS, GCP). My work integrates technologies like Java, Spring Boot, and Python. Passionate about teaching, I contribute to programs like {reprograma} and Minas Programam, empowering new tech talent — always focused on robust, secure, and scalable solutions.",
     "about.cv": "Download CV",
     "skill.backend": "Backend",
     "skill.teaching": "Teaching &amp; Mentoring",
@@ -192,12 +195,11 @@ const TRANSLATIONS = {
 
     "chips.label": "Where I've worked:",
 
-    "experience.title":
-      "From neuroscience to mission-critical financial systems.",
-    "experience.subtitle":
-      "From neuroscience research to mission-critical financial systems.",
-    "experience.cta": "See full career on LinkedIn",
+    "experience.title": "From neuroscience to financial systems",
+    "experience.subtitle": "From neuroscience research to financial systems.",
+    "experience.cta": "See full trajectory",
     "experience.past": "Before that",
+    "experience.logos.title": "Companies &amp; communities",
     "exp.now.label": "Now",
     "exp.btg.role": "Software Analyst",
     "exp.btg.desc":

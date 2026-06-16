@@ -346,6 +346,11 @@ h5 {
 /* About section */
 .about {
   padding: var(--section-v) 0;
+  background-color: var(--secondary-accent);
+}
+
+.about .section-eyebrow {
+  color: rgba(247, 251, 253, 0.72);
 }
 
 .about-title {
@@ -384,6 +389,31 @@ h5 {
   padding: 0;
 }
 
+.about-quote {
+  margin: 0;
+  padding: 0;
+}
+
+.about-quote-text {
+  font-size: 4.4rem;
+  font-weight: 400;
+  line-height: 1.35;
+  color: var(--primary-bg-color);
+  margin: 0 0 1.6rem 0;
+}
+
+.about-quote-author {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: rgba(247, 251, 253, 0.72);
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.about-descr {
+  color: var(--primary-bg-color);
+}
+
 .about-download-btn {
   margin-top: 4rem;
 }
@@ -399,13 +429,6 @@ h5 {
   flex: 33.33333333%;
 }
 
-.service-card-img {
-  display: block;
-  height: 5rem;
-  margin: 0 auto 2rem;
-  filter: invert(33%) sepia(7%) saturate(243%) hue-rotate(145deg)
-    brightness(94%) contrast(81%);
-}
 
 .service-card-title {
   text-align: center;
@@ -605,8 +628,8 @@ h5 {
 
 /* Footer */
 .footer {
-  background-color: var(--primary-accent);
-  color: var(--gray-color-3);
+  background-color: var(--primary-bg-color);
+  color: var(--main-text-color);
 }
 
 .footer-row {
@@ -621,9 +644,12 @@ h5 {
   margin-top: 0;
 }
 
+.footer-social a {
+  color: var(--main-text-color);
+}
+
 .footer-social a:hover {
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
-    brightness(102%) contrast(102%);
+  opacity: 0.6;
 }
 
 .footer-copyright {
@@ -755,100 +781,6 @@ h5 {
   margin-top: 1.2rem;
 }
 
-/* ---------- Expertise (pilares) ---------- */
-.expertise {
-  padding: var(--section-v) 0;
-}
-
-.expertise-title {
-  margin-bottom: 5rem;
-}
-
-.expertise .service-card {
-  background: var(--white-color);
-  border: 1px solid var(--gray-color);
-  border-radius: 1.2rem;
-  padding: 3.5rem 2.5rem;
-  flex: 0 0 31%;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    border-color 0.3s ease;
-}
-
-.expertise .service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 1.4rem 3rem rgba(12, 22, 24, 0.08);
-  border-color: var(--secondary-accent);
-}
-
-.expertise .service-card-img {
-  height: 4.4rem;
-  margin-bottom: 2.4rem;
-  filter: invert(15%) sepia(38%) saturate(2200%) hue-rotate(335deg)
-    brightness(70%) contrast(95%);
-}
-
-/* ---------- Logos strip (comunidades & programas) ---------- */
-.logos-strip {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 1.6rem 4rem;
-  margin-top: 7rem;
-  padding: 4rem 0 0;
-  border-top: 1px solid var(--gray-color);
-}
-
-.logos-strip-label {
-  font-size: 1.3rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.12rem;
-  color: var(--gray-text-color);
-  flex-shrink: 0;
-}
-
-.logos-strip-list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 2.4rem 3.6rem;
-  list-style: none;
-}
-
-.strip-logo {
-  height: 3rem;
-  width: auto;
-  max-width: 10rem;
-  object-fit: contain;
-  filter: grayscale(1);
-  opacity: 0.45;
-  transition:
-    filter 0.25s ease,
-    opacity 0.25s ease;
-}
-
-.strip-logo:hover {
-  filter: grayscale(0);
-  opacity: 1;
-}
-
-/* wrapper para logos com fundo escuro (ex: Estação Hack — texto branco) */
-.strip-logo-dark-bg {
-  display: inline-flex;
-  align-items: center;
-  background: #1c1c1e;
-  border-radius: 0.5rem;
-  padding: 0.4rem 0.8rem;
-}
-.strip-logo-dark-bg .strip-logo {
-  filter: grayscale(0);
-  opacity: 0.75;
-}
-.strip-logo-dark-bg:hover .strip-logo {
-  opacity: 1;
-}
 
 /* ---------- Experiência (timeline) ---------- */
 .experience {
@@ -861,15 +793,19 @@ h5 {
 }
 
 /* --- "Agora": trabalho atual em destaque editorial --- */
+.trajectory-intro {
+  max-width: 70rem;
+  font-size: 1.7rem;
+  line-height: 1.8;
+  color: var(--gray-text-color);
+  margin-bottom: 5rem;
+}
+
 .exp-now {
   position: relative;
   max-width: 90rem;
   margin: 0 auto 6rem;
-  padding: 4.5rem 4.5rem 4rem;
-  background: var(--white-color);
-  border-radius: 1.6rem;
-  box-shadow: 0 2.4rem 6rem rgba(12, 22, 24, 0.08);
-  overflow: hidden;
+  padding: 0.5rem 0 0.5rem 3rem;
 }
 
 .exp-now::before {
@@ -877,7 +813,7 @@ h5 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 0.6rem;
+  width: 0.3rem;
   height: 100%;
   background: var(--secondary-accent);
 }
@@ -1133,13 +1069,13 @@ h5 {
 }
 
 .feedbacks-title {
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 
 .feedbacks-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 4rem;
+  gap: 3rem;
   align-items: stretch;
 }
 
@@ -1156,8 +1092,8 @@ h5 {
 }
 
 .feedbacks-story-body {
-  font-size: 1.6rem;
-  line-height: 1.8;
+  font-size: 1.5rem;
+  line-height: 1.7;
   color: var(--gray-text-color);
 }
 
@@ -1171,6 +1107,7 @@ h5 {
 .zoom-window {
   flex: 1 1 42rem;
   max-width: 56rem;
+  min-height: 52rem;
   background: #1c1c1f;
   border-radius: 1.4rem;
   overflow: hidden;
@@ -1388,6 +1325,84 @@ h5 {
   }
 }
 
+/* ---------- Comunidades & Logos — fundo off-white ---------- */
+.communities {
+  background-color: var(--primary-bg-color);
+  padding: 6rem 0;
+}
+
+.communities-label {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gray-text-color);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.communities-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1.2rem;
+}
+
+.community-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+  background: #fff;
+  border: 1px solid rgba(12, 22, 24, 0.08);
+  border-radius: 0.8rem;
+  padding: 1rem;
+  transition: box-shadow 0.2s;
+}
+
+.community-item:hover {
+  box-shadow: 0 4px 12px rgba(12, 22, 24, 0.1);
+}
+
+.community-logo {
+  max-height: 2.8rem;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.55;
+  transition: filter 0.25s, opacity 0.25s;
+}
+
+.community-item:hover .community-logo {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+/* Responsivo */
+@media (max-width: 977px) {
+  .communities-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .communities {
+    padding: 4rem 0;
+  }
+
+  .communities-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  .community-item {
+    padding: 0.8rem;
+  }
+
+  .community-logo {
+    max-height: 2.4rem;
+  }
+}
+
 /* ---------- Palestras — split layout ARQ-style ---------- */
 
 /* A seção ocupa largura total — sem container interno */
@@ -1400,24 +1415,22 @@ h5 {
 .carousel-container {
   display: flex;
   align-items: stretch;
-  min-height: max(52rem, 62vh);
+  min-height: max(44rem, 54vh);
 }
 
 /* ---------- Bloco esquerdo: narrativa ---------- */
 .carousel-left {
-  flex: 0 0 42%;
+  flex: 0 0 55%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   /* alinha com a grelha de conteúdo sem container explícito */
-  padding: var(--section-v) 5rem var(--section-v)
+  padding: var(--section-v) 6rem var(--section-v)
     max(3.2rem, calc((100vw - 120rem) / 2 + 3.2rem));
-  max-width: 58rem;
-  margin-left: auto;
 }
 
 .carousel-title {
-  font-size: 3.4rem;
+  font-size: 3rem;
   font-weight: 400;
   color: var(--primary-bg-color);
   line-height: 1.35;
@@ -1429,7 +1442,7 @@ h5 {
 }
 
 .carousel-narrative {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   line-height: 1.85;
   color: var(--primary-bg-color);
   margin-bottom: 3.6rem;
@@ -1471,6 +1484,25 @@ h5 {
   overflow: hidden;
   display: flex;
   align-items: center;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Fade escuro sobre o próximo card (peek) — segue referência ARQ */
+.carousel-right::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 15%;
+  background: linear-gradient(
+    to right,
+    rgba(12, 22, 24, 0) 0%,
+    rgba(12, 22, 24, 0.75) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
 }
 
 .carousel-track {
@@ -1478,7 +1510,8 @@ h5 {
   width: max-content;
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.6rem;
+  padding-left: 3.2rem;
   padding-right: 3.2rem;
   /* translateX controlado por JS */
   transition: transform 0.55s cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -1488,8 +1521,8 @@ h5 {
 /* slides preenchem 100% da altura da coluna direita */
 .carousel-slide {
   flex-shrink: 0;
-  width: min(44rem, 34vw);
-  height: min(34rem, 52vh);
+  width: 36rem;
+  height: 50rem;
   position: relative;
   overflow: hidden;
   border-radius: 0.4rem;
@@ -1500,6 +1533,8 @@ h5 {
   height: 100%;
   object-fit: cover;
   display: block;
+  -webkit-user-drag: none;
+  user-drag: none;
   transition: transform 0.55s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
@@ -1512,13 +1547,12 @@ h5 {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 5rem 3.2rem 2.8rem;
-  background: linear-gradient(
-    to top,
-    rgba(12, 22, 24, 0.9) 0%,
-    rgba(12, 22, 24, 0.45) 55%,
-    transparent 100%
-  );
+  min-height: 13rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem 3.2rem 2.8rem;
+  background: rgba(12, 22, 24, 0.9);
 }
 
 .slide-label {
@@ -1535,40 +1569,32 @@ h5 {
   line-height: 1.6;
 }
 
-/* Setas */
+/* Setas - ocultas visualmente, mantidas para acessibilidade */
 .carousel-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(247, 251, 253, 0.1);
-  border: 1px solid rgba(247, 251, 253, 0.2);
-  color: var(--primary-bg-color);
-  width: 4.8rem;
-  height: 4.8rem;
+  background: transparent;
+  border: none;
+  color: transparent;
+  width: 0;
+  height: 0;
   border-radius: 50%;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  transition: background 0.2s ease;
+  cursor: auto;
+  transition: none;
   z-index: 3;
 }
 
-.carousel-arrow:hover,
-.carousel-arrow:focus-visible {
-  background: rgba(247, 251, 253, 0.22);
-}
-
-.carousel-arrow:focus-visible {
-  outline: 2px solid var(--secondary-accent);
-  outline-offset: 3px;
-}
-
-.carousel-prev {
-  left: 1.6rem;
-}
-.carousel-next {
-  right: 1.6rem;
+@media (prefers-reduced-motion: no-preference) {
+  /* Setas visíveis apenas para usuários de tecnologia assistiva */
+  @supports (clip-path: polygon(0 0)) {
+    .carousel-arrow {
+      clip-path: inset(100%);
+    }
+  }
 }
 
 /* Dots — centralizados na base do bloco direito */
@@ -1606,6 +1632,8 @@ h5 {
   outline: 2px solid var(--secondary-accent);
   outline-offset: 3px;
 }
+
+/* Badge slides (UNESCO/Google) */
 
 /* ---------- Projetos ---------- */
 .project-grid {
@@ -1660,7 +1688,7 @@ h5 {
 .footer-cta {
   font-size: 2.8rem;
   font-weight: 600;
-  color: var(--white-color);
+  color: var(--main-text-color);
   text-align: center;
   margin-bottom: 2.4rem;
 }

@@ -322,12 +322,12 @@
 
   .carousel-slide {
     /* 1 card + pequena espiada do próximo */
-    width: 78vw;
-    height: min(28rem, 46vh);
+    width: 70vw;
+    height: 50rem;
   }
 
   .carousel-track {
-    padding: 0 2.4rem 0 0;
+    padding: 0 2.4rem 0 2.4rem;
   }
 
   .carousel-title {
