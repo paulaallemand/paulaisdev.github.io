@@ -628,8 +628,8 @@ h5 {
 
 /* Footer */
 .footer {
-  background-color: var(--secondary-accent);
-  color: var(--gray-color-3);
+  background-color: var(--primary-bg-color);
+  color: var(--main-text-color);
 }
 
 .footer-row {
@@ -644,9 +644,12 @@ h5 {
   margin-top: 0;
 }
 
+.footer-social a {
+  color: var(--main-text-color);
+}
+
 .footer-social a:hover {
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
-    brightness(102%) contrast(102%);
+  opacity: 0.6;
 }
 
 .footer-copyright {
