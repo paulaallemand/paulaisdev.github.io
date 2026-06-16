@@ -111,6 +111,16 @@
                 role="tab"
                 class="exp-tab"
                 aria-selected="false"
+                aria-controls="traj-tab-tera"
+                id="traj-btn-tera"
+                tabindex="-1"
+              >
+                Tera
+              </button>
+              <button
+                role="tab"
+                class="exp-tab"
+                aria-selected="false"
                 aria-controls="traj-tab-2024"
                 id="traj-btn-2024"
                 tabindex="-1"
@@ -165,6 +175,21 @@
               </div>
               <div
                 role="tabpanel"
+                id="traj-tab-tera"
+                aria-labelledby="traj-btn-tera"
+                class="exp-tab-panel"
+                hidden
+              >
+                <p class="exp-tp-company">Tera</p>
+                <p class="exp-tp-role" data-i18n="exp.tera.role">
+                  Expert &amp; Fullstack Developer
+                </p>
+                <p class="exp-tp-desc" data-i18n="exp.tera.desc">
+                  Ensino de fullstack e back-end (lógica, algoritmos, arquitetura web, SQL/NoSQL, Node.js, web APIs e segurança) e desenvolvimento de plataformas em Vue, React, Node e Firebase — sempre com foco em acessibilidade.
+                </p>
+              </div>
+              <div
+                role="tabpanel"
                 id="traj-tab-2024"
                 aria-labelledby="traj-btn-2024"
                 class="exp-tab-panel"
@@ -205,29 +230,15 @@
                 class="exp-tab-panel"
                 hidden
               >
-                <div class="exp-tp-entry">
-                  <p class="exp-tp-company">Tera</p>
-                  <p class="exp-tp-role" data-i18n="exp.tera.role">
-                    Expert &amp; Fullstack Developer
-                  </p>
-                  <p class="exp-tp-desc" data-i18n="exp.tera.desc">
-                    Ensino de fullstack e back-end (lógica, algoritmos,
-                    arquitetura web, SQL/NoSQL, Node.js, web APIs e segurança) e
-                    desenvolvimento de plataformas em Vue, React, Node e
-                    Firebase — sempre com foco em acessibilidade.
-                  </p>
-                </div>
-                <div class="exp-tp-entry exp-tp-entry--sep">
-                  <p class="exp-tp-company">
-                    {reprograma} · Minas Programam · Estação Hack
-                  </p>
-                  <p class="exp-tp-role" data-i18n="exp.edu.role">Professora</p>
-                  <p class="exp-tp-desc" data-i18n="exp.edu.desc">
-                    Formação de novas pessoas em programação — Git/GitHub,
-                    HTML/CSS, JavaScript, React, Node.js e APIs/CRUD — em
-                    programas que ampliam o acesso à tecnologia.
-                  </p>
-                </div>
+                <p class="exp-tp-company">
+                  {reprograma} · Minas Programam · Estação Hack
+                </p>
+                <p class="exp-tp-role" data-i18n="exp.edu.role">Professora</p>
+                <p class="exp-tp-desc" data-i18n="exp.edu.desc">
+                  Formação de novas pessoas em programação — Git/GitHub,
+                  HTML/CSS, JavaScript, React, Node.js e APIs/CRUD — em
+                  programas que ampliam o acesso à tecnologia.
+                </p>
               </div>
               <div
                 role="tabpanel"
