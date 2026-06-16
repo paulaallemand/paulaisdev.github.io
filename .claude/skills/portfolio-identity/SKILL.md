@@ -1,79 +1,44 @@
 ---
 name: portfolio-identity
-description: Identidade visual e editorial do portfólio da Paula Allemand (paulaisdev.github.io). Carregue ao trabalhar em qualquer mudança de design, copy, layout ou componente do portfólio — define paleta, tipografia, ritmo de cor das seções, tom de voz e a referência ARQ Finance.
+description: Identidade visual e editorial do portfólio Paula Allemand (paulaisdev.github.io) — paleta, tipografia, tom de voz, ritmo de cor e referência ARQ Finance
 ---
 
-# Identidade do portfólio — Paula Allemand
+# Identidade Visual — Paula Allemand Portfolio
 
-Portfólio pessoal em HTML/CSS/JS vanilla (GitHub Pages). Branch de trabalho: `revamp-2026`.
-Referência de design: **ARQ Finance** — editorial, premium, muito respiro, alto contraste.
+## Paleta de Cores
 
-## Quem é a Paula
+- **Off-white** (`#f7fbfd`): fundo principal, seções light
+- **Grafite** (`#0c1618`): texto principal, elementos escuros
+- **Marsala** (`#6f1d1b`): acento secundário, CTAs, seção about
+- **Cinza** (`#565a5b`): texto muted, metadados
 
-Engenheira de Software com trajetória da neurociência (USP, doula/obstetrícia) aos
-sistemas críticos do mercado financeiro (Itaú, BV, BTG Pactual). Educadora há +5 anos
-({reprograma}, Minas Programam, Tera, Estação Hack) — +4 mil alunos, +400 aulas.
-A narrativa central é **propósito + transformação pela tecnologia e educação**.
-
-**Manifesto:** "Acredito no poder da tecnologia para transformar: movida por propósito,
-alimentada pelo aprendizado e comprometida em construir soluções de impacto para um
-amanhã melhor."
-
-**Citação âncora (seção Sobre):** "Tudo que você toca, você transforma. Tudo que você
-transforma, transforma você." — Octavia Butler.
-
-## Paleta
-
-| Cor | Hex | Variável CSS | Uso |
-|-----|-----|--------------|-----|
-| Off-white | `#f7fbfd` | `--primary-bg-color` | Fundo claro padrão, texto sobre escuro |
-| Grafite | `#0c1618` | `--primary-accent` | Fundo escuro (talks), texto principal |
-| Marsala | `#6f1d1b` | `--secondary-accent` | Acento, fundo de seções de destaque, linhas |
-| Cinza | `#565a5b` | `--gray-text-color` | Texto secundário/descrições |
-
-## Ritmo de cor das seções (intercalar — nunca encadear cores iguais)
-
-`hero(W) → about(M) → experience(W) → communities(W) → feedbacks(W) → talks(G) → footer(M)`
-
-W = off-white · M = marsala · G = grafite. O marsala vive no #about (citação Octavia
-Butler, emocional/pessoal) e no footer. Garantir **alto contraste** texto/fundo sempre.
+**Ritmo por seção:**  
+Hero (W) → About (M) → Experience (W) → Communities (W) → Feedbacks (W) → Talks (G) → Footer (W)
 
 ## Tipografia
 
-- **Títulos de seção** (`.title`): grandes, peso 400–600, line-height ~1.3.
-- **Eyebrow** (`.section-eyebrow`): uppercase, letter-spacing largo (~0.2em), pequeno,
-  cor reduzida (cinza ou off-white 72% sobre escuro).
-- **Citação** (`.about-quote-text`): ~4.4rem, peso 400; autor abaixo, separado, em cor
-  de acento reduzida.
-- **Body**: 1.4–1.7rem, line-height 1.7–1.85, cor cinza.
+- **Fonte:** Inter (sans-serif)
+- **Escala:** Titles 4–7rem, Body 1.6–1.8rem, Eyebrows 1.2rem + 0.2em spacing
+- **Peso:** 600–700 em headings, 400–500 em body
 
-## Princípios de design (estilo ARQ)
+## Tom de Voz
 
-- **Editorial flush, sem molduras genéricas** — conteúdo direto sobre o fundo. Evitar
-  cards brancos com sombra + borda arredondada (parecem genéricos). Quando precisar
-  destacar, usar linha de acento marsala à esquerda + tipografia, não caixas.
-- **Muito respiro** — espaçamento vertical generoso (`--section-v`).
-- **Imagens que sangram** — fotos grandes, podem cortar nas bordas (ex.: carousel split).
-- **Sem motions de entrada/saída** — nada de AOS ou animações de scroll. Micro-interações
-  sutis (hover) são ok.
-- **Marca-d'água tipográfica** — números de ano gigantes, baixa opacidade, como elemento
-  gráfico.
+**Essência:** Propósito, educação, impacto social, tecnologia para todos.
 
-## Componentes-chave
+*Manifesto:* "Acredito no poder da tecnologia para transformar: movida por propósito, alimentada pelo aprendizado e comprometida em construir soluções de impacto para um amanhã melhor."
 
-- **Carousel de palestras (split)**: bloco esquerdo narrativo (fundo grafite) + trilha de
-  fotos à direita que sangra. 1º card alinhado com "Início" da navbar. Legenda com faixa
-  preta opaca de altura padronizada. Peek/fade sutil no card seguinte. Drag por Pointer
-  Events, sem autoplay, sem setas visíveis (setas só para a11y).
-- **Experiência editorial**: card "Agora" flush (linha marsala + ano marca-d'água), e
-  trajetória anterior em abas de ano numa página dedicada (`trajetoria.html`).
-- **Chat de feedbacks estilo Zoom**: mensagens reais de alunos animadas como num chat.
-- **Grid de logos** (empresas & comunidades): grayscale + hover colorido.
+## Referência Visual — ARQ Finance
 
-## Do / Don't
+Princípios: Editorial flush (sem sombras genéricas), imagens que sangram, alto contraste, whitespace generoso, sem animations de entrada.
 
-✅ Intercalar cores entre seções · alto contraste · respiro · editorial flush · marsala
-como acento pontual · imagens grandes.
+## Componentes-Chave
 
-❌ Encadear seções da mesma cor · cards brancos com sombra genérica · motions de entrada
-(AOS) · ícones/ilustrações "brega" · texto de baixo contraste · setas de carousel visíveis.
+1. **Carousel Palestras** — split layout, 6 fotos + 2 badges, legendas padronizadas `min-height: 13rem`
+2. **Card "Agora"** — editorial flush, linha marsala esquerda, ano marca-d'água
+3. **Chat Feedbacks** — estilo Zoom com animação de digitação
+4. **Logos Strip** — parceiros com grayscale + hover opacity
+
+## Do's & Don'ts
+
+✅ **Do:** Alto contraste (AA WCAG), imagens bleed, cards flush, acessibilidade a11y  
+❌ **Don't:** AOS animations, pills com borda em tech, baixo contraste, containers rígidos
