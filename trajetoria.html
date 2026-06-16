@@ -101,9 +101,19 @@
                 role="tab"
                 class="exp-tab"
                 aria-selected="true"
+                aria-controls="traj-tab-2025"
+                id="traj-btn-2025"
+                tabindex="0"
+              >
+                2025
+              </button>
+              <button
+                role="tab"
+                class="exp-tab"
+                aria-selected="false"
                 aria-controls="traj-tab-2024"
                 id="traj-btn-2024"
-                tabindex="0"
+                tabindex="-1"
               >
                 2024
               </button>
@@ -141,9 +151,24 @@
             <div class="exp-tab-panels">
               <div
                 role="tabpanel"
+                id="traj-tab-2025"
+                aria-labelledby="traj-btn-2025"
+                class="exp-tab-panel"
+              >
+                <p class="exp-tp-company">BTG Pactual</p>
+                <p class="exp-tp-role" data-i18n="exp.btg.role">
+                  Software Analyst
+                </p>
+                <p class="exp-tp-desc" data-i18n="exp.btg.desc">
+                  Atuo na área de Seguros — soluções para seguradoras, resseguradoras e times de vendas — participando de todo o ciclo de sistemas críticos no setor regulado pela SUSEP. Construo aplicações em microserviços de alto volume e baixa latência, com modelagem de dados para cálculos atuariais.
+                </p>
+              </div>
+              <div
+                role="tabpanel"
                 id="traj-tab-2024"
                 aria-labelledby="traj-btn-2024"
                 class="exp-tab-panel"
+                hidden
               >
                 <p class="exp-tp-company">Banco BV</p>
                 <p class="exp-tp-role" data-i18n="exp.bv.role">
