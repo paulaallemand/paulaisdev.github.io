@@ -1,0 +1,420 @@
+/* ============================================================
+   Training platform (paulaallemand.com/training)
+   Reaproveita variáveis e componentes de main.css (reset, cores,
+   .container, .btn, .section-eyebrow, .title, header/footer).
+   Este arquivo só acrescenta componentes novos, não sobrescreve nada.
+   ============================================================ */
+
+/* ---------- Hero de trilha/catálogo ---------- */
+.training-hero {
+  position: relative;
+  padding: 18rem 0 6rem;
+  background-color: var(--primary-bg-color);
+}
+
+.training-hero-eyebrow {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--secondary-accent);
+  margin-bottom: 1.2rem;
+}
+
+.training-hero-heading {
+  font-weight: 500;
+  font-size: 5.4rem;
+  line-height: 1.2;
+  max-width: 80rem;
+}
+
+.training-hero-subtitle {
+  font-size: 1.8rem;
+  line-height: 1.7;
+  color: var(--gray-text-color);
+  max-width: 62rem;
+  margin-top: 2rem;
+}
+
+.training-hero-actions {
+  margin-top: 3.2rem;
+}
+
+/* ---------- Fileira "por que aprender aqui" ---------- */
+.value-section {
+  padding: var(--section-v) 0;
+}
+
+.value-section .title {
+  margin-top: 1.6rem;
+  margin-bottom: 4rem;
+}
+
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.4rem;
+}
+
+.value-card {
+  background-color: var(--gray-color-3);
+  padding: 3.2rem 2.4rem;
+  text-align: left;
+}
+
+.value-card-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.value-card-desc {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: var(--gray-text-color);
+}
+
+/* ---------- Grade de trilhas (home + catálogo) ---------- */
+.trilhas-destaque {
+  padding: 0 0 var(--section-v);
+}
+
+.trilhas-destaque .title {
+  margin-top: 1.6rem;
+  margin-bottom: 4rem;
+}
+
+.trilhas-catalogo {
+  padding: 4rem 0 var(--section-v);
+}
+
+.trilha-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  gap: 2.4rem;
+  padding-bottom: 4rem;
+}
+
+.trilha-card {
+  display: block;
+  background-color: var(--white-color);
+  border: 1px solid var(--gray-color);
+  text-decoration: none;
+  color: var(--main-text-color);
+  transition: border-color 0.2s ease;
+}
+
+.trilha-card:hover {
+  border-color: var(--secondary-accent);
+}
+
+.trilha-card-top {
+  background-color: var(--primary-accent);
+  padding: 3.2rem 2.4rem;
+  position: relative;
+}
+
+.trilha-badge {
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--primary-accent);
+  background-color: var(--primary-bg-color);
+  padding: 0.4rem 1.2rem;
+}
+
+.trilha-card-top .trilha-name {
+  color: var(--white-color);
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-top: 1.6rem;
+}
+
+.trilha-card-body {
+  padding: 2.4rem;
+}
+
+.trilha-card-desc {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: var(--gray-text-color);
+  margin-bottom: 1.6rem;
+}
+
+.trilha-card-meta {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--secondary-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.trilha-card.is-soon {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.trilha-card.is-soon .trilha-card-top {
+  background-color: var(--gray-color-2);
+}
+
+.trilha-card.is-soon .trilha-badge {
+  background-color: var(--white-color);
+  color: var(--gray-text-color);
+}
+
+/* ---------- Fileira de estatísticas na página de trilha ---------- */
+.stat-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  padding: 4rem 0;
+  border-top: 1px solid var(--gray-color);
+  border-bottom: 1px solid var(--gray-color);
+}
+
+.stat-chip {
+  background-color: var(--gray-color-3);
+  padding: 1.6rem 2.4rem;
+  min-width: 16rem;
+}
+
+.stat-chip-label {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--main-text-color);
+}
+
+.stat-chip-value {
+  display: block;
+  font-size: 1.4rem;
+  color: var(--gray-text-color);
+  margin-top: 0.2rem;
+}
+
+/* ---------- Acordeão de níveis ---------- */
+.level-list {
+  padding: 6rem 0 10rem;
+}
+
+.level-list-title {
+  margin-bottom: 3.2rem;
+}
+
+.level-accordion {
+  border: 1px solid var(--gray-color);
+  margin-bottom: 1.2rem;
+}
+
+.level-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem 2.4rem;
+  background-color: var(--white-color);
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+}
+
+.level-header-left {
+  display: flex;
+  align-items: baseline;
+  gap: 1.6rem;
+}
+
+.level-number {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--secondary-accent);
+}
+
+.level-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.level-meta {
+  font-size: 1.3rem;
+  color: var(--gray-text-color);
+  white-space: nowrap;
+}
+
+.level-icon {
+  transition: transform 0.2s ease;
+  font-size: 1.6rem;
+  color: var(--gray-text-color);
+  margin-left: 1.6rem;
+}
+
+.level-accordion.is-open .level-icon {
+  transform: rotate(180deg);
+}
+
+.level-body {
+  display: none;
+  padding: 0 2.4rem 2.4rem;
+  background-color: var(--gray-color-3);
+}
+
+.level-accordion.is-open .level-body {
+  display: block;
+}
+
+.term-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
+  column-gap: 3.2rem;
+  row-gap: 1.4rem;
+  padding-top: 2rem;
+}
+
+.term-item {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: var(--main-text-color);
+}
+
+.term-number {
+  flex: 0 0 auto;
+  width: 2.6rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--secondary-accent);
+}
+
+.term-name {
+  flex: 1 1 auto;
+}
+
+/* ---------- Tela de login ---------- */
+.login-box {
+  max-width: 44rem;
+  margin: 0 auto;
+  text-align: center;
+  padding: 18rem 2rem 10rem;
+}
+
+.login-box .title {
+  text-align: center;
+  font-size: 3.2rem;
+}
+
+.login-box-desc {
+  font-size: 1.6rem;
+  color: var(--gray-text-color);
+  line-height: 1.7;
+  margin: 1.6rem 0 3.2rem;
+}
+
+.google-btn-placeholder {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.2rem;
+  border: 1px solid var(--gray-color-2);
+  padding: 1.4rem 2.4rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--gray-text-color);
+  background-color: var(--white-color);
+}
+
+.login-note {
+  margin-top: 3.2rem;
+  font-size: 1.3rem;
+  color: var(--gray-text-color);
+}
+
+/* ---------- Banner de divulgação na home do portfólio ---------- */
+.training-promo {
+  background-color: var(--secondary-accent);
+  padding: 6rem 0;
+}
+
+.training-promo-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3.2rem;
+}
+
+.training-promo-content {
+  flex: 1 1 50rem;
+}
+
+.training-promo-eyebrow {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--primary-bg-color);
+  opacity: 0.85;
+  margin-bottom: 1rem;
+}
+
+.training-promo-heading {
+  font-size: 3.2rem;
+  font-weight: 500;
+  line-height: 1.25;
+  color: var(--white-color);
+  max-width: 46rem;
+}
+
+.training-promo-desc {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: var(--primary-bg-color);
+  opacity: 0.9;
+  max-width: 46rem;
+  margin-top: 1.6rem;
+}
+
+.training-promo-action {
+  flex: 0 0 auto;
+}
+
+/* ---------- Indicador no item de menu "Training" ---------- */
+.nav-link-training {
+  position: relative;
+}
+
+.nav-link-training::after {
+  content: "";
+  position: absolute;
+  top: -0.2rem;
+  right: -0.8rem;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background-color: var(--secondary-accent);
+}
+
+@media (max-width: 992px) {
+  .training-promo-heading {
+    font-size: 2.4rem;
+  }
+  .value-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .training-hero-heading {
+    font-size: 3.6rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .value-grid {
+    grid-template-columns: 1fr;
+  }
+  .term-list {
+    grid-template-columns: 1fr;
+  }
+}

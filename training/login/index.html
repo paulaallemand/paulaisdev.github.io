@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entrar · Training · Paula Allemand</title>
+    <meta name="robots" content="noindex" />
+    <meta name="author" content="Paula Allemand" />
+    <meta name="theme-color" content="#6f1d1b" />
+
+    <link rel="shortcut icon" href="../../img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/media.css" />
+    <link rel="stylesheet" href="../../css/training.css" />
+  </head>
+
+  <body>
+    <header id="header" class="header">
+      <div class="container container-lg">
+        <div class="header-nav">
+          <a href="../../index.html" class="logo">Paula<span>.</span>Allemand</a>
+          <nav id="nav" class="nav">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="../../index.html" class="nav-link">Início</a>
+              </li>
+              <li class="nav-item">
+                <a href="../index.html" class="nav-link">Training</a>
+              </li>
+              <li class="nav-item">
+                <a href="../trilhas/index.html" class="nav-link">Trilhas</a>
+              </li>
+            </ul>
+            <button id="nav-btn" class="nav-btn">
+              <img id="nav-btn-img" src="../../img/icons/open.svg" alt="Menu" />
+            </button>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <div class="login-box">
+        <p class="training-hero-eyebrow">Entrar</p>
+        <h1 class="title">Entrar com Google</h1>
+        <p class="login-box-desc">
+          Login serve só pra guardar seu progresso entre sessões. Nenhum
+          conteúdo fica escondido por causa disso.
+        </p>
+
+        <div id="g_id_onload"
+          data-client_id="SEU_CLIENT_ID_AQUI.apps.googleusercontent.com"
+          data-callback="handleGoogleCredentialResponse"
+          data-auto_prompt="false">
+        </div>
+        <div class="g_id_signin"
+          data-type="standard"
+          data-shape="pill"
+          data-theme="outline"
+          data-text="continue_with"
+          data-size="large"
+          data-locale="pt-BR">
+        </div>
+
+        <p class="login-note">
+          Prefere não entrar agora? Volte para
+          <a href="../trilhas/ia/index.html">a Trilha de IA</a>. O conteúdo
+          continua aberto, só o progresso fica sem salvar.
+        </p>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-row">
+          <div class="social-links-row footer-social">
+            <a
+              href="https://github.com/paulaisdev"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+            >
+              <img src="../../img/social_icons/github.svg" alt="GitHub" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/paulaallemand/"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+            >
+              <img src="../../img/social_icons/linkedin.svg" alt="LinkedIn" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../../js/auth.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="../../js/main.js"></script>
+  </body>
+</html>
