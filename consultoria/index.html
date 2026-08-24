@@ -89,8 +89,8 @@
                 Menos tarefa manual, mais tempo pra você.
               </h1>
               <span class="hero-heading-subtitle">
-                Pra quem quer usar IA e automatizar tarefas no trabalho, sem
-                precisar entender de tecnologia pra isso.
+                Pra quem quer usar IA e automatizar tarefas no trabalho ou na
+                vida, sem precisar dominar tecnologia pra isso.
               </span>
               <div class="hero-cta-row">
                 <a href="#form" class="btn btn-red">Quero agendar uma conversa</a>
@@ -176,8 +176,8 @@
               -->
               <div class="hero-photo">
                 <img
-                  src="https://images.pexels.com/photos/1181742/pexels-photo-1181742.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Profissional sorrindo em frente ao notebook, no trabalho"
+                  src="img/hero-photo.jpg"
+                  alt="Pessoa sorrindo, anotando em um caderno com o notebook aberto ao fundo"
                 />
               </div>
             </div>
@@ -440,6 +440,31 @@
     ></script>
     <script src="../js/i18n.js"></script>
     <script src="../js/main.js"></script>
+    <!-- A foto do hero é retrato (vertical); isso trava a altura dela na
+         altura real do bloco de texto ao lado (heading + subtítulo +
+         botão), pra ela cortar só embaixo, alinhada com o botão, em vez
+         de esticar pra baixo do que o texto. CSS puro não dá pra fazer
+         isso de forma confiável aqui — ver comentário em consultoria.css
+         acima de .hero-photo. -->
+    <script>
+      (function () {
+        var content = document.querySelector(".hero-content");
+        var photo = document.querySelector(".hero-photo");
+        if (!content || !photo) return;
+
+        function syncHeroPhotoHeight() {
+          if (window.innerWidth <= 720) {
+            photo.style.height = "";
+            return;
+          }
+          photo.style.height = content.offsetHeight + "px";
+        }
+
+        syncHeroPhotoHeight();
+        window.addEventListener("resize", syncHeroPhotoHeight);
+        window.addEventListener("load", syncHeroPhotoHeight);
+      })();
+    </script>
     <!-- Carrossel desativado a pedido da Paula (imagem fixa no lugar).
          Pra reativar, tirar este comentário — o script já tem
          "if (!carousel) return" então é seguro deixar comentado.

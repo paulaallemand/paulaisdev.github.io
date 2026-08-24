@@ -61,9 +61,22 @@
 /* Imagem fixa no lugar do carrossel (a pedido da Paula) — mesmas
    alturas por breakpoint, mesmo fallback de fundo. */
 
+/* Tentativa anterior (height:100% dependendo do stretch do .hero-row)
+   não funciona: como a foto é retrato (bem mais alta que larga), o
+   navegador usa a altura NATURAL dela pra calcular a altura da linha
+   flex antes de aplicar o stretch — então "100%" sempre resolve pro
+   próprio tamanho grande da foto (dependência circular do flexbox).
+   Por isso a altura da .hero-photo é ajustada via JS (ver script no
+   fim do body), medindo a altura real do .hero-content e aplicando
+   como altura fixa aqui — sem isso, não tem como o corte acompanhar
+   o texto de forma confiável só com CSS. */
+.hero-img {
+  display: flex;
+  flex-direction: column;
+}
+
 .hero-photo {
   width: 100%;
-  height: 38rem;
   overflow: hidden;
   background-color: var(--primary-accent);
 }
@@ -72,35 +85,15 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Essa foto (1181742) é enquadrada com a pessoa e o notebook mais
-     abaixo no quadro — 15%/top estava zerando o notebook fora do
-     crop. 32% mostra mais da parte de baixo da foto original. */
-  object-position: center 32%;
+  /* Mantém o topo inteiro (alinhado com o início do texto) e corta só
+     o excedente de baixo, até a altura do botão. */
+  object-position: center top;
   display: block;
-}
-
-@media (max-width: 1200px) {
-  .hero-photo {
-    height: 34rem;
-  }
-}
-
-@media (max-width: 977px) {
-  .hero-photo {
-    height: 32rem;
-  }
 }
 
 @media (max-width: 720px) {
   .hero-photo {
-    height: 30rem;
     margin-top: 4rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-photo {
-    height: 26rem;
   }
 }
 
