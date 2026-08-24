@@ -234,6 +234,21 @@ h5 {
   font-weight: 600;
 }
 
+.nav-link-cta {
+  padding: 0.8rem 1.8rem;
+  border: 1.5px solid var(--secondary-accent);
+  border-radius: 0.4rem;
+  color: var(--secondary-accent) !important;
+  font-weight: 600;
+  transition: all 0.2s ease-in;
+}
+
+.nav-link-cta:hover,
+.nav-link-cta:focus {
+  background-color: var(--secondary-accent);
+  color: var(--white-color) !important;
+}
+
 .nav {
   display: flex;
   align-items: center;
@@ -1060,6 +1075,44 @@ h5 {
 .exp-highlight-arrow {
   font-size: 1.1rem;
   opacity: 0.6;
+}
+
+/* ---------- Companies: seção compacta de logos ---------- */
+.companies {
+  padding: calc(var(--section-v) / 3) 0;
+  background-color: var(--primary-bg-color);
+}
+
+.companies .section-eyebrow {
+  margin-bottom: 2.4rem;
+}
+
+.logos-strip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logos-strip-list {
+  display: flex;
+  gap: 2rem 2.8rem;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.strip-logo {
+  height: 4rem;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.5;
+  transition: opacity 0.25s ease, filter 0.25s ease;
+}
+
+.strip-logo:hover {
+  opacity: 1;
+  filter: grayscale(0);
 }
 
 /* ---------- Feedbacks: mock de chat estilo Zoom ---------- */

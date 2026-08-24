@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consultoria de Automação e IA no dia a dia · Paula Allemand</title>
+    <meta
+      name="description"
+      content="Consultoria de automação e uso de IA no dia a dia, pra profissionais não técnicos. Agende uma conversa e receba um roteiro de preparo por e-mail."
+    />
+    <meta name="theme-color" content="#6f1d1b" />
+
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Consultoria de Automação e IA no dia a dia · Paula Allemand"
+    />
+    <meta
+      property="og:description"
+      content="Automação e IA no dia a dia, explicado sem jargão. Agende uma conversa."
+    />
+    <meta property="og:url" content="https://paulaallemand.com/consultoria" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/media.css" />
+    <link rel="stylesheet" href="css/consultoria.css" />
+  </head>
+
+  <body>
+    <header id="header" class="header">
+      <div class="container container-lg">
+        <div class="header-nav">
+          <a href="../index.html" class="logo">Paula<span>.</span>Allemand</a>
+          <nav id="nav" class="nav">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="../index.html#home" class="nav-link">Início</a>
+              </li>
+              <li class="nav-item">
+                <a href="../index.html#about" class="nav-link">Sobre</a>
+              </li>
+              <li class="nav-item">
+                <a href="../experience.html" class="nav-link">Experiência</a>
+              </li>
+              <li class="nav-item">
+                <a href="../index.html#feedbacks" class="nav-link">Feedbacks</a>
+              </li>
+              <li class="nav-item">
+                <a href="../index.html#talks" class="nav-link">Palestras</a>
+              </li>
+              <li class="nav-item">
+                <a href="../blog.html" class="nav-link">Blog</a>
+              </li>
+              <!-- "Training"/learning ainda não está em produção — não subir esse link no commit.
+              <li class="nav-item">
+                <a href="../learning/" class="nav-link nav-link-training">Training</a>
+              </li>
+              -->
+              <li class="nav-item">
+                <a href="index.html" class="nav-link nav-link-cta active">Consultoria</a>
+              </li>
+            </ul>
+            <button
+              id="lang-toggle"
+              class="lang-toggle"
+              type="button"
+              aria-label="Ver em inglês"
+            >
+              <img src="../img/flags/us.svg" alt="Ver em inglês" />
+            </button>
+            <button id="nav-btn" class="nav-btn">
+              <img id="nav-btn-img" src="../img/icons/open.svg" alt="Menu" />
+            </button>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section id="home" class="hero">
+        <div class="container container-lg">
+          <div class="hero-row">
+            <div class="hero-content">
+              <span class="hero-greeting">Consultoria</span>
+              <h1 class="hero-heading">
+                Menos tarefa manual, mais tempo pra você.
+              </h1>
+              <span class="hero-heading-subtitle">
+                Pra quem quer usar IA e automatizar tarefas no trabalho ou na
+                vida, sem precisar dominar tecnologia pra isso.
+              </span>
+              <div class="hero-cta-row">
+                <a href="#form" class="btn btn-red">Quero agendar uma conversa</a>
+              </div>
+            </div>
+            <div class="hero-img">
+              <!-- Carrossel desativado a pedido da Paula — voltar a
+                   habilitar removendo este comentário e o do bloco de
+                   script na parte de baixo do arquivo.
+              <div class="hero-carousel" id="hero-carousel">
+                <img
+                  class="hero-carousel-img is-active"
+                  src="https://images.pexels.com/photos/33067699/pexels-photo-33067699.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Médica sorrindo, de braços cruzados, em uma clínica"
+                />
+                <img
+                  class="hero-carousel-img"
+                  src="https://images.pexels.com/photos/15319021/pexels-photo-15319021.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Nutricionista orientando uma paciente em um consultório"
+                />
+                <img
+                  class="hero-carousel-img"
+                  src="https://images.pexels.com/photos/5356220/pexels-photo-5356220.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Profissional concentrada trabalhando em um notebook em um café"
+                />
+                <img
+                  class="hero-carousel-img"
+                  src="https://images.pexels.com/photos/27086768/pexels-photo-27086768.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Administradora sorrindo em um ambiente de escritório"
+                />
+                <img
+                  class="hero-carousel-img"
+                  src="https://images.pexels.com/photos/7876197/pexels-photo-7876197.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  alt="Advogado em uma consulta de escritório"
+                />
+                <button
+                  class="hero-carousel-arrow hero-carousel-arrow-prev"
+                  type="button"
+                  aria-label="Foto anterior"
+                >
+                  &#8249;
+                </button>
+                <button
+                  class="hero-carousel-arrow hero-carousel-arrow-next"
+                  type="button"
+                  aria-label="Próxima foto"
+                >
+                  &#8250;
+                </button>
+                <div class="hero-carousel-dots" role="tablist" aria-label="Selecionar foto">
+                  <button
+                    class="hero-carousel-dot is-active"
+                    role="tab"
+                    aria-selected="true"
+                    aria-label="Foto 1"
+                  ></button>
+                  <button
+                    class="hero-carousel-dot"
+                    role="tab"
+                    aria-selected="false"
+                    aria-label="Foto 2"
+                  ></button>
+                  <button
+                    class="hero-carousel-dot"
+                    role="tab"
+                    aria-selected="false"
+                    aria-label="Foto 3"
+                  ></button>
+                  <button
+                    class="hero-carousel-dot"
+                    role="tab"
+                    aria-selected="false"
+                    aria-label="Foto 4"
+                  ></button>
+                  <button
+                    class="hero-carousel-dot"
+                    role="tab"
+                    aria-selected="false"
+                    aria-label="Foto 5"
+                  ></button>
+                </div>
+              </div>
+              -->
+              <div class="hero-photo">
+                <img
+                  src="img/hero-photo.jpg"
+                  alt="Pessoa sorrindo, anotando em um caderno com o notebook aberto ao fundo"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="pra-quem" class="consultoria-section">
+        <div class="container qualificacao-grid">
+          <div>
+            <h2 class="section-eyebrow">Isso é pra você se...</h2>
+            <ul class="dores-list">
+              <li>
+                Você ouve falar de IA o dia inteiro e não sabe por onde
+                começar, na prática, no seu trabalho.
+              </li>
+              <li>
+                Tem tarefas repetitivas no seu dia a dia e desconfia que dá
+                pra automatizar, mas não sabe como.
+              </li>
+              <li>
+                Já tentou usar ChatGPT ou outra IA sozinha, travou, e não
+                sabe se está usando do jeito certo.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="section-eyebrow section-eyebrow-muted">Isso não é pra você se...</h2>
+            <ul class="dores-list">
+              <li>
+                Você procura uma resposta pronta e genérica, que sirva pra
+                qualquer pessoa. Aqui a gente parte do seu caso, não de um
+                modelo padrão.
+              </li>
+              <li>
+                Você prefere que alguém resolva tudo por você, sem
+                participar. A consultoria funciona melhor quando a gente
+                olha sua rotina junto.
+              </li>
+              <li>
+                Você está procurando um curso longo ou uma trilha de
+                estudo. Isso aqui é uma conversa focada no seu caso, não
+                um treinamento extenso.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="como-funciona" class="consultoria-section">
+        <div class="container como-funciona-grid">
+          <div class="como-funciona-mockup">
+            <div class="phone-mockup" aria-hidden="true">
+              <div class="phone-mockup-notch"></div>
+              <div class="phone-mockup-screen">
+                <div class="phone-mockup-browserbar">
+                  paulaallemand.com/consultoria
+                </div>
+                <div class="phone-mockup-page">
+                  <p class="phone-mockup-eyebrow">Consultoria</p>
+                  <p class="phone-mockup-heading">
+                    Menos tarefa manual, mais tempo pra você.
+                  </p>
+                  <div class="phone-mockup-field">
+                    <span class="phone-mockup-label">Nome</span>
+                    <div class="phone-mockup-input">
+                      <span id="mockup-name-text"></span
+                      ><span class="phone-mockup-cursor"></span>
+                    </div>
+                  </div>
+                  <div class="phone-mockup-field">
+                    <span class="phone-mockup-label">E-mail</span>
+                    <div class="phone-mockup-input">
+                      <span id="mockup-email-text"></span>
+                    </div>
+                  </div>
+                  <div class="phone-mockup-btn" id="mockup-btn">
+                    Quero minha conversa
+                  </div>
+                  <p class="phone-mockup-success" id="mockup-success">
+                    Prontinho! Confere sua caixa de entrada (e o spam, por
+                    garantia).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="como-funciona-steps">
+            <h2 class="section-eyebrow">Como funciona</h2>
+            <ol class="passo-lista">
+              <li>
+                <span class="passo-numero">1</span>
+                <p>Você preenche seu nome e e-mail aqui embaixo.</p>
+              </li>
+              <li>
+                <span class="passo-numero">2</span>
+                <p>
+                  Chega um e-mail com um roteiro rápido pra você pensar
+                  antes da nossa conversa — e o link pra agendar um
+                  horário.
+                </p>
+              </li>
+              <li>
+                <span class="passo-numero">3</span>
+                <p>A gente conversa sobre o seu caso, no seu ritmo.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section id="form" class="consultoria-section consultoria-section-dark">
+        <div class="container form-section-inner">
+          <h2 class="section-eyebrow">Vamos conversar?</h2>
+          <p class="section-lead">
+            Deixa seu nome e e-mail que eu te mando os próximos passos.
+          </p>
+
+          <div class="form-card">
+            <form id="form-consultoria">
+              <label for="from_name">Nome</label>
+              <input type="text" id="from_name" name="from_name" required />
+
+              <label for="reply_to">E-mail</label>
+              <input type="email" id="reply_to" name="reply_to" required />
+
+              <div class="form-consent">
+                <input type="checkbox" id="consentimento" required />
+                <label for="consentimento">
+                  Aceito receber e-mails sobre a consultoria. Veja a
+                  <a href="privacidade.html" target="_blank">política de privacidade</a>.
+                </label>
+              </div>
+
+              <div class="form-consent">
+                <input type="checkbox" id="newsletter" />
+                <label for="newsletter">
+                  Quero também saber de novos conteúdos e oportunidades gratuitas.
+                </label>
+              </div>
+              <input type="hidden" id="newsletter_optin" name="newsletter_optin" value="não" />
+
+              <button type="submit" class="btn btn-red form-submit">
+                Quero minha conversa
+              </button>
+
+              <p class="form-trust">
+                Quem te atende: Paula Allemand, engenheira de software com
+                experiência em educação e tecnologia.
+              </p>
+
+              <p class="form-msg form-msg-ok" id="msg-ok">
+                Prontinho! Confere sua caixa de entrada (e o spam, por
+                garantia) — te mandei um roteiro rápido de preparo e o link
+                pra agendar.
+              </p>
+              <p class="form-msg form-msg-erro" id="msg-erro">
+                Algo deu errado no envio. Tenta de novo em instantes, ou me
+                chama direto.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section id="videos" class="consultoria-section">
+        <div class="container">
+          <h2 class="section-eyebrow">Quer adiantar o básico?</h2>
+          <p class="section-lead">
+            Minha própria plataforma de ensino gratuita (Trilha de IA) ainda
+            está em construção. Até lá, esses vídeos ajudam a entender o
+            essencial:
+          </p>
+          <div class="video-grid">
+            <a
+              class="video-card"
+              href="https://www.youtube.com/watch?v=gHLeO7wbooU"
+              target="_blank"
+            >
+              <span class="video-tag">O básico</span>
+              <span class="video-titulo"
+                >O que é Inteligência Artificial? (explicado de forma
+                simples)</span
+              >
+            </a>
+            <a
+              class="video-card"
+              href="https://www.youtube.com/watch?v=lB4IwJDnvsA"
+              target="_blank"
+            >
+              <span class="video-tag">O básico</span>
+              <span class="video-titulo">Inteligência Artificial em 4 minutos</span>
+            </a>
+            <a
+              class="video-card"
+              href="https://www.youtube.com/watch?v=UmuJeb0VvXA"
+              target="_blank"
+            >
+              <span class="video-tag">Na prática</span>
+              <span class="video-titulo"
+                >ChatGPT — o que é e como usar (tutorial com
+                exemplos)</span
+              >
+            </a>
+            <a
+              class="video-card"
+              href="https://www.youtube.com/watch?v=Ju7GCm1wlYI"
+              target="_blank"
+            >
+              <span class="video-tag">Na prática</span>
+              <span class="video-titulo">Aprenda ChatGPT em 15 minutos</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-row">
+            <h2 class="footer-cta">Bora conversar?</h2>
+            <a href="#form" class="btn btn-red">Quero minha conversa</a>
+            <div class="social-links-row footer-social">
+              <a
+                href="https://github.com/paulaisdev"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub"
+              >
+                <img src="../img/social_icons/github.svg" alt="GitHub" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/paulaallemand/"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn"
+              >
+                <img src="../img/social_icons/linkedin.svg" alt="LinkedIn" />
+              </a>
+            </div>
+          </div>
+          <p class="footer-copyright">
+            Paula Allemand · <a href="privacidade.html">Privacidade</a>
+          </p>
+        </div>
+      </footer>
+
+      <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+    </main>
+
+    <div id="goToTop" class="goToTop">
+      <a href="#home" aria-label="Voltar ao topo">
+        <img src="../img/icons/arrow_up.svg" alt="Voltar ao topo" />
+      </a>
+    </div>
+
+    <!-- EmailJS: ver EMAILJS_SETUP.md na raiz do repo. -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script src="../js/i18n.js"></script>
+    <script src="../js/main.js"></script>
+    <!-- A foto do hero é retrato (vertical); isso trava a altura dela na
+         altura real do bloco de texto ao lado (heading + subtítulo +
+         botão), pra ela cortar só embaixo, alinhada com o botão, em vez
+         de esticar pra baixo do que o texto. CSS puro não dá pra fazer
+         isso de forma confiável aqui — ver comentário em consultoria.css
+         acima de .hero-photo. -->
+    <script>
+      (function () {
+        var content = document.querySelector(".hero-content");
+        var photo = document.querySelector(".hero-photo");
+        if (!content || !photo) return;
+
+        function syncHeroPhotoHeight() {
+          if (window.innerWidth <= 720) {
+            photo.style.height = "";
+            return;
+          }
+          photo.style.height = content.offsetHeight + "px";
+        }
+
+        syncHeroPhotoHeight();
+        window.addEventListener("resize", syncHeroPhotoHeight);
+        window.addEventListener("load", syncHeroPhotoHeight);
+      })();
+    </script>
+    <!-- Carrossel desativado a pedido da Paula (imagem fixa no lugar).
+         Pra reativar, tirar este comentário — o script já tem
+         "if (!carousel) return" então é seguro deixar comentado.
+    <script>
+      (function () {
+        var carousel = document.getElementById("hero-carousel");
+        if (!carousel) return;
+
+        var slides = carousel.querySelectorAll(".hero-carousel-img");
+        var dots = carousel.querySelectorAll(".hero-carousel-dot");
+        var prevBtn = carousel.querySelector(".hero-carousel-arrow-prev");
+        var nextBtn = carousel.querySelector(".hero-carousel-arrow-next");
+        var current = 0;
+        var timer;
+        var isAnimating = false;
+        var reduceMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        ).matches;
+        // Crossfade dura 0.35s (ver consultoria.css) — trava novas trocas
+        // até o fim pra evitar duas fotos sobrepostas em cliques rápidos.
+        var TRANSITION_MS = reduceMotion ? 0 : 380;
+
+        function goTo(index) {
+          if (isAnimating || index === current) return;
+          isAnimating = true;
+
+          slides[current].classList.remove("is-active");
+          dots[current].classList.remove("is-active");
+          dots[current].setAttribute("aria-selected", "false");
+
+          current = index;
+          slides[current].classList.add("is-active");
+          dots[current].classList.add("is-active");
+          dots[current].setAttribute("aria-selected", "true");
+
+          setTimeout(function () {
+            isAnimating = false;
+          }, TRANSITION_MS);
+        }
+
+        function next() {
+          goTo((current + 1) % slides.length);
+        }
+
+        function prev() {
+          goTo((current - 1 + slides.length) % slides.length);
+        }
+
+        function startAutoplay() {
+          if (reduceMotion) return;
+          stopAutoplay();
+          timer = setInterval(next, 4500);
+        }
+
+        function stopAutoplay() {
+          clearInterval(timer);
+        }
+
+        function restartAutoplay() {
+          stopAutoplay();
+          startAutoplay();
+        }
+
+        dots.forEach(function (dot, i) {
+          dot.addEventListener("click", function () {
+            goTo(i);
+            restartAutoplay();
+          });
+        });
+
+        if (prevBtn) {
+          prevBtn.addEventListener("click", function () {
+            prev();
+            restartAutoplay();
+          });
+        }
+        if (nextBtn) {
+          nextBtn.addEventListener("click", function () {
+            next();
+            restartAutoplay();
+          });
+        }
+
+        // WCAG 2.2.2 — pausa o autoplay quando o carrossel recebe
+        // hover ou foco de teclado, retoma quando sai.
+        carousel.addEventListener("mouseenter", stopAutoplay);
+        carousel.addEventListener("mouseleave", startAutoplay);
+        carousel.addEventListener("focusin", stopAutoplay);
+        carousel.addEventListener("focusout", startAutoplay);
+
+        startAutoplay();
+      })();
+    </script>
+    -->
+    <script>
+      (function () {
+        var nameEl = document.getElementById("mockup-name-text");
+        var emailEl = document.getElementById("mockup-email-text");
+        var btn = document.getElementById("mockup-btn");
+        var success = document.getElementById("mockup-success");
+        if (!nameEl || !emailEl || !btn || !success) return;
+
+        var reduceMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        ).matches;
+        var NAME = "Mariana Souza";
+        var EMAIL = "mariana@email.com";
+
+        if (reduceMotion) {
+          nameEl.textContent = NAME;
+          emailEl.textContent = EMAIL;
+          success.classList.add("is-visible");
+          return;
+        }
+
+        function typeInto(el, text, speed, done) {
+          var i = 0;
+          el.textContent = "";
+          (function step() {
+            if (i <= text.length) {
+              el.textContent = text.slice(0, i);
+              i++;
+              setTimeout(step, speed);
+            } else if (done) {
+              done();
+            }
+          })();
+        }
+
+        function runDemo() {
+          nameEl.textContent = "";
+          emailEl.textContent = "";
+          btn.classList.remove("is-pressed");
+          success.classList.remove("is-visible");
+
+          typeInto(nameEl, NAME, 90, function () {
+            setTimeout(function () {
+              typeInto(emailEl, EMAIL, 70, function () {
+                setTimeout(function () {
+                  btn.classList.add("is-pressed");
+                  setTimeout(function () {
+                    btn.classList.remove("is-pressed");
+                    success.classList.add("is-visible");
+                    setTimeout(runDemo, 3200);
+                  }, 200);
+                }, 500);
+              });
+            }, 400);
+          });
+        }
+
+        runDemo();
+      })();
+    </script>
+    <script>
+      (function () {
+        emailjs.init("eTGo5la7X-EKJYVCf");
+
+        var form = document.getElementById("form-consultoria");
+        var msgOk = document.getElementById("msg-ok");
+        var msgErro = document.getElementById("msg-erro");
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          msgOk.style.display = "none";
+          msgErro.style.display = "none";
+
+          document.getElementById("newsletter_optin").value = document.getElementById(
+            "newsletter"
+          ).checked
+            ? "sim"
+            : "não";
+
+          var btn = form.querySelector("button[type=submit]");
+          btn.disabled = true;
+          btn.textContent = "Enviando...";
+
+          emailjs.sendForm("service_4eycoik", "template_ea3bpne", form).then(
+            function () {
+              msgOk.style.display = "block";
+              form.reset();
+              btn.disabled = false;
+              btn.textContent = "Quero minha conversa";
+            },
+            function () {
+              msgErro.style.display = "block";
+              btn.disabled = false;
+              btn.textContent = "Quero minha conversa";
+            }
+          );
+        });
+      })();
+    </script>
+  </body>
+</html>

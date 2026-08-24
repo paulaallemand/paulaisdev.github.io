@@ -1,0 +1,633 @@
+/* consultoria.css
+   Reaproveita variáveis e componentes de main.css/media.css (Poppins,
+   --primary-bg-color, --primary-accent, --secondary-accent, .container,
+   .hero, .btn, .footer etc — ver PLANO_AJUSTES_CONSULTORIA.md).
+   Este arquivo só acrescenta os 3 componentes que não existem no site:
+   card de formulário, lista numerada de passos, cards de vídeo.
+   Nunca sobrescreve main.css. */
+
+.consultoria-section {
+  padding: var(--section-v) 0;
+  border-top: 0.1rem solid var(--gray-color-3);
+}
+
+/* No site real, esse espaço vem da fileira de ícones sociais (ausente
+   aqui) entre o subtítulo e os botões do hero — repõe o respiro. */
+.hero-cta-row {
+  margin-top: 3.6rem;
+}
+
+/* Carrossel de fotos do hero */
+
+/* Altura fixa (em vez de aspect-ratio) — garante que as 5 fotos tenham
+   sempre exatamente a mesma altura entre si e que a imagem termine
+   rente ao limite da seção, sem sobrar tira do fundo da hero
+   (--primary-bg-color, o off-white azulado do site) entre a foto e a
+   borda. Valores por breakpoint pra acompanhar o hero-content ao lado. */
+
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  height: 46rem;
+  overflow: hidden;
+  background-color: var(--primary-accent);
+}
+
+@media (max-width: 1200px) {
+  .hero-carousel {
+    height: 40rem;
+  }
+}
+
+@media (max-width: 977px) {
+  .hero-carousel {
+    height: 44rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero-carousel {
+    height: 38rem;
+    margin-top: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-carousel {
+    height: 30rem;
+  }
+}
+
+/* Imagem fixa no lugar do carrossel (a pedido da Paula) — mesmas
+   alturas por breakpoint, mesmo fallback de fundo. */
+
+/* Tentativa anterior (height:100% dependendo do stretch do .hero-row)
+   não funciona: como a foto é retrato (bem mais alta que larga), o
+   navegador usa a altura NATURAL dela pra calcular a altura da linha
+   flex antes de aplicar o stretch — então "100%" sempre resolve pro
+   próprio tamanho grande da foto (dependência circular do flexbox).
+   Por isso a altura da .hero-photo é ajustada via JS (ver script no
+   fim do body), medindo a altura real do .hero-content e aplicando
+   como altura fixa aqui — sem isso, não tem como o corte acompanhar
+   o texto de forma confiável só com CSS. */
+.hero-img {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-photo {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--primary-accent);
+}
+
+.hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Mantém o topo inteiro (alinhado com o início do texto) e corta só
+     o excedente de baixo, até a altura do botão. */
+  object-position: center top;
+  display: block;
+}
+
+@media (max-width: 720px) {
+  .hero-photo {
+    margin-top: 4rem;
+  }
+}
+
+.hero-carousel-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* "top" cortava o rosto quando a foto original tinha espaço vazio
+     acima da cabeça (headroom) — 15% mantém o rosto visível na maioria
+     dos retratos. Sem inspeção visual, é uma aproximação; ajuste por
+     foto com object-position inline se alguma continuar cortando. */
+  object-position: center 15%;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.hero-carousel-img.is-active {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-carousel-img {
+    transition: none;
+  }
+}
+
+/* Setas de navegação — visíveis por pedido explícito (diferente das
+   setas ocultas do #talks no site principal) */
+
+.hero-carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 4rem;
+  height: 4rem;
+  min-width: 4.4rem;
+  min-height: 4.4rem;
+  border-radius: 50%;
+  border: 0.15rem solid rgba(255, 255, 255, 0.8);
+  background: rgba(12, 22, 24, 0.35);
+  color: var(--white-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.8rem;
+  line-height: 1;
+  transition: background 0.2s ease-in;
+}
+
+.hero-carousel-arrow:hover,
+.hero-carousel-arrow:focus {
+  background: rgba(12, 22, 24, 0.6);
+}
+
+.hero-carousel-arrow-prev {
+  left: 1.2rem;
+}
+
+.hero-carousel-arrow-next {
+  right: 1.2rem;
+}
+
+.hero-carousel-dots {
+  position: absolute;
+  bottom: 1.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.8rem;
+  z-index: 2;
+}
+
+.hero-carousel-dot {
+  position: relative;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  border: 0.15rem solid var(--white-color);
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s ease-in;
+}
+
+/* Amplia a área de toque sem mudar o tamanho visual do ponto (WCAG 2.5.8) */
+.hero-carousel-dot::after {
+  content: "";
+  position: absolute;
+  inset: -0.8rem;
+}
+
+.hero-carousel-dot.is-active {
+  background: var(--white-color);
+}
+
+.section-lead {
+  font-size: 1.9rem;
+  color: var(--gray-text-color);
+  max-width: 60ch;
+  margin-top: -1rem;
+}
+
+/* Seção de contraste — mesmo padrão de fundo escuro usado em .about */
+
+.consultoria-section-dark {
+  background-color: var(--secondary-accent);
+  color: var(--white-color);
+  border-top: none;
+}
+
+.consultoria-section-dark .section-eyebrow {
+  color: rgba(247, 251, 253, 0.72);
+}
+
+.consultoria-section-dark .section-lead {
+  color: rgba(247, 251, 253, 0.85);
+}
+
+.form-section-inner {
+  text-align: center;
+}
+
+.form-section-inner .section-lead {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Lista de dores */
+
+.dores-list {
+  list-style: none;
+  padding: 0;
+  margin: 2.4rem 0 0;
+  max-width: 70ch;
+}
+
+.dores-list li {
+  padding: 1.8rem 0;
+  border-bottom: 0.1rem solid var(--gray-color-3);
+  font-size: 1.9rem;
+}
+
+.dores-list li:last-child {
+  border-bottom: none;
+}
+
+/* Grid "isso é / isso não é pra você" */
+
+.qualificacao-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+}
+
+.section-eyebrow-muted {
+  color: var(--gray-text-color);
+}
+
+@media (max-width: 850px) {
+  .qualificacao-grid {
+    grid-template-columns: 1fr;
+    gap: 3.2rem;
+  }
+}
+
+/* "Como funciona" — mockup de celular à esquerda, passos à direita
+   (pedido explícito: "mova esses passos para o lado direito") */
+
+.como-funciona-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 38%) minmax(0, 1fr);
+  gap: 6rem;
+  align-items: center;
+}
+
+.como-funciona-mockup {
+  display: flex;
+  justify-content: center;
+}
+
+.phone-mockup {
+  position: relative;
+  width: 27rem;
+  max-width: 100%;
+  aspect-ratio: 9 / 19.5;
+  background: var(--primary-accent);
+  border-radius: 3.2rem;
+  padding: 1.2rem;
+  box-shadow: 0 1.4rem 3rem rgba(12, 22, 24, 0.18);
+}
+
+.phone-mockup-notch {
+  position: absolute;
+  top: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8rem;
+  height: 1.8rem;
+  background: var(--primary-accent);
+  border-radius: 1rem;
+  z-index: 2;
+}
+
+.phone-mockup-screen {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-bg-color);
+  border-radius: 2.2rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-mockup-browserbar {
+  flex-shrink: 0;
+  padding: 1.8rem 1.6rem 0.8rem;
+  font-size: 1rem;
+  color: var(--gray-text-color);
+  background: var(--white-color);
+  border-bottom: 0.1rem solid var(--gray-color-3);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.phone-mockup-page {
+  padding: 2rem 1.8rem;
+  flex: 1;
+}
+
+.phone-mockup-eyebrow {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  color: var(--secondary-accent);
+  margin: 0 0 0.6rem;
+}
+
+.phone-mockup-heading {
+  font-size: 1.7rem;
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0 0 2rem;
+  color: var(--main-text-color);
+}
+
+.phone-mockup-field {
+  margin-bottom: 1.4rem;
+}
+
+.phone-mockup-label {
+  display: block;
+  font-size: 1.1rem;
+  color: var(--gray-text-color);
+  margin-bottom: 0.4rem;
+}
+
+.phone-mockup-input {
+  min-height: 3rem;
+  border: 0.1rem solid var(--gray-color-2);
+  border-radius: 0.4rem;
+  background: var(--white-color);
+  padding: 0.8rem 1rem;
+  font-size: 1.3rem;
+  color: var(--main-text-color);
+  display: flex;
+  align-items: center;
+}
+
+.phone-mockup-cursor {
+  display: inline-block;
+  width: 0.15rem;
+  height: 1.4rem;
+  background: var(--secondary-accent);
+  margin-left: 0.1rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .phone-mockup-cursor {
+    animation: phone-cursor-blink 1s step-end infinite;
+  }
+}
+
+@keyframes phone-cursor-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.phone-mockup-btn {
+  margin-top: 0.6rem;
+  background: var(--secondary-accent);
+  color: var(--white-color);
+  text-align: center;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  transition: transform 0.15s ease;
+}
+
+.phone-mockup-btn.is-pressed {
+  transform: scale(0.96);
+}
+
+.phone-mockup-success {
+  margin-top: 1.4rem;
+  font-size: 1.2rem;
+  color: #2e6b3e;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.phone-mockup-success.is-visible {
+  opacity: 1;
+}
+
+@media (max-width: 977px) {
+  .como-funciona-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}
+
+/* Lista numerada de passos — número tipográfico, sem badge/círculo */
+
+.passo-lista {
+  list-style: none;
+  padding: 0;
+  margin: 2.4rem 0 0;
+  display: grid;
+  gap: 2.4rem;
+  max-width: 70ch;
+}
+
+.passo-lista li {
+  display: flex;
+  gap: 1.6rem;
+  align-items: flex-start;
+}
+
+.passo-numero {
+  font-weight: 700;
+  font-size: 2.8rem;
+  color: var(--secondary-accent);
+  flex-shrink: 0;
+  width: 4.4rem;
+}
+
+.passo-lista p {
+  font-size: 1.9rem;
+  margin: 0.4rem 0 0;
+}
+
+/* Card de formulário */
+
+.form-card {
+  background: var(--white-color);
+  border: none;
+  border-radius: 0.6rem;
+  padding: 4.8rem;
+  margin: 3.2rem auto 0;
+  max-width: 62rem;
+  text-align: left;
+  box-shadow: 0 1.4rem 3rem rgba(12, 22, 24, 0.18);
+}
+
+.form-card label {
+  display: block;
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin-bottom: 0.7rem;
+  margin-top: 1.8rem;
+  color: var(--main-text-color);
+}
+
+.form-card label:first-of-type {
+  margin-top: 0;
+}
+
+.form-card input[type="text"],
+.form-card input[type="email"] {
+  width: 100%;
+  padding: 1.4rem 1.5rem;
+  border: 0.1rem solid var(--gray-color-2);
+  border-radius: 0.4rem;
+  font-family: inherit;
+  font-size: 1.7rem;
+  background: var(--primary-bg-color);
+  color: var(--main-text-color);
+}
+
+.form-consent {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+.form-consent input {
+  margin-top: 0.4rem;
+  flex-shrink: 0;
+}
+
+.form-consent label {
+  margin: 0 !important;
+  font-weight: 400 !important;
+  font-size: 1.4rem !important;
+  color: var(--gray-text-color);
+}
+
+.form-submit {
+  margin-top: 2.4rem;
+  width: 100%;
+  text-align: center;
+}
+
+.form-trust {
+  margin-top: 1.6rem;
+  font-size: 1.3rem;
+  color: var(--gray-text-color);
+  text-align: center;
+}
+
+.form-msg {
+  margin-top: 1.6rem;
+  font-size: 1.5rem;
+  display: none;
+}
+
+.form-msg-ok {
+  color: #2e6b3e;
+}
+
+.form-msg-erro {
+  color: var(--secondary-accent);
+}
+
+/* Cards de vídeo — flush, sem sombra decorativa */
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+  gap: 1.6rem;
+  margin-top: 2.4rem;
+}
+
+.video-card {
+  display: block;
+  padding: 1.8rem 2rem;
+  background: var(--white-color);
+  border: 0.1rem solid var(--gray-color-2);
+  border-radius: 0.4rem;
+  text-decoration: none;
+  color: var(--main-text-color);
+  cursor: pointer;
+  transition: border-color 0.2s ease-in;
+}
+
+.video-card:hover,
+.video-card:focus {
+  border-color: var(--secondary-accent);
+}
+
+.video-tag {
+  display: block;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--secondary-accent);
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+.video-titulo {
+  font-weight: 500;
+  font-size: 1.7rem;
+}
+
+/* Footer copyright (subpágina) */
+
+.footer-copyright {
+  text-align: center;
+  margin-top: 1.6rem;
+  font-size: 1.4rem;
+  opacity: 0.75;
+}
+
+@media (max-width: 720px) {
+  .form-card {
+    max-width: 100%;
+    padding: 2.4rem;
+  }
+}
+
+/* Foco visível (WCAG 2.4.7) — reset.css zera o outline nativo do site
+   inteiro; esses componentes são novos desta página e precisam do
+   próprio contorno. */
+
+.hero-carousel-dot:focus-visible,
+.hero-carousel-arrow:focus-visible,
+.video-card:focus-visible,
+.form-card input[type="text"]:focus-visible,
+.form-card input[type="email"]:focus-visible,
+.form-consent input:focus-visible,
+.form-submit:focus-visible {
+  outline: 0.2rem solid var(--secondary-accent);
+  outline-offset: 0.2rem;
+}
+
+.consultoria-section-dark .hero-carousel-dot:focus-visible {
+  outline-color: var(--white-color);
+}
+
+/* Título do hero desta página é mais longo que o da home — evita
+   quebras ruins entre 720–1200px além do que media.css já reduz. */
+
+@media (max-width: 1200px) {
+  .hero-heading {
+    font-size: 6rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-heading {
+    font-size: 4rem;
+  }
+}
