@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glossário · Trilhas · Paula Allemand</title>
+    <meta
+      name="description"
+      content="Glossário de tecnologia, IA e dados, em lista alfabética com busca — encontre rapidinho o significado do termo que você procura."
+    />
+    <meta name="author" content="Paula Allemand" />
+    <meta name="theme-color" content="#6f1d1b" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Glossário · Paula Allemand" />
+    <meta
+      property="og:description"
+      content="Glossário de tecnologia, IA e dados, em lista alfabética com busca."
+    />
+    <meta property="og:url" content="https://paulaallemand.com/training/glossario" />
+
+    <link rel="shortcut icon" href="../../img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../../css/main.css" />
+    <link rel="stylesheet" href="../../css/media.css" />
+    <link rel="stylesheet" href="../../css/training.css" />
+  </head>
+
+  <body>
+    <header id="header" class="header">
+      <div class="container container-lg">
+        <div class="header-nav">
+          <a href="../../index.html" class="logo">Paula<span>.</span>Allemand</a>
+          <nav id="nav" class="nav">
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="../../index.html" class="nav-link">Início</a>
+              </li>
+              <li class="nav-item">
+                <a href="../index.html" class="nav-link">Comece aqui</a>
+              </li>
+              <li class="nav-item">
+                <a href="../trilhas/index.html" class="nav-link">Trilhas</a>
+              </li>
+              <li class="nav-item">
+                <a href="index.html" class="nav-link active">Glossário</a>
+              </li>
+            </ul>
+            <button id="nav-btn" class="nav-btn">
+              <img id="nav-btn-img" src="../../img/icons/open.svg" alt="Menu" />
+            </button>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="training-hero">
+        <div class="container">
+          <p class="training-hero-eyebrow">Glossário</p>
+          <h1 class="training-hero-heading">Termos de tecnologia, explicados de forma simples</h1>
+          <p class="training-hero-subtitle">
+            Busca por um termo ou navega pela letra inicial. Uma parte já
+            está aberta pra qualquer pessoa; o restante fica liberado assim
+            que você entra com sua conta Google.
+          </p>
+          <div class="training-hero-actions" data-account-logged-out>
+            <a
+              href="../login/index.html?next=/training/glossario/index.html"
+              class="btn btn-red js-cta-fazer-trilha"
+              >Acessar</a
+            >
+          </div>
+          <div
+            class="training-hero-actions"
+            data-account-logged-in
+            style="display: none"
+          >
+            <p class="login-note" style="margin-top: 0">
+              Você está logada como <strong data-account-name></strong>.
+              <a href="#" data-account-logout>Sair</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="glossario-section">
+        <div class="container">
+          <div class="glossario-toolbar">
+            <input
+              type="search"
+              id="glossario-busca"
+              class="glossario-search"
+              placeholder="Busca um termo..."
+              aria-label="Buscar termo no glossário"
+            />
+            <nav class="glossario-alfabeto" id="glossario-alfabeto" aria-label="Navegar por letra"></nav>
+          </div>
+          <div id="glossario-lista"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-row">
+          <h2 class="footer-cta">Quer ver as trilhas completas?</h2>
+          <a href="../trilhas/index.html" class="btn btn-red">Ver todas as trilhas</a>
+          <div class="social-links-row footer-social">
+            <a
+              href="https://github.com/paulaisdev"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+            >
+              <img src="../../img/social_icons/github.svg" alt="GitHub" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/paulaallemand/"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+            >
+              <img src="../../img/social_icons/linkedin.svg" alt="LinkedIn" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+
+    <div id="goToTop" class="goToTop">
+      <a href="#main-content" aria-label="Voltar ao topo">
+        <img src="../../img/icons/arrow_up.svg" alt="Voltar ao topo" />
+      </a>
+    </div>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/auth.js"></script>
+    <script src="../../js/glossario-todas-em-tech.js"></script>
+    <script src="../../js/glossario.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        paTrainingRenderAccountState({
+          loggedOutEl: document.querySelector("[data-account-logged-out]"),
+          loggedInEl: document.querySelector("[data-account-logged-in]"),
+          nameEl: document.querySelector("[data-account-name]"),
+        });
+
+        const logoutLink = document.querySelector("[data-account-logout]");
+        if (logoutLink) {
+          logoutLink.addEventListener("click", (event) => {
+            event.preventDefault();
+            paTrainingLogout();
+            window.location.reload();
+          });
+        }
+
+        paGlossarioInit();
+      });
+    </script>
+  </body>
+</html>

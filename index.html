@@ -31,6 +31,7 @@
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/media.css" />
+    <link rel="stylesheet" href="css/training.css" />
   </head>
 
   <body>
@@ -60,7 +61,7 @@
               </li>
               <li class="nav-item">
                 <a
-                  href="#experience"
+                  href="experience.html"
                   class="nav-link"
                   data-i18n="nav.experience"
                   >Experiência</a
@@ -160,6 +161,29 @@
         </div>
       </section>
 
+      <section id="training-promo" class="training-promo">
+        <div class="container">
+          <div class="training-promo-row">
+            <div class="training-promo-content">
+              <p class="training-promo-eyebrow">Novo</p>
+              <h2 class="training-promo-heading">
+                O conteúdo dos vídeos, organizado em trilha.
+              </h2>
+              <p class="training-promo-desc">
+                Tudo que você vê no Instagram e no TikTok, reunido num único
+                lugar, com progresso e sem jargão. Comece pela Trilha de IA
+                para Leigos.
+              </p>
+            </div>
+            <div class="training-promo-action">
+              <a href="training/index.html" class="btn btn-ghost-white"
+                >Ver a plataforma de training</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="about" class="about">
         <div class="container">
           <div class="about-title">
@@ -196,144 +220,57 @@
         </div>
       </section>
 
-      <section id="experience" class="experience">
-        <div class="container">
-          <div class="experience-title">
-            <p class="section-eyebrow" data-i18n="eyebrow.experience">
-              Experiência
-            </p>
-            <h2 class="title" data-i18n="experience.title">
-              Da neurociência aos sistemas críticos do mercado financeiro.
-            </h2>
-          </div>
-
-          <!-- AGORA: trabalho atual em destaque editorial -->
-          <article class="exp-now">
-            <span class="exp-now-year" aria-hidden="true">2025</span>
-            <div class="exp-now-body">
-              <span class="exp-now-badge">
-                <span class="exp-now-dot"></span
-                ><span data-i18n="exp.now.label">Agora</span>
-              </span>
-              <h3 class="exp-now-role">
-                <span class="exp-now-company">BTG Pactual</span>
-                <span class="exp-now-sep">·</span>
-                <span data-i18n="exp.btg.role">Software Analyst</span>
-              </h3>
-              <p class="exp-now-desc" data-i18n="exp.btg.desc">
-                Atuo na área de Seguros — soluções para seguradoras,
-                resseguradoras e times de vendas — participando de todo o ciclo
-                de sistemas críticos no setor regulado pela SUSEP.
-              </p>
-              <ul class="exp-now-stack" aria-label="Tecnologias">
-                <li>Java</li>
-                <li>Spring Boot</li>
-                <li>Quarkus</li>
-                <li>Python</li>
-                <li>Kafka</li>
-                <li>PostgreSQL</li>
-                <li>AWS</li>
-                <li>Kubernetes</li>
-              </ul>
-            </div>
-          </article>
-
-          <div class="experience-cta">
-            <a
-              href="trajetoria.html"
-              class="btn btn-white"
-              data-i18n="experience.cta"
-              >Ver trajetória completa</a
-            >
-          </div>
-        </div>
-      </section>
-
-      <!-- Empresas que impactaram minha carreira -->
+      <!-- Empresas que impactaram minha carreira — oculto até redesign final
       <section id="companies" class="companies">
         <div class="container">
-          <p class="section-eyebrow" data-i18n="eyebrow.companies">
-            Empresas que impactaram minha carreira
-          </p>
-          <div class="logos-strip">
-            <ul class="logos-strip-list">
-              <li>
-                <img
-                  src="img/logos/download.png"
-                  alt="BTG Pactual"
-                  class="strip-logo"
-                  loading="lazy"
-                />
+          <div class="companies-inner">
+            <p class="companies-label" data-i18n="eyebrow.companies">
+              Empresas que impactaram minha carreira
+            </p>
+            <ul class="companies-list">
+              <li class="companies-item">
+                <img src="img/logos/download.png" alt="BTG Pactual" class="company-logo" loading="lazy" />
               </li>
-              <li>
-                <img
-                  src="img/logos/itau.png"
-                  alt="Itaú Unibanco"
-                  class="strip-logo"
-                  loading="lazy"
-                />
+              <li class="companies-item">
+                <img src="img/logos/itau.png" alt="Itaú Unibanco" class="company-logo" loading="lazy" />
               </li>
-              <li>
-                <img
-                  src="img/logos/bv.png"
-                  alt="Banco BV"
-                  class="strip-logo"
-                  loading="lazy"
-                />
+              <li class="companies-item">
+                <img src="img/logos/bv.png" alt="Banco BV" class="company-logo" loading="lazy" />
               </li>
-              <li>
-                <img
-                  src="img/logos/tera.png"
-                  alt="Tera"
-                  class="strip-logo"
-                  loading="lazy"
-                />
+              <li class="companies-item">
+                <img src="img/logos/tera.png" alt="Tera" class="company-logo" loading="lazy" />
               </li>
-              <li>
-                <img
-                  src="img/logos/reprograma.png"
-                  alt="{reprograma}"
-                  class="strip-logo"
-                  loading="lazy"
-                />
+              <li class="companies-item">
+                <img src="img/logos/reprograma.png" alt="{reprograma}" class="company-logo" loading="lazy" />
               </li>
-              <li>
-                <img
-                  src="img/logos/minas-programam.png"
-                  alt="Minas Programam"
-                  class="strip-logo"
-                  loading="lazy"
-                />
+              <li class="companies-item">
+                <img src="img/logos/minas-programam.png" alt="Minas Programam" class="company-logo" loading="lazy" />
               </li>
-              <li>
-                <img
-                  src="img/logos/estacao-hack.png"
-                  alt="Estação Hack"
-                  class="strip-logo"
-                  loading="lazy"
-                />
+              <li class="companies-item">
+                <img src="img/logos/estacao-hack.png" alt="Estação Hack" class="company-logo" loading="lazy" />
+              </li>
+              <li class="companies-item">
+                <img src="img/logos/usp.png" alt="USP" class="company-logo" loading="lazy" />
               </li>
             </ul>
           </div>
         </div>
       </section>
+      -->
 
       <section id="feedbacks" class="feedbacks">
         <div class="container">
-          <div class="feedbacks-title">
-            <p class="section-eyebrow" data-i18n="eyebrow.feedbacks">
-              Feedbacks
-            </p>
-            <h2 class="title" data-i18n="feedbacks.title">
-              Educação é o que me move
-            </h2>
-            <p class="section-subtitle" data-i18n="feedbacks.subtitle">
-              Mensagens reais que recebi no chat ao final das aulas
-            </p>
-          </div>
-
           <div class="feedbacks-grid">
             <div class="feedbacks-story">
+              <p class="section-eyebrow" data-i18n="eyebrow.feedbacks">
+                Feedbacks
+              </p>
+              <h2 class="title" data-i18n="feedbacks.title">
+                Educação é o que me move
+              </h2>
+              <p class="section-subtitle" data-i18n="feedbacks.subtitle">
+                Mensagens reais que recebi no chat ao final das aulas
+              </p>
               <p
                 class="feedbacks-story-body"
                 data-i18n-html="feedbacks.story.body"
@@ -683,6 +620,60 @@
           </div>
         </div>
       </section>
+
+      <!-- Experiência — oculto até redesign final
+      <section id="experience" class="experience">
+        <div class="container">
+          <div class="experience-title">
+            <p class="section-eyebrow" data-i18n="eyebrow.experience">
+              Experiência
+            </p>
+            <h2 class="title" data-i18n="experience.title">
+              Da neurociência aos sistemas críticos do mercado financeiro.
+            </h2>
+          </div>
+
+          <article class="exp-now">
+            <span class="exp-now-year" aria-hidden="true">2025</span>
+            <div class="exp-now-body">
+              <span class="exp-now-badge">
+                <span class="exp-now-dot"></span
+                ><span data-i18n="exp.now.label">Agora</span>
+              </span>
+              <h3 class="exp-now-role">
+                <span class="exp-now-company">BTG Pactual</span>
+                <span class="exp-now-sep">·</span>
+                <span data-i18n="exp.btg.role">Software Analyst</span>
+              </h3>
+              <p class="exp-now-desc" data-i18n="exp.btg.desc">
+                Atuo na área de Seguros — soluções para seguradoras,
+                resseguradoras e times de vendas — participando de todo o ciclo
+                de sistemas críticos no setor regulado pela SUSEP.
+              </p>
+              <ul class="exp-now-stack" aria-label="Tecnologias">
+                <li>Java</li>
+                <li>Spring Boot</li>
+                <li>Quarkus</li>
+                <li>Python</li>
+                <li>Kafka</li>
+                <li>PostgreSQL</li>
+                <li>AWS</li>
+                <li>Kubernetes</li>
+              </ul>
+            </div>
+          </article>
+
+          <div class="experience-cta">
+            <a
+              href="experience.html"
+              class="btn btn-white"
+              data-i18n="experience.cta"
+              >Ver trajetória completa</a
+            >
+          </div>
+        </div>
+      </section>
+      -->
 
       <!-- PROJETOS: ocultos até ficarem prontos. Reabrir removendo este comentário.
     <section id="projects" class="projects">
