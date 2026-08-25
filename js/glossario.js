@@ -9,6 +9,23 @@
 const PA_GLOSSARIO_SEMANA_ABERTA = 1;
 const PA_GLOSSARIO_LOGIN_URL = "../login/index.html?next=/training/glossario/index.html";
 
+const PA_GLOSSARIO_CONVITES = [
+  "Essa definição fica disponível assim que você entra com sua conta Google.",
+  "Entra com sua conta Google pra ver essa definição.",
+  "Falta só entrar com sua conta Google pra desbloquear esse termo.",
+  "Essa aqui é só entrar com sua conta Google e já libera.",
+  "Quer ver o significado? É só entrar com sua conta Google.",
+];
+
+function paGlossarioHash(texto) {
+  let hash = 0;
+  for (let i = 0; i < texto.length; i++) {
+    hash = (hash << 5) - hash + texto.charCodeAt(i);
+    hash |= 0;
+  }
+  return Math.abs(hash);
+}
+
 function paGlossarioNormalizar(texto) {
   return texto
     .normalize("NFD")
@@ -55,9 +72,14 @@ function paGlossarioCriarItem(termo) {
   item.className = "glossario-item";
   item.dataset.termo = paGlossarioNormalizar(termo.termo);
 
+  const convite =
+    PA_GLOSSARIO_CONVITES[
+      paGlossarioHash(termo.termo) % PA_GLOSSARIO_CONVITES.length
+    ];
+
   const corpo = termo.aberto
     ? `<p class="glossario-item-definicao">${termo.definicao}</p>`
-    : `<p class="glossario-item-convite">Essa definição fica disponível assim que você entra com sua conta Google. <a href="${PA_GLOSSARIO_LOGIN_URL}">Acessar</a></p>`;
+    : `<p class="glossario-item-convite">${convite} <a href="${PA_GLOSSARIO_LOGIN_URL}">Acessar</a></p>`;
 
   item.innerHTML = `
     <p class="glossario-item-termo">${termo.termo}</p>
