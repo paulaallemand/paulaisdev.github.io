@@ -319,7 +319,7 @@ function applyLang(lang) {
   const btn = document.getElementById("lang-toggle");
   if (btn) {
     const img = btn.querySelector("img");
-    img.src = target === "en" ? "img/flags/us.svg" : "img/flags/br.svg";
+    img.src = target === "en" ? "/img/flags/us.svg" : "/img/flags/br.svg";
     img.alt = dict["lang.toggle"];
     btn.setAttribute("aria-label", dict["lang.toggle"]);
     btn.dataset.lang = lang;

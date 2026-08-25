@@ -234,6 +234,21 @@ h5 {
   font-weight: 600;
 }
 
+.nav-link-cta {
+  padding: 0.8rem 1.8rem;
+  border: 1.5px solid var(--secondary-accent);
+  border-radius: 0.4rem;
+  color: var(--secondary-accent) !important;
+  font-weight: 600;
+  transition: all 0.2s ease-in;
+}
+
+.nav-link-cta:hover,
+.nav-link-cta:focus {
+  background-color: var(--secondary-accent);
+  color: var(--white-color) !important;
+}
+
 .nav {
   display: flex;
   align-items: center;

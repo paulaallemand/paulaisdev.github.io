@@ -1,6 +1,6 @@
 ---
 name: portfolio-identity
-description: Identidade visual e editorial do portfólio Paula Allemand (paulaisdev.github.io) — paleta, tipografia, tom de voz, ritmo de cor e referência ARQ Finance
+description: Identidade visual e editorial do portfólio Paula Allemand (paulaallemand.com) — paleta, tipografia, tom de voz, ritmo de cor e referência ARQ Finance
 ---
 
 # Identidade Visual — Paula Allemand Portfolio
