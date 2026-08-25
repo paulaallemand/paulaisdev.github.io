@@ -99,13 +99,17 @@
   display: block;
   background-color: var(--white-color);
   border: 1px solid var(--gray-color);
+  border-radius: 0.8rem;
+  overflow: hidden;
   text-decoration: none;
   color: var(--main-text-color);
-  transition: border-color 0.2s ease;
+  transition: border-color 0.25s ease-out, box-shadow 0.25s ease-out, transform 0.25s ease-out;
 }
 
 .trilha-card:hover {
   border-color: var(--secondary-accent);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
 }
 
 .trilha-card-top {
@@ -206,7 +210,14 @@
 
 .level-accordion {
   border: 1px solid var(--gray-color);
+  border-radius: 0.8rem;
+  overflow: hidden;
   margin-bottom: 1.2rem;
+  transition: box-shadow 0.25s ease-out;
+}
+
+.level-accordion:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
 }
 
 .level-header {
@@ -220,6 +231,11 @@
   cursor: pointer;
   text-align: left;
   font-family: inherit;
+  transition: background-color 0.2s ease-out;
+}
+
+.level-header:hover {
+  background-color: var(--gray-color-3);
 }
 
 .level-header-left {
@@ -246,7 +262,7 @@
 }
 
 .level-icon {
-  transition: transform 0.2s ease;
+  transition: transform 0.25s ease-out;
   font-size: 1.6rem;
   color: var(--gray-text-color);
   margin-left: 1.6rem;
@@ -470,6 +486,7 @@
   font-family: inherit;
   color: var(--primary-accent);
   background-color: var(--white-color);
+  transition: border-color 0.25s ease-out, box-shadow 0.25s ease-out;
 }
 
 .glossario-search::placeholder {
@@ -479,6 +496,7 @@
 .glossario-search:focus {
   outline: none;
   border-color: var(--secondary-accent);
+  box-shadow: 0 0 0 4px rgba(111, 29, 27, 0.08);
 }
 
 .glossario-alfabeto {
@@ -498,13 +516,15 @@
   font-weight: 700;
   color: var(--secondary-accent);
   background-color: var(--gray-color-3);
-  border-radius: 0.4rem;
+  border-radius: 0.6rem;
   text-decoration: none;
+  transition: background-color 0.2s ease-out, color 0.2s ease-out, transform 0.2s ease-out;
 }
 
 .glossario-alfabeto-link:hover {
   background-color: var(--secondary-accent);
   color: var(--primary-bg-color);
+  transform: translateY(-1px);
 }
 
 .glossario-alfabeto-link.is-disabled {
@@ -531,8 +551,15 @@
 }
 
 .glossario-item {
-  padding: 1.8rem 0;
+  padding: 1.8rem 1.2rem;
+  margin: 0 -1.2rem;
   border-bottom: 1px solid var(--gray-color);
+  border-radius: 0.6rem;
+  transition: background-color 0.2s ease-out;
+}
+
+.glossario-item:hover {
+  background-color: var(--gray-color-3);
 }
 
 .glossario-item-termo {
