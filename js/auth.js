@@ -13,7 +13,7 @@
  * conteúdo em si nunca depende de login pra ser visto.
  */
 
-const GOOGLE_CLIENT_ID = "SEU_CLIENT_ID_AQUI.apps.googleusercontent.com";
+const GOOGLE_CLIENT_ID = "571336837163-2if41u56e2fkfv6kdsftgbr2ttq08dvo.apps.googleusercontent.com";
 
 const PA_TRAINING_SESSION_KEY = "pa_training_user";
 

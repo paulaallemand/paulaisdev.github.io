@@ -3,17 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trilhas · Training · Paula Allemand</title>
+    <title>Glossário Todas em Tech · Training · Paula Allemand</title>
     <meta
       name="description"
-      content="Catálogo de trilhas gratuitas de Paula Allemand: tecnologia, IA, carreira e finanças, organizadas em módulos e aulas."
+      content="107 termos de tecnologia, IA e dados usados no curso Todas em Tech, organizados por semana. Semana 1 é aberta, semanas 2 a 8 pedem login."
     />
     <meta name="author" content="Paula Allemand" />
     <meta name="theme-color" content="#6f1d1b" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Trilhas · Training · Paula Allemand" />
-    <meta property="og:url" content="https://paulaallemand.com/training/trilhas" />
+    <meta property="og:title" content="Glossário Todas em Tech · Paula Allemand" />
+    <meta
+      property="og:description"
+      content="Termos de tecnologia, IA e dados usados no curso Todas em Tech, organizados por semana."
+    />
+    <meta property="og:url" content="https://paulaallemand.com/training/glossario" />
 
     <link rel="shortcut icon" href="../../img/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="../../css/main.css" />
@@ -35,10 +39,10 @@
                 <a href="../index.html" class="nav-link">Training</a>
               </li>
               <li class="nav-item">
-                <a href="index.html" class="nav-link active">Trilhas</a>
+                <a href="../trilhas/index.html" class="nav-link">Trilhas</a>
               </li>
               <li class="nav-item">
-                <a href="../glossario/index.html" class="nav-link">Glossário</a>
+                <a href="index.html" class="nav-link active">Glossário</a>
               </li>
             </ul>
             <button id="nav-btn" class="nav-btn">
@@ -52,58 +56,36 @@
     <main id="main-content">
       <section class="training-hero">
         <div class="container">
-          <p class="training-hero-eyebrow">Catálogo</p>
-          <h1 class="training-hero-heading">Todas as trilhas</h1>
+          <p class="training-hero-eyebrow">Glossário · Todas em Tech</p>
+          <h1 class="training-hero-heading">Termos do curso, semana por semana</h1>
           <p class="training-hero-subtitle">
-            Sem cadastro pra ver o que tem aqui. Login só é pedido quando você
-            entra numa trilha pra começar a acompanhar de verdade.
+            Clique num card pra virar e ver a definição. A Semana 1 fica
+            aberta pra qualquer pessoa; da Semana 2 em diante é só entrar com
+            Google pra desbloquear.
           </p>
+          <div class="training-hero-actions" data-account-logged-out>
+            <a
+              href="../login/index.html?next=/training/glossario/index.html"
+              class="btn btn-red js-cta-fazer-trilha"
+              >Entrar pra desbloquear</a
+            >
+          </div>
+          <div
+            class="training-hero-actions"
+            data-account-logged-in
+            style="display: none"
+          >
+            <p class="login-note" style="margin-top: 0">
+              Você está logada como <strong data-account-name></strong>.
+              <a href="#" data-account-logout>Sair</a>
+            </p>
+          </div>
         </div>
       </section>
 
-      <section class="trilhas-catalogo">
+      <section class="glossario-section">
         <div class="container">
-          <div class="trilha-grid">
-            <a href="ia/index.html" class="trilha-card">
-              <div class="trilha-card-top">
-                <span class="trilha-badge">Grátis</span>
-                <p class="trilha-name">Trilha de IA para Leigos</p>
-              </div>
-              <div class="trilha-card-body">
-                <p class="trilha-card-desc">
-                  46 termos, do zero absoluto até vocabulário avançado — pra
-                  quem nunca ouviu falar de inteligência artificial sair
-                  sabendo exatamente do que se trata.
-                </p>
-                <p class="trilha-card-meta">4 níveis · 46 termos</p>
-              </div>
-            </a>
-            <div class="trilha-card is-soon">
-              <div class="trilha-card-top">
-                <span class="trilha-badge">Em breve</span>
-                <p class="trilha-name">Psicologia Financeira</p>
-              </div>
-              <div class="trilha-card-body">
-                <p class="trilha-card-desc">
-                  10 aulas práticas sobre a relação entre comportamento e
-                  dinheiro, cada uma com um material de apoio.
-                </p>
-                <p class="trilha-card-meta">1 nível · 10 aulas</p>
-              </div>
-            </div>
-            <div class="trilha-card is-soon">
-              <div class="trilha-card-top">
-                <span class="trilha-badge">Em breve</span>
-                <p class="trilha-name">Resumos de Livro</p>
-              </div>
-              <div class="trilha-card-body">
-                <p class="trilha-card-desc">
-                  Resumos aplicados de livros de desenvolvimento pessoal e
-                  carreira, com exercício prático em cada um.
-                </p>
-              </div>
-            </div>
-          </div>
+          <div id="glossario-semanas"></div>
         </div>
       </section>
     </main>
@@ -111,8 +93,8 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-row">
-          <h2 class="footer-cta">Bora aprender algo novo?</h2>
-          <a href="ia/index.html" class="btn btn-red">Começar pela Trilha de IA</a>
+          <h2 class="footer-cta">Quer ver as trilhas completas?</h2>
+          <a href="../trilhas/index.html" class="btn btn-red">Ver todas as trilhas</a>
           <div class="social-links-row footer-social">
             <a
               href="https://github.com/paulaisdev"
@@ -144,5 +126,28 @@
     </div>
 
     <script src="../../js/main.js"></script>
+    <script src="../../js/auth.js"></script>
+    <script src="../../js/glossario-todas-em-tech.js"></script>
+    <script src="../../js/glossario.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        paTrainingRenderAccountState({
+          loggedOutEl: document.querySelector("[data-account-logged-out]"),
+          loggedInEl: document.querySelector("[data-account-logged-in]"),
+          nameEl: document.querySelector("[data-account-name]"),
+        });
+
+        const logoutLink = document.querySelector("[data-account-logout]");
+        if (logoutLink) {
+          logoutLink.addEventListener("click", (event) => {
+            event.preventDefault();
+            paTrainingLogout();
+            window.location.reload();
+          });
+        }
+
+        paGlossarioRender();
+      });
+    </script>
   </body>
 </html>
