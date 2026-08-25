@@ -3,19 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Glossário Todas em Tech · Training · Paula Allemand</title>
+    <title>Glossário · Training · Paula Allemand</title>
     <meta
       name="description"
-      content="107 termos de tecnologia, IA e dados usados no curso Todas em Tech, organizados por semana. Semana 1 é aberta, semanas 2 a 8 pedem login."
+      content="Glossário de tecnologia, IA e dados, em lista alfabética com busca — encontre rapidinho o significado do termo que você procura."
     />
     <meta name="author" content="Paula Allemand" />
     <meta name="theme-color" content="#6f1d1b" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Glossário Todas em Tech · Paula Allemand" />
+    <meta property="og:title" content="Glossário · Paula Allemand" />
     <meta
       property="og:description"
-      content="Termos de tecnologia, IA e dados usados no curso Todas em Tech, organizados por semana."
+      content="Glossário de tecnologia, IA e dados, em lista alfabética com busca."
     />
     <meta property="og:url" content="https://paulaallemand.com/training/glossario" />
 
@@ -56,18 +56,18 @@
     <main id="main-content">
       <section class="training-hero">
         <div class="container">
-          <p class="training-hero-eyebrow">Glossário · Todas em Tech</p>
-          <h1 class="training-hero-heading">Termos do curso, semana por semana</h1>
+          <p class="training-hero-eyebrow">Glossário</p>
+          <h1 class="training-hero-heading">Termos de tecnologia, sem jargão</h1>
           <p class="training-hero-subtitle">
-            Clique num card pra virar e ver a definição. A Semana 1 fica
-            aberta pra qualquer pessoa; da Semana 2 em diante é só entrar com
-            Google pra desbloquear.
+            Busca por um termo ou navega pela letra inicial. Uma parte já
+            está aberta pra qualquer pessoa; o restante fica liberado assim
+            que você entra com sua conta Google.
           </p>
           <div class="training-hero-actions" data-account-logged-out>
             <a
               href="../login/index.html?next=/training/glossario/index.html"
               class="btn btn-red js-cta-fazer-trilha"
-              >Entrar pra desbloquear</a
+              >Acessar</a
             >
           </div>
           <div
@@ -85,7 +85,17 @@
 
       <section class="glossario-section">
         <div class="container">
-          <div id="glossario-semanas"></div>
+          <div class="glossario-toolbar">
+            <input
+              type="search"
+              id="glossario-busca"
+              class="glossario-search"
+              placeholder="Busca um termo..."
+              aria-label="Buscar termo no glossário"
+            />
+            <nav class="glossario-alfabeto" id="glossario-alfabeto" aria-label="Navegar por letra"></nav>
+          </div>
+          <div id="glossario-lista"></div>
         </div>
       </section>
     </main>
@@ -146,7 +156,7 @@
           });
         }
 
-        paGlossarioRender();
+        paGlossarioInit();
       });
     </script>
   </body>
