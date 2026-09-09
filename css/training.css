@@ -397,14 +397,13 @@
    vizinha. */
 .training-tab {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   align-items: stretch;
   position: fixed;
   top: 50%;
   right: 0;
   transform: translateY(-50%);
   z-index: 90;
-  border-radius: 8px 0 0 8px;
   overflow: hidden;
   text-decoration: none;
   box-shadow: -2px 0 12px rgba(12, 22, 24, 0.15);
@@ -422,6 +421,7 @@
   padding: 2.4rem 1.2rem;
   white-space: nowrap;
   flex-shrink: 0;
+  border-radius: 8px 0 0 8px;
 }
 
 .training-tab-panel {
@@ -434,7 +434,6 @@
   overflow: hidden;
   white-space: nowrap;
   background-color: var(--primary-bg-color);
-  border-radius: 8px 0 0 8px;
   transition: max-width 0.3s ease, opacity 0.2s ease;
 }
 

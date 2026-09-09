@@ -149,6 +149,11 @@ const TRANSLATIONS = {
 
     "nav.consultoria": "Consultoria",
 
+    "trainingtab.label": "Trilhas",
+    "trainingtab.eyebrow": "Novo",
+    "trainingtab.heading": "O conteúdo dos vídeos, organizado em trilha.",
+    "trainingtab.cta": "Ver a plataforma de training →",
+
     "consultoria.hero.eyebrow": "Consultoria",
     "consultoria.hero.heading": "Menos tarefa manual, mais tempo pra você.",
     "consultoria.hero.subtitle":
@@ -358,6 +363,11 @@ const TRANSLATIONS = {
     "a11y.skip": "Skip to main content",
 
     "nav.consultoria": "Consulting",
+
+    "trainingtab.label": "Tracks",
+    "trainingtab.eyebrow": "New",
+    "trainingtab.heading": "The video content, organized into a track.",
+    "trainingtab.cta": "See the training platform →",
 
     "consultoria.hero.eyebrow": "Consulting",
     "consultoria.hero.heading": "Less manual work, more time for you.",
