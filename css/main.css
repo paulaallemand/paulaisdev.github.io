@@ -362,6 +362,7 @@ h5 {
 .about {
   padding: var(--section-v) 0;
   background-color: var(--secondary-accent);
+  border-top: 1px solid rgba(247, 251, 253, 0.15);
 }
 
 .about .section-eyebrow {
