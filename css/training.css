@@ -385,58 +385,117 @@
   max-width: 62rem;
 }
 
-/* ---------- Banner de divulgação na home do portfólio ---------- */
-/* Ficava marsala, igual ao .about logo abaixo — duas seções cheias da
-   mesma cor, uma colada na outra, lidas como bloco duplicado (a borda
-   de 15% de opacidade tentada antes não bastava pra separar). O
-   ritmo real do site alterna W (off-white) / M (marsala) por seção
-   (ver portfolio-identity skill) — este banner é o W que faltava
-   entre o hero e o about, não mais um M repetido. */
-.training-promo {
-  background-color: var(--primary-bg-color);
-  padding: 6rem 0;
-}
-
-.training-promo-row {
+/* ---------- Aba lateral de divulgação na home do portfólio ---------- */
+/* Era um banner de seção inteira, cheio de largura — ficava marsala
+   igual ao .about logo abaixo (duas seções cheias da mesma cor
+   coladas, lidas como bloco duplicado) e, depois de virar off-white,
+   ficava indistinguível do hero acima (mesmo problema, cor diferente).
+   Trocado por uma aba fixa na borda direita: fechada, é só uma faixa
+   fina com "Trilhas" na vertical; ao passar o mouse (ou focar via
+   teclado), expande num painel curto com a chamada e o CTA. Não ocupa
+   mais espaço no fluxo da página, então não compete com nenhuma seção
+   vizinha. */
+.training-tab {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 3.2rem;
+  flex-direction: row-reverse;
+  align-items: stretch;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 90;
+  background-color: var(--secondary-accent);
+  border-radius: 8px 0 0 8px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: -2px 0 12px rgba(12, 22, 24, 0.15);
 }
 
-.training-promo-content {
-  flex: 1 1 50rem;
-}
-
-.training-promo-eyebrow {
+.training-tab-label {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: var(--white-color);
   font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--secondary-accent);
-  margin-bottom: 1rem;
+  padding: 2.4rem 1.2rem;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
-.training-promo-heading {
-  font-size: 3.2rem;
+.training-tab-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.8rem;
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: max-width 0.3s ease, opacity 0.2s ease;
+}
+
+.training-tab:hover .training-tab-panel,
+.training-tab:focus .training-tab-panel,
+.training-tab:focus-within .training-tab-panel {
+  max-width: 30rem;
+  opacity: 1;
+  padding: 2.4rem 2rem 2.4rem 1.6rem;
+  white-space: normal;
+}
+
+.training-tab-eyebrow {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--primary-bg-color);
+  opacity: 0.85;
+}
+
+.training-tab-heading {
+  font-size: 1.7rem;
   font-weight: 500;
-  line-height: 1.25;
-  color: var(--main-text-color);
-  max-width: 46rem;
+  line-height: 1.3;
+  color: var(--white-color);
+  max-width: 24rem;
 }
 
-.training-promo-desc {
-  font-size: 1.6rem;
-  line-height: 1.7;
-  color: var(--gray-text-color);
-  opacity: 0.9;
-  max-width: 46rem;
-  margin-top: 1.6rem;
+.training-tab-cta {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--white-color);
 }
 
-.training-promo-action {
-  flex: 0 0 auto;
+/* Sem hover em touch — vira uma tira fixa e compacta embaixo, sempre
+   com o painel "aberto" (curto o bastante pra não atrapalhar), toque
+   leva direto pra trilha. */
+@media (max-width: 720px) {
+  .training-tab {
+    top: auto;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transform: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0;
+    padding: 1.4rem 2rem;
+  }
+
+  .training-tab-label {
+    writing-mode: horizontal-tb;
+    transform: none;
+    padding: 0;
+    font-size: 1rem;
+  }
+
+  .training-tab-panel {
+    display: none;
+  }
 }
 
 /* ---------- Indicador no item de menu "Training" ---------- */

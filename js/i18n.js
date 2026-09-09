@@ -153,7 +153,7 @@ const TRANSLATIONS = {
     "consultoria.hero.heading": "Menos tarefa manual, mais tempo pra você.",
     "consultoria.hero.subtitle":
       "Pra quem quer usar IA e automatizar tarefas no trabalho ou na vida, sem precisar dominar tecnologia pra isso.",
-    "consultoria.cta.agendar": "Quero agendar uma conversa",
+    "consultoria.cta.agendar": "Quero mais tempo",
     "consultoria.cta.conversa": "Quero minha conversa",
     "consultoria.cta.sending": "Enviando...",
 
@@ -363,7 +363,7 @@ const TRANSLATIONS = {
     "consultoria.hero.heading": "Less manual work, more time for you.",
     "consultoria.hero.subtitle":
       "For anyone who wants to use AI and automate tasks at work or in daily life, without having to master technology to do it.",
-    "consultoria.cta.agendar": "I want to book a call",
+    "consultoria.cta.agendar": "I want more time",
     "consultoria.cta.conversa": "I want my call",
     "consultoria.cta.sending": "Sending...",
 
