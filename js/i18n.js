@@ -8,6 +8,7 @@ const TRANSLATIONS = {
     "nav.home": "Início",
     "nav.about": "Sobre",
     "nav.experience": "Experiência",
+    "nav.expertise": "Atuação",
     "nav.feedbacks": "Feedbacks",
     "nav.talks": "Palestras",
     "nav.blog": "Blog",
@@ -100,6 +101,11 @@ const TRANSLATIONS = {
 
     "talks.title": "Palestras &amp; vivências",
     "talks.subtitle": "Um pouco da minha trajetória em eventos e comunidades.",
+    "talks.split.title": "O que me trouxe até aqui",
+    "talks.split.narrative":
+      "Desde 2018, atuei como educadora em iniciativas como {reprograma}, Minas Programam, Tera e Estação Hack, somando cerca de 100 turmas, entre 4 e 5 mil alunos impactados e mais de 400 aulas ministradas. Ensinar tecnologia — especialmente para pessoas em transição de carreira — me transformou: aprendi a traduzir complexidade e a entender que educação é presença, responsabilidade e construção de autonomia.",
+    "talks.badge.students": "Alunos impactados",
+    "talks.badge.classes": "Aulas ministradas",
     "talks.tera.desc":
       "Roda de conversa sobre times interdisciplinares para a comunidade da Tera.",
     "talks.programaria.desc": "Palestra sobre acessibilidade web.",
@@ -224,6 +230,7 @@ const TRANSLATIONS = {
     "nav.home": "Home",
     "nav.about": "About",
     "nav.experience": "Experience",
+    "nav.expertise": "Expertise",
     "nav.feedbacks": "Feedback",
     "nav.talks": "Talks",
     "nav.blog": "Blog",
@@ -314,6 +321,11 @@ const TRANSLATIONS = {
 
     "talks.title": "Talks &amp; experiences",
     "talks.subtitle": "A glimpse of my journey across events and communities.",
+    "talks.split.title": "What brought me here",
+    "talks.split.narrative":
+      "Since 2018, I've worked as an educator in initiatives like {reprograma}, Minas Programam, Tera, and Estação Hack, across roughly 100 cohorts, reaching between 4,000 and 5,000 students and teaching over 400 classes. Teaching technology — especially to people changing careers — transformed me: I learned to translate complexity and understood that education is presence, responsibility, and building autonomy.",
+    "talks.badge.students": "Students reached",
+    "talks.badge.classes": "Classes taught",
     "talks.tera.desc": "Open class on careers and backend for the community.",
     "talks.programaria.desc": "Talk on women and diversity in technology.",
     "talks.inovazl.desc":
