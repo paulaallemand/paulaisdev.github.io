@@ -386,8 +386,14 @@
 }
 
 /* ---------- Banner de divulgação na home do portfólio ---------- */
+/* Ficava marsala, igual ao .about logo abaixo — duas seções cheias da
+   mesma cor, uma colada na outra, lidas como bloco duplicado (a borda
+   de 15% de opacidade tentada antes não bastava pra separar). O
+   ritmo real do site alterna W (off-white) / M (marsala) por seção
+   (ver portfolio-identity skill) — este banner é o W que faltava
+   entre o hero e o about, não mais um M repetido. */
 .training-promo {
-  background-color: var(--secondary-accent);
+  background-color: var(--primary-bg-color);
   padding: 6rem 0;
 }
 
@@ -408,8 +414,7 @@
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--primary-bg-color);
-  opacity: 0.85;
+  color: var(--secondary-accent);
   margin-bottom: 1rem;
 }
 
@@ -417,14 +422,14 @@
   font-size: 3.2rem;
   font-weight: 500;
   line-height: 1.25;
-  color: var(--white-color);
+  color: var(--main-text-color);
   max-width: 46rem;
 }
 
 .training-promo-desc {
   font-size: 1.6rem;
   line-height: 1.7;
-  color: var(--primary-bg-color);
+  color: var(--gray-text-color);
   opacity: 0.9;
   max-width: 46rem;
   margin-top: 1.6rem;

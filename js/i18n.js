@@ -146,6 +146,73 @@ const TRANSLATIONS = {
     "footer.cta": "Bora construir algo incrível?",
     "footer.contact": "Fale comigo",
     "a11y.skip": "Pular para o conteúdo",
+
+    "nav.consultoria": "Consultoria",
+
+    "consultoria.hero.eyebrow": "Consultoria",
+    "consultoria.hero.heading": "Menos tarefa manual, mais tempo pra você.",
+    "consultoria.hero.subtitle":
+      "Pra quem quer usar IA e automatizar tarefas no trabalho ou na vida, sem precisar dominar tecnologia pra isso.",
+    "consultoria.cta.agendar": "Quero agendar uma conversa",
+    "consultoria.cta.conversa": "Quero minha conversa",
+    "consultoria.cta.sending": "Enviando...",
+
+    "consultoria.fit.yes.title": "Isso é pra você se...",
+    "consultoria.fit.yes.item1":
+      "Você ouve falar de IA o dia inteiro e não sabe por onde começar, na prática, no seu trabalho.",
+    "consultoria.fit.yes.item2":
+      "Tem tarefas repetitivas no seu dia a dia e desconfia que dá pra automatizar, mas não sabe como.",
+    "consultoria.fit.yes.item3":
+      "Já tentou usar ChatGPT ou outra IA sozinha, travou, e não sabe se está usando do jeito certo.",
+    "consultoria.fit.no.title": "Isso não é pra você se...",
+    "consultoria.fit.no.item1":
+      "Você procura uma resposta pronta e genérica, que sirva pra qualquer pessoa. Aqui a gente parte do seu caso, não de um modelo padrão.",
+    "consultoria.fit.no.item2":
+      "Você prefere que alguém resolva tudo por você, sem participar. A consultoria funciona melhor quando a gente olha sua rotina junto.",
+    "consultoria.fit.no.item3":
+      "Você está procurando um curso longo ou uma trilha de estudo. Isso aqui é uma conversa focada no seu caso, não um treinamento extenso.",
+
+    "consultoria.how.eyebrow": "Como funciona",
+    "consultoria.how.step1": "Você preenche seu nome e e-mail aqui embaixo.",
+    "consultoria.how.step2":
+      "Chega um e-mail com um roteiro rápido pra você pensar antes da nossa conversa — e o link pra agendar um horário.",
+    "consultoria.how.step3": "A gente conversa sobre o seu caso, no seu ritmo.",
+    "consultoria.mockup.label.nome": "Nome",
+    "consultoria.mockup.label.email": "E-mail",
+    "consultoria.mockup.success":
+      "Prontinho! Confere sua caixa de entrada (e o spam, por garantia).",
+
+    "consultoria.form.title": "Vamos conversar?",
+    "consultoria.form.lead":
+      "Deixa seu nome e e-mail que eu te mando os próximos passos.",
+    "consultoria.form.label.nome": "Nome",
+    "consultoria.form.label.email": "E-mail",
+    "consultoria.form.consent1":
+      'Aceito receber e-mails sobre a consultoria. Veja a <a href="privacidade.html" target="_blank">política de privacidade</a>.',
+    "consultoria.form.consent2":
+      "Quero também saber de novos conteúdos e oportunidades gratuitas.",
+    "consultoria.form.trust":
+      "Quem te atende: Paula Allemand, engenheira de software com experiência em educação e tecnologia.",
+    "consultoria.form.msgok":
+      "Prontinho! Confere sua caixa de entrada (e o spam, por garantia) — te mandei um roteiro rápido de preparo e o link pra agendar.",
+    "consultoria.form.msgerro":
+      "Algo deu errado no envio. Tenta de novo em instantes, ou me chama direto.",
+
+    "consultoria.videos.title": "Quer adiantar o básico?",
+    "consultoria.videos.lead":
+      "Minha própria plataforma de ensino gratuita (Trilha de IA) ainda está em construção. Até lá, esses vídeos ajudam a entender o essencial:",
+    "consultoria.videos.tag.basico": "O básico",
+    "consultoria.videos.tag.pratica": "Na prática",
+    "consultoria.videos.v1":
+      "O que é Inteligência Artificial? (explicado de forma simples)",
+    "consultoria.videos.v2": "Inteligência Artificial em 4 minutos",
+    "consultoria.videos.v3":
+      "ChatGPT — o que é e como usar (tutorial com exemplos)",
+    "consultoria.videos.v4": "Aprenda ChatGPT em 15 minutos",
+
+    "consultoria.footer.cta": "Bora conversar?",
+    "consultoria.footer.copyright":
+      'Paula Allemand · <a href="privacidade.html">Privacidade</a>',
   },
 
   en: {
@@ -289,6 +356,72 @@ const TRANSLATIONS = {
     "footer.rights": "Made with coffee and code by Paula Allemand.",
 
     "a11y.skip": "Skip to main content",
+
+    "nav.consultoria": "Consulting",
+
+    "consultoria.hero.eyebrow": "Consulting",
+    "consultoria.hero.heading": "Less manual work, more time for you.",
+    "consultoria.hero.subtitle":
+      "For anyone who wants to use AI and automate tasks at work or in daily life, without having to master technology to do it.",
+    "consultoria.cta.agendar": "I want to book a call",
+    "consultoria.cta.conversa": "I want my call",
+    "consultoria.cta.sending": "Sending...",
+
+    "consultoria.fit.yes.title": "This is for you if...",
+    "consultoria.fit.yes.item1":
+      "You hear about AI all day long and don't know where to start, in practice, at your job.",
+    "consultoria.fit.yes.item2":
+      "You have repetitive tasks in your day-to-day and suspect they could be automated, but don't know how.",
+    "consultoria.fit.yes.item3":
+      "You've tried using ChatGPT or another AI on your own, got stuck, and aren't sure you're using it right.",
+    "consultoria.fit.no.title": "This isn't for you if...",
+    "consultoria.fit.no.item1":
+      "You're looking for a generic, one-size-fits-all answer. Here we start from your actual case, not a template.",
+    "consultoria.fit.no.item2":
+      "You'd rather someone solve everything for you, without being involved. The consulting works best when we look at your routine together.",
+    "consultoria.fit.no.item3":
+      "You're looking for a long course or a study track. This is a focused conversation about your case, not an extensive training program.",
+
+    "consultoria.how.eyebrow": "How it works",
+    "consultoria.how.step1": "You fill in your name and email below.",
+    "consultoria.how.step2":
+      "You get an email with a quick prep guide to think about before our call — plus the link to book a time.",
+    "consultoria.how.step3": "We talk through your case, at your own pace.",
+    "consultoria.mockup.label.nome": "Name",
+    "consultoria.mockup.label.email": "Email",
+    "consultoria.mockup.success":
+      "All set! Check your inbox (and your spam folder, just in case).",
+
+    "consultoria.form.title": "Let's talk?",
+    "consultoria.form.lead":
+      "Leave your name and email and I'll send you the next steps.",
+    "consultoria.form.label.nome": "Name",
+    "consultoria.form.label.email": "Email",
+    "consultoria.form.consent1":
+      'I agree to receive emails about the consulting. See the <a href="privacidade.html" target="_blank">privacy policy</a>.',
+    "consultoria.form.consent2":
+      "I also want to hear about new content and free opportunities.",
+    "consultoria.form.trust":
+      "Who you'll talk to: Paula Allemand, software engineer with experience in education and technology.",
+    "consultoria.form.msgok":
+      "All set! Check your inbox (and your spam folder, just in case) — I've sent you a quick prep guide and the booking link.",
+    "consultoria.form.msgerro":
+      "Something went wrong sending this. Try again in a moment, or reach out to me directly.",
+
+    "consultoria.videos.title": "Want a head start on the basics?",
+    "consultoria.videos.lead":
+      "My own free learning platform (Trilha de IA) is still under construction. Until then, these videos help with the essentials:",
+    "consultoria.videos.tag.basico": "The basics",
+    "consultoria.videos.tag.pratica": "In practice",
+    "consultoria.videos.v1":
+      "What is Artificial Intelligence? (explained simply)",
+    "consultoria.videos.v2": "Artificial Intelligence in 4 minutes",
+    "consultoria.videos.v3": "ChatGPT — what it is and how to use it (tutorial with examples)",
+    "consultoria.videos.v4": "Learn ChatGPT in 15 minutes",
+
+    "consultoria.footer.cta": "Shall we talk?",
+    "consultoria.footer.copyright":
+      'Paula Allemand · <a href="privacidade.html">Privacy</a>',
   },
 };
 
