@@ -664,6 +664,29 @@ h5 {
   color: var(--main-text-color);
 }
 
+/* Variante escura do footer, usada em páginas que ficam inteiras em fundo
+   claro (ex.: Trajetória) — dá um respiro de contraste no fim da página. */
+.footer-dark {
+  background-color: var(--primary-accent);
+  color: var(--white-color);
+}
+
+.footer-dark .footer-cta {
+  color: var(--white-color);
+}
+
+.footer-dark .footer-social a {
+  color: var(--white-color);
+}
+
+.footer-dark .social-links-row a {
+  filter: invert(90%) brightness(1.6);
+}
+
+.footer-dark .footer-copyright {
+  color: rgba(247, 251, 253, 0.6);
+}
+
 .footer-row {
   display: flex;
   flex-direction: column;
