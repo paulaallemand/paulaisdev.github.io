@@ -31,7 +31,7 @@ const TRANSLATIONS = {
       "Tudo que você toca, você transforma. Tudo que você transforma, transforma você.",
     "about.headline.author": "— Octavia Butler",
     "about.descr":
-      "Acredito no poder da tecnologia para transformar: movida por propósito, alimentada pelo aprendizado e comprometida em construir soluções de impacto para um amanhã melhor.",
+      "Acredito no poder da tecnologia para transformar: movida por propósito, alimentada pelo aprendizado e comprometida em construir soluções de impacto.",
     "trajectory.intro":
       "Sou uma engenheira de software multifacetada, com base sólida em desenvolvimento back-end, design de APIs e computação em nuvem (AWS, GCP). Meu trabalho integra tecnologias como Java, Spring Boot e Python. Apaixonada por ensinar, contribuo com programas como {reprograma} e Minas Programam, formando novos talentos da tecnologia — sempre com foco em soluções robustas, seguras e escaláveis.",
     "about.cv": "Baixar CV",
@@ -249,7 +249,7 @@ const TRANSLATIONS = {
       "All that you touch you change. All that you change changes you.",
     "about.headline.author": "— Octavia Butler",
     "about.descr":
-      "I believe in the power of technology to transform: driven by purpose, fueled by learning, and committed to building impactful solutions for a better tomorrow.",
+      "I believe in the power of technology to transform: driven by purpose, fueled by learning, and committed to building impactful solutions.",
     "trajectory.intro":
       "I am a versatile software engineer with a solid foundation in backend development, API design, and cloud computing (AWS, GCP). My work integrates technologies like Java, Spring Boot, and Python. Passionate about teaching, I contribute to programs like {reprograma} and Minas Programam, empowering new tech talent — always focused on robust, secure, and scalable solutions.",
     "about.cv": "Download CV",

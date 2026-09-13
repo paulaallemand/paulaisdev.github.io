@@ -249,6 +249,23 @@ h5 {
   color: var(--white-color) !important;
 }
 
+.nav-link-btn {
+  padding: 0.8rem 1.8rem;
+  border: 1.5px solid var(--primary-accent);
+  border-radius: 0.4rem;
+  background-color: var(--primary-accent);
+  color: var(--white-color) !important;
+  font-weight: 600;
+  transition: all 0.2s ease-in;
+}
+
+.nav-link-btn:hover,
+.nav-link-btn:focus {
+  background-color: var(--white-color);
+  border-color: var(--primary-accent);
+  color: var(--primary-accent) !important;
+}
+
 .nav {
   display: flex;
   align-items: center;
