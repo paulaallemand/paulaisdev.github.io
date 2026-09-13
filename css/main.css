@@ -1507,6 +1507,12 @@ h5 {
   margin-bottom: 2.4rem;
 }
 
+/* Feedbacks fica em fundo claro, diferente do carrossel de Palestras (fundo escuro) —
+   reaproveita o tamanho do carousel-title, mas com cor legível em fundo claro. */
+.feedbacks-story .carousel-title {
+  color: var(--main-text-color);
+}
+
 .carousel-left .section-eyebrow {
   color: rgba(247, 251, 253, 0.72);
 }
