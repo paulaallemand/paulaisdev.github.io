@@ -92,7 +92,7 @@ const TRANSLATIONS = {
       "Participação no vídeo do Impact Challenge for Women and Girls, do Google.org.",
 
     "feedbacks.title":
-      "Não acredite só em mim. Educação é o que me move e, por isso, ensinar pra mim é acreditar que qualquer um pode alcançar qualquer coisa. Essas mensagens recebi ao fim de algumas aulas que dei",
+      "Ensinar pra mim é acreditar que qualquer um pode alcançar qualquer coisa. Essas mensagens recebi ao fim de algumas aulas que dei",
     "feedbacks.window": "Aula ao vivo",
 
     "talks.title": "Palestras &amp; vivências",
@@ -308,7 +308,7 @@ const TRANSLATIONS = {
       "Featured in Google.org's Impact Challenge for Women and Girls video.",
 
     "feedbacks.title":
-      "Don't just take my word for it. Education is what moves me, and to me, teaching means believing anyone can achieve anything. These are messages I received at the end of some of the classes I taught",
+      "Don't just take my word for it. Teaching means believing anyone can achieve anything. These are messages I received at the end of some of the classes I taught",
     "feedbacks.window": "Live class",
 
     "talks.title": "Talks &amp; experiences",
