@@ -91,13 +91,9 @@ const TRANSLATIONS = {
     "featured.google.desc":
       "Participação no vídeo do Impact Challenge for Women and Girls, do Google.org.",
 
-    "feedbacks.title": "Educação é o que me move",
-    "feedbacks.subtitle":
-      "Mensagens reais que recebi no chat ao final das aulas",
-    "feedbacks.story.body":
-      "Antes da tecnologia, fui doula e estudei obstetrícia. Aprendi cedo que escuta ativa e comunicação clara mudam a experiência de alguém. Então considero que en é abrir portas: abre uma passagem para mim e para o outro. E mostra que tecnologia é para todo mundo.<br /><br />As mensagens ao lado são reais, foi assim que me despedi de tantas aulas.",
-    "feedbacks.story.sign": "— Professora e mentora há 10 anos",
-    "feedbacks.window": "Aula ao vivo · {reprograma}",
+    "feedbacks.title":
+      "Não acredite só em mim. Educação é o que me move e, por isso, ensinar pra mim é acreditar que qualquer um pode alcançar qualquer coisa. Essas mensagens recebi ao fim de algumas aulas que dei",
+    "feedbacks.window": "Aula ao vivo",
 
     "talks.title": "Palestras &amp; vivências",
     "talks.subtitle": "Um pouco da minha trajetória em eventos e comunidades.",
@@ -311,13 +307,9 @@ const TRANSLATIONS = {
     "featured.google.desc":
       "Featured in Google.org's Impact Challenge for Women and Girls video.",
 
-    "feedbacks.title": "Education is what moves me",
-    "feedbacks.subtitle":
-      "Real messages I received in the chat at the end of my classes",
-    "feedbacks.story.body":
-      "Before tech, I was a doula and studied obstetrics. I learned early that active listening and clear communication change someone's experience — and that's exactly what I carried with me when I moved into software development.<br /><br />Teaching, to me, is about opening doors. Every cohort at {reprograma}, Minas Programam, and Tera is a chance to show that technology is for everyone. The messages beside this are real — that's how I said goodbye to so many classes.",
-    "feedbacks.story.sign": "— Paula, teacher and mentor for 5+ years",
-    "feedbacks.window": "Live class · {reprograma}",
+    "feedbacks.title":
+      "Don't just take my word for it. Education is what moves me, and to me, teaching means believing anyone can achieve anything. These are messages I received at the end of some of the classes I taught",
+    "feedbacks.window": "Live class",
 
     "talks.title": "Talks &amp; experiences",
     "talks.subtitle": "A glimpse of my journey across events and communities.",
@@ -438,7 +430,8 @@ const TRANSLATIONS = {
     "consultoria.videos.v1":
       "What is Artificial Intelligence? (explained simply)",
     "consultoria.videos.v2": "Artificial Intelligence in 4 minutes",
-    "consultoria.videos.v3": "ChatGPT — what it is and how to use it (tutorial with examples)",
+    "consultoria.videos.v3":
+      "ChatGPT — what it is and how to use it (tutorial with examples)",
     "consultoria.videos.v4": "Learn ChatGPT in 15 minutes",
 
     "consultoria.footer.cta": "Shall we talk?",
