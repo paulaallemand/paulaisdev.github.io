@@ -3,6 +3,9 @@
 import { useEffect } from "react";
 import { messages, type Locale } from "@/config/i18n";
 import { useParams } from "next/navigation";
+import Expertise from "@/app/components/Expertise";
+import Feedbacks from "@/app/components/Feedbacks";
+import Talks from "@/app/components/Talks";
 
 export default function Page() {
   const params = useParams();
@@ -51,9 +54,9 @@ export default function Page() {
         </div>
       </section>
 
-      <section id="expertise" className="expertise" />
-      <section id="feedbacks" className="feedbacks" />
-      <section id="talks" className="talks" />
+      <Expertise />
+      <Feedbacks />
+      <Talks />
     </main>
   );
 }
