@@ -1,16 +1,23 @@
-import type { NextConfig } from "next";
-import createMDX from "@next/mdx";
+import type { NextConfig } from 'next'
+import withMDX from '@next/mdx'
 
-const withMDX = createMDX({
-  extension: /\.mdx?$/,
-  options: {
-    jsx: true,
+const config: NextConfig = {
+  output: 'export',
+  images: {
+    unoptimized: true,
   },
-});
+  compress: true,
+  productionBrowserSourceMaps: false,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  experimental: {
+    optimizePackageImports: ['posthog-js'],
+  },
+}
 
-const nextConfig: NextConfig = {
-  output: "export",
-  pageExtensions: ["ts", "tsx", "md", "mdx"],
-};
+const withMdx = withMDX({
+  extension: /\.mdx?$/,
+})
 
-export default withMDX(nextConfig);
+export default withMdx(config)
