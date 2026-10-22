@@ -22,6 +22,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="/css/training.css" />
         <link rel="stylesheet" href="/css/media.css" />
         <link rel="stylesheet" href="/css/privacy-banner.css" />
+        <link rel="stylesheet" href="/css/login-button.css" />
       </head>
       <body>
         <AnalyticsProvider>
