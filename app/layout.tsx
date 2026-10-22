@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { AnalyticsProvider } from "./components/AnalyticsProvider";
 
 export const metadata: Metadata = {
   title: "Paula Allemand",
@@ -21,9 +22,11 @@ export default function RootLayout({
         <link rel="stylesheet" href="/css/media.css" />
       </head>
       <body>
-        <Header />
-        {children}
-        <Footer />
+        <AnalyticsProvider>
+          <Header />
+          {children}
+          <Footer />
+        </AnalyticsProvider>
       </body>
     </html>
   );
