@@ -1,11 +1,26 @@
-import { readFileSync } from "fs";
-import { join } from "path";
+'use client'
+
+import { LoginButton } from '@/app/components/LoginButton'
 
 export default function LoginPage() {
-  const filePath = join(process.cwd(), "public", "training", "login", "index.html");
-  const htmlContent = readFileSync(filePath, "utf-8");
-
   return (
-    <div dangerouslySetInnerHTML={{ __html: htmlContent }} suppressHydrationWarning />
-  );
+    <div style={{ maxWidth: '600px', margin: '4rem auto', padding: '2rem' }}>
+      <h1 style={{ marginBottom: '1.5rem' }}>Login</h1>
+      <p style={{ marginBottom: '2rem', color: '#565a5b' }}>
+        Faça login com sua conta Google para acessar conteúdo exclusivo da plataforma de training.
+      </p>
+
+      <LoginButton />
+
+      <div style={{ marginTop: '2rem', padding: '1rem', backgroundColor: '#f7fbfd', borderRadius: '4px' }}>
+        <p style={{ fontSize: '0.875rem', color: '#0c1618', margin: 0 }}>
+          <strong>Desenvolvimento:</strong> Se receber erro de origin_mismatch ao testar local,{' '}
+          <a href="https://console.cloud.google.com/" target="_blank" rel="noopener noreferrer">
+            registre localhost:3000
+          </a>{' '}
+          no OAuth consent screen do Google Cloud Console.
+        </p>
+      </div>
+    </div>
+  )
 }
