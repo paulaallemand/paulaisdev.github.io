@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Header() {
   const [navOpen, setNavOpen] = useState(false);
@@ -21,7 +22,7 @@ export default function Header() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link href="/experience.html" className="nav-link" data-i18n="nav.experience">
+                <Link href="/experience" className="nav-link" data-i18n="nav.experience">
                   Experiência
                 </Link>
               </li>
@@ -55,6 +56,9 @@ export default function Header() {
                 <Link href="/training/" className="nav-link nav-link-cta">
                   Trilhas
                 </Link>
+              </li>
+              <li className="nav-item language-item">
+                <LanguageSwitcher />
               </li>
             </ul>
           </nav>
