@@ -6,22 +6,24 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:debug": "playwright test --debug"
   },
   "dependencies": {
-    "@mdx-js/loader": "^3.1.1",
-    "@mdx-js/react": "^3.1.1",
-    "@next/mdx": "^16.4.2",
     "next": "16.4.2",
-    "posthog-js": "^1.438.15",
-    "react": "19.3.0",
-    "react-dom": "19.3.0"
+    "react": "19.0.0-rc.1",
+    "react-dom": "19.0.0-rc.1",
+    "posthog-js": "^1.150.0"
   },
   "devDependencies": {
+    "@next/mdx": "^16.4.2",
+    "@playwright/test": "^1.48.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^9",
+    "eslint": "^8",
     "eslint-config-next": "16.4.2",
     "typescript": "^5"
   }
